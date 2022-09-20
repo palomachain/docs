@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="https://raw.githubusercontent.com/palomachain/paloma-docs/main/docs/src/.vuepress/public/assets/Paloma_black.svg" width="200">
+<img align="center" src="https://docs.palomachain.com/assets/Paloma_black.svg" width="200">
 </p>
 
 <div align="Center">
