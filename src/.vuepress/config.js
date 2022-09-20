@@ -49,7 +49,7 @@ mixpanel.track('DOCUMENT_VISIT');
     editLinkText: '',
     lastUpdated: false,
     smoothScroll: true,
-    logo: "assets/Paloma_black.svg",
+    logo: "/assets/Paloma_black.svg",
     nav: [
       {
         text: 'Blog',
