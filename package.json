@@ -1,0 +1,24 @@
+{
+  "name": "paloma",
+  "version": "0.0.1",
+  "description": "Official Paloma Protocol Documentation",
+  "main": "index.js",
+  "authors": {
+    "name": "Paloma",
+    "email": "info@palomachain.com"
+  },
+  "repository": "https://github.com/palomachain/paloma-docs/paloma",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@maginapp/vuepress-plugin-copy-code": "^1.0.0",
+    "vuepress": "^1.9.7",
+    "vuepress-theme-dark": "^0.1.0"
+  },
+  "dependencies": {
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+  }
+}
