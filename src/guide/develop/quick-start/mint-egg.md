@@ -112,7 +112,7 @@ In the last step below, we'll need to pass the payload in base64 format in the s
 This can be done in two simple steps. 
 
 ### Get payload in Hex
-Use https://abi.hashex.org/ get the hex version here. You'll need to pass in the following parameters:
+Use this [online tool](https://abi.hashex.org/) get the hex version here. You'll need to pass in the following parameters:
 - Function - your function --> mint
 - Argument - Address --> Your ethereum address
 - Argument - Uint --> 1
@@ -123,7 +123,7 @@ Use https://abi.hashex.org/ get the hex version here. You'll need to pass in the
 :::
 
 ### Convert to byte array
-Now that you have the payload in Hex format, you need to convert it into base64. You can use this [tool](https://base64.guru/converter/encode/hex).
+Now that you have the payload in Hex format, you need to convert it into base64 usin this [tool](https://base64.guru/converter/encode/hex).
 
 :::details Using Python for the conversion
 Python also makes it easy to convert Hex into base64 as per the steps below.
