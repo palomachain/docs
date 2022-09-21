@@ -142,16 +142,14 @@ print(BASE64_VAL)
 ## Mint the Egg on Ethereum
 Last, but not least, it's time to mint the egg by executing the `PickWinner` smart contract function. This will result in a `SubmitLogicCall` on [Compass EVM](./applications/compass-evm.md) that is relayed by the Pigeons to Ethereum.
 
-create a JSON file with the payload from above and export the variable
+create a JSON variable with the payload from above and export the variable
 ```sh
-cat <<EOT > pick_winner.json
+export JSON=$(cat <<EOT 
 {
-  "pick_winner": {"payload": "<base64 value>"  }
+  "pick_winner": {"payload": "<your base64 value>"  }
 }
 EOT
 )
-
-export JSON=pick_winner.json
 ```
 
 Copy and run the script below on your Paloma node using `bash`.
