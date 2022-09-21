@@ -57,7 +57,7 @@
       </div>
       <div class="etc-menu_container">
         <div class="menu-items">
-          <a href="https://guaya23l1on.typeform.com/to/r0NYlO5S" target="_blank" rel="noopener noreferrer">
+          <a data-tf-popup="r0NYlO5S" data-tf-iframe-props="title=Getting Started With Paloma" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
             <img src="/assets/collab.svg" alt="Collaborate with Paloma">
           </a>
         </div>
