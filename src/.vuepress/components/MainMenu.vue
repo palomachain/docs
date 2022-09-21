@@ -3,7 +3,7 @@
     <div class="main-menu">
       <div class="main-menu_container">
         <div class="menu-items">
-          <a href="/guide/introduction">
+          <a href="/guide/introduction.html">
             <img src="/assets/quick_start.svg" alt="Quick Start">
           </a>
         </div>
