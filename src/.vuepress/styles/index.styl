@@ -4,7 +4,12 @@
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
-body {background-color: #fffff;}
+@require 'fonts'
+
+body {
+    background-color: #fffff;
+    font-family: 'Roboto Mono', -apple-system, sans-serif;
+}
 
 html {    
     background-size: cover;
@@ -22,3 +27,153 @@ background-color: #fffff;
 
 .home .hero img
   max-width 450px!important
+
+header.navbar, header.navbar .links {
+    background-color: #F1D1E5;
+}
+
+header.navbar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+    height: auto;
+}
+
+header.navbar .links {
+    padding-right: 3rem;
+    top: 2rem;
+}
+
+.nav-item a {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 1179px) { 
+        .nav-links {
+        padding: 0 3rem !important;
+        transition: all 0.2s ease;
+    }
+}
+
+.nav-links {
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.navbar .site-name {
+    display: none;    
+}
+
+.search-box {
+  order: 1;
+  margin-right: 0;
+  margin-left: 1rem;
+
+  .suggestions {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+.links .search-box input {
+    border: 1px solid #2C2C2C;
+    box-shadow: 0px 4px 4px #DCC3D3;
+    background: #FFF url(/assets/search.svg) 0.6rem 0.5rem no-repeat
+}
+
+.outbound {
+    display: none !important;    
+}
+
+ul.suggestions {
+    margin-top: 60px;
+}
+
+main.home {
+    padding: 14rem 2rem 0;
+}
+
+h1#main-title {
+    padding: 4rem 0;
+    padding-bottom: 2rem;
+    font-size: 34.59px;
+}
+
+.theme-default-content:not(.custom) > h1 {
+    padding-top: 13rem;
+}
+
+.theme-default-content:not(.custom) > h2,
+.theme-default-content:not(.custom) > h3,
+.theme-default-content:not(.custom) > h4,
+.theme-default-content:not(.custom) > h5 {
+    padding-top: 13.5rem;
+}
+
+aside.sidebar {
+    top: 12rem;
+}
+
+p.description {
+    display: none;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+}
+
+.social-menu {
+    display: flex;
+    margin-bottom: 8rem;
+}
+
+.etc-menu {
+    display: block;
+    margin-bottom: 8rem;
+}
+
+// .menu {
+//     display: grid;
+//     grid-auto-flow: column;
+//     grid-auto-columns: 2fr 2fr 2fr 2fr;
+
+//     width: 800px;
+//     margin: 0 auto;    
+// }
+
+// .menu > * { flex: 1; }
+
+.main-menu_container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: 50%;
+
+}
+
+.social-menu_container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1179px) { 
+    .main-menu_container {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        flex-basis: 100%;
+    }
+    .social-menu_container {
+        display: flex;
+        flex-direction: row;
+        // flex: 1;
+    }
+}
+
+.menu-items {
+    padding: .5em;
+    width: auto;
+}

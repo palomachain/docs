@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "Paloma Docs",
+  title: "Official Paloma Protocol Documentation",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -52,13 +52,25 @@ mixpanel.track('DOCUMENT_VISIT');
     logo: "/assets/Paloma_black.svg",
     nav: [
       {
+        text: 'Developer Assistance',
+        link: 'https://guaya23l1on.typeform.com/to/r0NYlO5S?typeform-source=www.palomachain.com ',
+      },
+      {
         text: 'Blog',
         link: 'https://www.palomachain.com/blog/'
       },
       {
+        text: 'Forum',
+        link: 'https://forum.palomachain.com/'
+      },
+      {
+        text: 'Discord',
+        link: 'https://discord.gg/tNqkNHvVNc'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/palomachain/paloma'
-      },
+      }
     ],
     sidebar: {
       '/guide/': [
