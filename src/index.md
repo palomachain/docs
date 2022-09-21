@@ -1,6 +1,6 @@
 ---
 home: true
-actionText: Start
+actionText: 
 actionLink: /guide/introduction
 features:
 # - title: Fast
