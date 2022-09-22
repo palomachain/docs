@@ -33,7 +33,7 @@ set -x
 #set the parameters for the JSON
 CHAIN_ID="eth-main"
 COMPASS_ID="50"
-CONTRACT_ADDRESS="0x4d746e8f7567d3bdaf64c0c366e6517b3cbe2acf"
+CONTRACT_ADDRESS="0xbb4fac66affd17365c447c837fd0a2f064313d64"
 SMART_CONTRACT_ABI='[{"type": "event", "name": "Transfer", "inputs": [{"name": "_from", "type": "address", "indexed": true}, {"name": "_to", "type": "address", "indexed": true}, {"name": "_tokenId", "type": "uint256", "indexed": true}], "anonymous": false}, {"type": "event", "name": "Approval", "inputs": [{"name": "_owner", "type": "address", "indexed": true}, {"name": "_approved", "type": "address", "indexed": true}, {"name": "_tokenId", "type": "uint256", "indexed": true}], "anonymous": false}, {"type": "event", "name": "ApprovalForAll", "inputs": [{"name": "_owner", "type": "address", "indexed": true}, {"name": "_operator", "type": "address", "indexed": true}, {"name": "_approved", "type": "bool", "indexed": false}], "anonymous": false}, {"type": "event", "name": "Minted", "inputs": [{"name": "eth_address", "type": "address", "indexed": true}, {"name": "paloma_address", "type": "string", "indexed": true}, {"name": "token_id", "type": "uint256", "indexed": true}], "anonymous": false}, {"type": "event", "name": "SetMinter", "inputs": [{"name": "new_minter", "type": "address", "indexed": true}, {"name": "old_minter", "type": "address", "indexed": true}], "anonymous": false}, {"type": "constructor", "stateMutability": "nonpayable", "inputs": []}, {"type": "function", "name": "name", "stateMutability": "nonpayable", "inputs": [], "outputs": [{"name": "", "type": "string"}]}, {"type": "function", "name": "symbol", "stateMutability": "nonpayable", "inputs": [], "outputs": [{"name": "", "type": "string"}]}, {"type": "function", "name": "supportsInterface", "stateMutability": "pure", "inputs": [{"name": "interface_id", "type": "bytes4"}], "outputs": [{"name": "", "type": "bool"}]}, {"type": "function", "name": "balanceOf", "stateMutability": "view", "inputs": [{"name": "_owner", "type": "address"}], "outputs": [{"name": "", "type": "uint256"}]}, {"type": "function", "name": "ownerOf", "stateMutability": "view", "inputs": [{"name": "_tokenId", "type": "uint256"}], "outputs": [{"name": "", "type": "address"}]}, {"type": "function", "name": "getApproved", "stateMutability": "view", "inputs": [{"name": "_tokenId", "type": "uint256"}], "outputs": [{"name": "", "type": "address"}]}, {"type": "function", "name": "isApprovedForAll", "stateMutability": "view", "inputs": [{"name": "_owner", "type": "address"}, {"name": "_operator", "type": "address"}], "outputs": [{"name": "", "type": "bool"}]}, {"type": "function", "name": "transferFrom", "stateMutability": "nonpayable", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_tokenId", "type": "uint256"}], "outputs": []}, {"type": "function", "name": "safeTransferFrom", "stateMutability": "nonpayable", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_tokenId", "type": "uint256"}], "outputs": []}, {"type": "function", "name": "safeTransferFrom", "stateMutability": "nonpayable", "inputs": [{"name": "_from", "type": "address"}, {"name": "_to", "type": "address"}, {"name": "_tokenId", "type": "uint256"}, {"name": "_data", "type": "bytes"}], "outputs": []}, {"type": "function", "name": "approve", "stateMutability": "nonpayable", "inputs": [{"name": "_approved", "type": "address"}, {"name": "_tokenId", "type": "uint256"}], "outputs": []}, {"type": "function", "name": "setApprovalForAll", "stateMutability": "nonpayable", "inputs": [{"name": "_operator", "type": "address"}, {"name": "_approved", "type": "bool"}], "outputs": []}, {"type": "function", "name": "mint", "stateMutability": "nonpayable", "inputs": [{"name": "_to", "type": "address"}, {"name": "_tokenId", "type": "uint256"}, {"name": "_paloma_address", "type": "string"}], "outputs": [{"name": "", "type": "bool"}]}, {"type": "function", "name": "set_minter", "stateMutability": "nonpayable", "inputs": [{"name": "_minter", "type": "address"}], "outputs": []}, {"type": "function", "name": "tokenURI", "stateMutability": "view", "inputs": [{"name": "tokenId", "type": "uint256"}], "outputs": [{"name": "", "type": "string"}]}, {"type": "function", "name": "minter", "stateMutability": "view", "inputs": [], "outputs": [{"name": "", "type": "address"}]}]'
 
 
@@ -114,8 +114,7 @@ This can be done in two simple steps.
 ### Get payload in Hex
 Use this [online tool](https://abi.hashex.org/) get the hex version here. You'll need to pass in the following parameters:
 - Function - your function --> mint
-- Argument - Address --> Your ethereum address
-- Argument - Uint --> 1
+- Argument - Address --> Your Ethereum address
 - Argument - String --> Your Paloma address
 
 :::details Example of Hex generation
@@ -146,7 +145,7 @@ create a JSON variable with the payload from above and export the variable
 ```sh
 export JSON=$(cat <<EOT 
 {
-  "pick_winner": {"payload": "<your base64 value>"  }
+  "pick_winner": {"payload": "<YOUR BASE64 VALUE>"  }
 }
 EOT
 )
@@ -169,4 +168,4 @@ palomad tx wasm execute \
 -y -b block
 ```
 
-**Congratulations, you have now minted and egg! Check your Ethereum wallet to see the NFT there.**
+**Congratulations, you have now minted and egg! Check your Ethereum wallet to see the NFT there.** You can also see the collection of already minted eggs on Opensea.
