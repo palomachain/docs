@@ -35,7 +35,7 @@ header.navbar .logo {
 }
 
 header.navbar, header.navbar .links {
-    background-color: #F1D1E5;
+    background-color: $headerColor;
 }
 
 header.navbar {
@@ -178,11 +178,31 @@ p.description {
     .social-menu_container {
         display: flex;
         flex-direction: row;
-        // flex: 1;
     }
 }
 
 .menu-items {
     padding: .5em;
     width: auto;
+}
+
+// Sidebar
+section .sidebar-heading {
+    color: $textColor;
+    font-size: 16px;
+}
+
+.sidebar-links a.sidebar-link {
+    color: $textColor;
+    font-size: 16px;
+}
+
+.sidebar-link .sidebar-sub-headers a.sidebar-link {
+    color: $thirdListTextColor;
+    font-size: 14px;
+}
+
+.sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link {
+    // color: $thirdListTextColor;
+    font-size: 12px;
 }
