@@ -187,6 +187,7 @@ mixpanel.track('DOCUMENT_VISIT');
           children: [
             {
               title: 'Operate a node',
+              path: '/guide/maintain/node/requirements',
               collapsable: true,
               children: [
                 'maintain/node/requirements',
@@ -203,6 +204,7 @@ mixpanel.track('DOCUMENT_VISIT');
             {
               title: 'Become a validator',
               collapsable: true,
+              path: '/guide/maintain/validator/validate-paloma',
               children: [
                 ['maintain/validator/validate-paloma', 'Get started'],
                 'maintain/validator/set-up-validator',
@@ -223,6 +225,7 @@ mixpanel.track('DOCUMENT_VISIT');
             {
               title: 'Become a relay pigeon',
               collapsable: true,
+              path: '/guide/maintain/relayer/pigeon',
               children: [
                 'maintain/relayer/pigeon',
               ]
