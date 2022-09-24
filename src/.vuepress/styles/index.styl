@@ -4,7 +4,12 @@
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
-body {background-color: #fffff;}
+@require 'fonts'
+
+body {
+    background-color: #fffff;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
 
 html {    
     background-size: cover;
@@ -20,5 +25,177 @@ html {
 background-color: #fffff;
 }
 
-.home .hero img
-  max-width 450px!important
+// .home .hero img
+//   max-width 450px!important
+
+header.navbar .logo {
+    height: 5.8rem;
+    min-width: auto; 
+    margin: 5% 0;   
+}
+
+header.navbar, header.navbar .links {
+    background-color: $headerColor;
+}
+
+header.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 5rem;
+    height: auto;
+    line-height: 6.5rem;
+}
+
+header.navbar .links {
+    padding-right: 3rem;
+    top: 0.6rem;
+}
+
+.nav-item a {
+    // font-weight: 1000;
+    font-family: 'Inter-Bold', -apple-system, sans-serif;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 1179px) { 
+        .nav-links {
+        padding: 0 3rem !important;
+        transition: all 0.2s ease;
+    }
+}
+
+.nav-links {
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.navbar .site-name {
+    display: none;    
+}
+
+.search-box {
+  order: 1;
+  margin-right: 0;
+  margin-left: 1rem;
+
+  .suggestions {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+.links .search-box input {
+    border: 1px solid #2C2C2C;
+    box-shadow: 0px 4px 4px #DCC3D3;
+    background: #FFF url(/assets/search.svg) 0.6rem 0.5rem no-repeat
+}
+
+.outbound {
+    display: none !important;    
+}
+
+ul.suggestions {
+    margin-top: 45px;
+}
+
+main.home {
+    padding: 10rem 2rem 0;
+}
+
+h1#main-title {
+    padding: 4rem 0;
+    padding-bottom: 3.5rem;
+    font-size: 34.59px;
+    font-family: 'Inter Bold', -apple-system, sans-serif;
+}
+
+.theme-default-content:not(.custom) > h1 {
+    padding-top: 9.5rem;
+}
+
+.theme-default-content:not(.custom) > h2,
+.theme-default-content:not(.custom) > h3,
+.theme-default-content:not(.custom) > h4,
+.theme-default-content:not(.custom) > h5 {
+    padding-top: 9.5rem;
+}
+
+aside.sidebar {
+    top: 8rem;
+}
+
+p.description {
+    display: none;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+}
+
+.social-menu {
+    display: flex;
+    margin-bottom: 8rem;
+}
+
+.etc-menu {
+    display: block;
+    margin-bottom: 8rem;
+}
+
+.main-menu_container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: 50%;
+
+}
+
+.social-menu_container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1179px) { 
+    .main-menu_container {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        flex-basis: 100%;
+    }
+    .social-menu_container {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.menu-items {
+    padding: .5em;
+    width: auto;
+}
+
+// Sidebar
+section .sidebar-heading {
+    color: $textColor;
+    font-size: 16px;
+}
+
+.sidebar-links a.sidebar-link {
+    color: $textColor;
+    font-size: 16px;
+}
+
+.sidebar-link .sidebar-sub-headers a.sidebar-link {
+    color: $thirdListTextColor;
+    font-size: 14px;
+}
+
+.sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link {
+    font-size: 12px;
+}
+
+a span.arrow.down,
+a span.arrow.right {
+    display:none;
+}

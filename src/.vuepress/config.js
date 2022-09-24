@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "Paloma Docs",
+  title: "Official Paloma Protocol Documentation",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -52,13 +52,25 @@ mixpanel.track('DOCUMENT_VISIT');
     logo: "/assets/Paloma_black.svg",
     nav: [
       {
+        text: 'Developer Assistance',
+        link: 'https://guaya23l1on.typeform.com/to/r0NYlO5S?typeform-source=www.palomachain.com ',
+      },
+      {
         text: 'Blog',
         link: 'https://www.palomachain.com/blog/'
       },
       {
+        text: 'Forum',
+        link: 'https://forum.palomachain.com/'
+      },
+      {
+        text: 'Discord',
+        link: 'https://discord.gg/tNqkNHvVNc'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/palomachain/paloma'
-      },
+      }
     ],
     sidebar: {
       '/guide/': [
@@ -175,6 +187,7 @@ mixpanel.track('DOCUMENT_VISIT');
           children: [
             {
               title: 'Operate a node',
+              path: '/guide/maintain/node/requirements',
               collapsable: true,
               children: [
                 'maintain/node/requirements',
@@ -191,6 +204,7 @@ mixpanel.track('DOCUMENT_VISIT');
             {
               title: 'Become a validator',
               collapsable: true,
+              path: '/guide/maintain/validator/validate-paloma',
               children: [
                 ['maintain/validator/validate-paloma', 'Get started'],
                 'maintain/validator/set-up-validator',
@@ -211,6 +225,7 @@ mixpanel.track('DOCUMENT_VISIT');
             {
               title: 'Become a relay pigeon',
               collapsable: true,
+              path: '/guide/maintain/relayer/pigeon',
               children: [
                 'maintain/relayer/pigeon',
               ]
