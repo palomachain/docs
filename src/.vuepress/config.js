@@ -26,6 +26,7 @@ module.exports = {
         href: "/assets/favicon_docs.png",
       },
     ],
+    ['script', {src: 'https://code.jquery.com/jquery-3.4.1.min.js'}],
     ['script', {}, `
           (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
 for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
@@ -67,7 +68,55 @@ if(!ignore) {
   mixpanel.init('eaae482845dadd88e1ce07b9fa03dd6b'); 
   mixpanel.track('DOCUMENT_VISIT');
 }
-      `],
+
+function makeCollabsibleFixed() { 
+  let collections = document.querySelectorAll("a.sidebar-heading");
+  Array.from(collections).forEach(e => e.classList.remove('sidebar-heading', 'clickable'));
+  Array.from(collections).forEach(e => e.classList.add('sidebar-link'));
+  Array.from(collections).forEach(e => console.log(e));
+  // Array.from(collections).forEach(e => e.classList.addEventListener("click", () => {
+  //   let collections = document.querySelectorAll("a.sidebar-heading");
+  //   Array.from(collections).forEach(e => e.classList.remove('sidebar-heading', 'clickable', 'open'));
+  //   Array.from(collections).forEach(e => e.classList.add('sidebar-link', 'active'));
+  //   console.log("Navigation clicked");
+  // })
+  console.log("This is the all the navigations", collections);
+  // collections.addEventListener("click", () => {
+  //   let collections = document.querySelectorAll("a.sidebar-heading");
+  //   Array.from(collections).forEach(e => e.classList.remove('sidebar-heading', 'clickable', 'open'));
+  //   Array.from(collections).forEach(e => e.classList.add('sidebar-link', 'active'));
+  //   console.log("Navigation clicked");
+  // })
+}
+
+window.addEventListener('load', function () {
+  alert("It's loaded!")
+  makeCollabsibleFixed();
+})
+
+let sidebarElements = document.querySelectorAll("a.sidebar-heading");
+
+
+
+// let navData = window.performance.getEntriesByType("navigation");
+// if (navData.length > 0 && navData[0].loadEventEnd > 0)
+// {
+//     console.log('Document is loaded');
+//     makeCollabsibleFixed();
+// } else {
+//     console.log('Document is not loaded');
+// }
+
+
+
+// const elementLoaded = document.readyState === 'complete' ? true : false;
+// console.log(elementLoaded);
+// if(elementLoaded) {
+//   makeCollabsibleFixed();
+// }
+
+// $('a').removeClass('sidebar-heading clickable').addClass('sidebar-link');
+  `],
   ],
 
   /**
@@ -121,90 +170,101 @@ if(!ignore) {
             ['develop/quick-start/quick-start', 'Send a message'],
             ['develop/quick-start/mint-egg', 'Mint an EGG'],
             ['develop/quick-start/resources', 'Resources and tools'],
-              ]
-          },
+            ['develop/quick-start/endpoints', 'Endpoints'],
+          ]
+        },
         {
           title: 'Develop',
           collapsable: true,
           children: [
-            {
-            title: 'Writing Smart Contracts',
-            collapsable: true,
-            path: '/guide/develop/smart-contracts/contracts',
-              children: [
-                {
-                 title: 'CosmWasm Contracts',
-                 collapsable: false,
-                 children: [
-                   ['develop/smart-contracts/contracts', 'CosmWasm'],
-                   'develop/smart-contracts/interact-with-smart-contract',
-                  ]
-                },
-                {
-                  title: 'EVM contracts',
-                  path: '/guide/develop/smart-contracts/hello-world-solidity',
-                  collapsable: false,
-                  children: [
-                    ['develop/smart-contracts/hello-world-solidity', 'Solidity'],
-                    ['develop/smart-contracts/hello-world-vyper', 'Vyper'],
-                  ]
-                },
-                'develop/smart-contracts/open-source',
-              ]
-            },
-            {
-              title: 'CLI',
-              path: '/guide/develop/palomad/palomad',
-              collapsable: true,
-              children: [
-                'develop/palomad/palomad',
-                'develop/palomad/commands',
-                'develop/palomad/install-palomad',
-                'develop/palomad/palomad-mac',
-                'develop/palomad/using-palomad',
-                'develop/palomad/subcommands',
-              ]
-            },
-            {
-              title: 'Javascript SDK',
-              collapsable: true,
-              path: '/guide/develop/paloma-js/getting-started',
-              children: [
-                ['develop/paloma-js/getting-started', 'Getting Started'],
-                ['develop/paloma-js/wallets', 'Wallet'],
-                ['develop/paloma-js/transactions', 'Transactions'],
-                ['develop/paloma-js/smart-contracts', 'Smart Contracts'],
-                ['develop/paloma-js/keys', 'Keys'],
-                'develop/paloma-js/fees',
-                ['develop/paloma-js/common-examples', 'Common Examples'],
-                'develop/paloma-js/add-modules',
-              ]
-            },
-            {
-              title: 'Paloma Core',
-              collapsable: true,
-              path: '/guide/develop/module-specifications/specifications',
-              children: [
-                ['develop/module-specifications/specifications', 'Specifications'],
-                'develop/module-specifications/spec-auth',
-                'develop/module-specifications/spec-authz',
-                'develop/module-specifications/spec-bank',
-                'develop/module-specifications/spec-capability',
-                'develop/module-specifications/spec-crisis',
-                'develop/module-specifications/spec-distribution',
-                'develop/module-specifications/spec-evidence',
-                'develop/module-specifications/spec-feegrant',
-                'develop/module-specifications/spec-governance',
-                'develop/module-specifications/spec-mint',
-                'develop/module-specifications/spec-params',
-                'develop/module-specifications/spec-slashing',
-                'develop/module-specifications/spec-staking',
-                'develop/module-specifications/spec-upgrade',
-                'develop/module-specifications/spec-wasm',
-              ]
-            },
-            ]
-          },
+            ['develop/smart-contracts/contracts', 'Writing CosmWasm Contracts'],
+            ['develop/smart-contracts/interact-with-smart-contracts', 'Interact with CosmWasm Contracts'],
+            ['develop/smart-contracts/hello-world-solidity', 'Writing Solidity Contracts'],
+            ['develop/smart-contracts/hello-world-vyper', 'Writing Vyper Contracts'],
+          ]
+        },
+        // {
+        //   title: 'Develop',
+        //   collapsable: true,
+        //   children: [
+        //     {
+        //     title: 'Writing Smart Contracts',
+        //     collapsable: true,
+        //     path: '/guide/develop/smart-contracts/contracts',
+        //       children: [
+        //         {
+        //          title: 'CosmWasm Contracts',
+        //          collapsable: false,
+        //          children: [
+        //            ['develop/smart-contracts/contracts', 'CosmWasm'],
+        //            'develop/smart-contracts/interact-with-smart-contract',
+        //           ]
+        //         },
+        //         {
+        //           title: 'EVM contracts',
+        //           path: '/guide/develop/smart-contracts/hello-world-solidity',
+        //           collapsable: false,
+        //           children: [
+        //             ['develop/smart-contracts/hello-world-solidity', 'Solidity'],
+        //             ['develop/smart-contracts/hello-world-vyper', 'Vyper'],
+        //           ]
+        //         },
+        //         'develop/smart-contracts/open-source',
+        //       ]
+        //     },
+        //     {
+        //       title: 'CLI',
+        //       path: '/guide/develop/palomad/palomad',
+        //       collapsable: true,
+        //       children: [
+        //         'develop/palomad/palomad',
+        //         'develop/palomad/commands',
+        //         'develop/palomad/install-palomad',
+        //         'develop/palomad/palomad-mac',
+        //         'develop/palomad/using-palomad',
+        //         'develop/palomad/subcommands',
+        //       ]
+        //     },
+        //     {
+        //       title: 'Javascript SDK',
+        //       collapsable: true,
+        //       path: '/guide/develop/paloma-js/getting-started',
+        //       children: [
+        //         ['develop/paloma-js/getting-started', 'Getting Started'],
+        //         ['develop/paloma-js/wallets', 'Wallet'],
+        //         ['develop/paloma-js/transactions', 'Transactions'],
+        //         ['develop/paloma-js/smart-contracts', 'Smart Contracts'],
+        //         ['develop/paloma-js/keys', 'Keys'],
+        //         'develop/paloma-js/fees',
+        //         ['develop/paloma-js/common-examples', 'Common Examples'],
+        //         'develop/paloma-js/add-modules',
+        //       ]
+        //     },
+        //     {
+        //       title: 'Paloma Core',
+        //       collapsable: true,
+        //       path: '/guide/develop/module-specifications/specifications',
+        //       children: [
+        //         ['develop/module-specifications/specifications', 'Specifications'],
+        //         'develop/module-specifications/spec-auth',
+        //         'develop/module-specifications/spec-authz',
+        //         'develop/module-specifications/spec-bank',
+        //         'develop/module-specifications/spec-capability',
+        //         'develop/module-specifications/spec-crisis',
+        //         'develop/module-specifications/spec-distribution',
+        //         'develop/module-specifications/spec-evidence',
+        //         'develop/module-specifications/spec-feegrant',
+        //         'develop/module-specifications/spec-governance',
+        //         'develop/module-specifications/spec-mint',
+        //         'develop/module-specifications/spec-params',
+        //         'develop/module-specifications/spec-slashing',
+        //         'develop/module-specifications/spec-staking',
+        //         'develop/module-specifications/spec-upgrade',
+        //         'develop/module-specifications/spec-wasm',
+        //       ]
+        //     },
+        //     ]
+        // },
         {
           title: 'Tools and Integrations',
           collapsable: true,
@@ -247,22 +307,30 @@ if(!ignore) {
                 'maintain/validator/faq',
               ]
             },
-            {
-              title: 'Govern the network',
-              collapsable: true,
-              path: '/guide/maintain/governance/governance',
-              children: [
-                'maintain/governance/proposals',
-              ]
-            },
-            {
-              title: 'Become a relay pigeon',
-              collapsable: true,
-              path: '/guide/maintain/relayer/pigeon',
-              children: [
-                'maintain/relayer/pigeon',
-              ]
-            },
+            ['maintain/validator/validate-paloma', 'Get started as validator'],
+            ['maintain/validator/set-up-validator', 'Set up as validator'],
+            ['maintain/validator/court-delegations', 'Court delegations'],
+            ['maintain/validator/implement-security', 'Implement security'],
+            ['maintain/validator/troubleshoot-validator-problems', 'Troubleshoot validator problems'],
+            ['maintain/validator/faq', 'FAQ as validator'],
+            // {
+            //   title: 'Govern the network',
+            //   collapsable: true,
+            //   path: '/guide/maintain/governance/governance',
+            //   children: [
+            //     'maintain/governance/proposals',
+            //   ]
+            // },
+            // {
+            //   title: 'Become a relay pigeon',
+            //   collapsable: true,
+            //   path: '/guide/maintain/relayer/pigeon',
+            //   children: [
+            //     'maintain/relayer/pigeon',
+            //   ]
+            // },
+            ['maintain/governance/governance', 'Govern the network'],
+            ['maintain/relayer/pigeon', 'Become a relay pigeon']
           ]
         },
       ],
