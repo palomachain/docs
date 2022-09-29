@@ -84,6 +84,31 @@ header.navbar .links {
   }
 }
 
+@media (max-width: 500px) {
+    header.navbar {
+        padding-left: 2rem;
+        background-color: white;
+        border:none;
+    }
+    header .sidebar-button {
+        margin-right: 0;
+        left: 85%;
+        right: 1rem;
+        top: 2.5rem;
+    }    
+    .navbar .links .search-box {
+        display: none;    
+    }
+}
+
+@media (max-width: 959px) {
+    .theme-container.sidebar-open .sidebar {
+        width: 100%;
+        top: 7.6rem;
+        background: $mobileMenu;
+    }
+}
+
 .links .search-box input {
     border: 1px solid #2C2C2C;
     box-shadow: 0px 4px 4px #DCC3D3;
@@ -168,12 +193,13 @@ section .sidebar-heading {
 
 .sidebar-group.is-sub-group.depth-1 > ul.sidebar-group-items.active {
     padding-left: 16px;
+    // border-left: 0.1rem solid #ff62c4;
     margin-left: 4px; 
 }
 
 .sidebar-group.is-sub-group.depth-2 > ul.sidebar-group-items {
     padding-left: 20px;
-    // margin-left: 34px; 
+    margin-left: -10px; 
 }
 
 .sidebar-group.depth-2 > a.sidebar-heading {
@@ -185,8 +211,8 @@ section .sidebar-heading {
 }
 
 .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link.active {
-    // border-left: 0.1rem solid #ff62c4;
-    padding-left: 0px;
+    border-left: 0.1rem solid #ff62c4;
+    padding-left: 20px;
     margin-left: 0px;
 }
 
@@ -223,7 +249,7 @@ section.sidebar-group .depth-2 a.sidebar-heading {
 }
 
 section.sidebar-group .depth-2 a.sidebar-heading.active {
-    // border-left: 0.1rem solid #ff62c4;
+    border-left: 0.1rem solid #ff62c4;
     padding-left: 21px;
 }
 
@@ -247,15 +273,29 @@ p.description {
 }
 
 .main-menu {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8rem;
 }
 
-.social-menu {
-    display: flex;
-    margin-bottom: 8rem;
+.main-menu>* {
+    flex: 0 0 100%;
 }
+
+.social-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.social-menu>* {
+    flex: 0 0 33.33333%;
+}
+
+// .social-menu {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill,minmax(150px, 33%));
+// }
 
 .etc-menu {
     display: block;
@@ -285,6 +325,21 @@ p.description {
     .social-menu_container {
         display: flex;
         flex-direction: row;
+    }
+    .social-menu>* {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1#main-title {
+        display: none;
+    }
+    .main-menu {
+        width: 100%;
+    }
+    .main-menu>* {
+        flex: 0 0 100%;
     }
 }
 
