@@ -67,7 +67,35 @@ if(!ignore) {
   mixpanel.init('eaae482845dadd88e1ce07b9fa03dd6b'); 
   mixpanel.track('DOCUMENT_VISIT');
 }
-      `],
+    `],
+    [
+      "script",
+      {},
+      `window.onload = function() {
+        const sidebarMenus = document.querySelectorAll('.sidebar-group.is-sub-group > .sidebar-heading')
+        console.log("This is the sidebarMenus", sidebarMenus);
+        for (var i = 0, len = sidebarMenus.length; i < len; i++) {
+          // sidebarMenus[i].onclick = function(){
+          //   sidebarMenus[i].remove
+          // };
+          sidebarMenus[i].classList.remove("clickable")
+          sidebarMenus[i].classList.add("sidebar-heading-normal")
+          sidebarMenus.addEventListener("click", function() {
+            sidebarMenus[i].classList.remove("clickable")
+            sidebarMenus[i].classList.add("sidebar-heading-normal")
+        });
+        }
+        // if (location.hash) {
+        //   const element = document.getElementById(location.hash.slice(1))
+
+        //   if (element) {
+        //     element.scrollIntoView()
+        //   }
+        // }
+        // sidebarOnclickListener(function() {
+        // })
+      }`,
+    ],
   ],
 
   /**
@@ -134,9 +162,9 @@ if(!ignore) {
               children: [
                 {
                  title: 'CosmWasm Contracts',
-                 collapsable: false,
+                 collapsable: true,
+                 path: '/guide/develop/smart-contracts/contracts',
                  children: [
-                   ['develop/smart-contracts/contracts', 'CosmWasm'],
                    'develop/smart-contracts/interact-with-smart-contract',
                   ]
                 },
