@@ -72,28 +72,38 @@ if(!ignore) {
       "script",
       {},
       `window.onload = function() {
-        const sidebarMenus = document.querySelectorAll('.sidebar-group.is-sub-group > .sidebar-heading')
-        console.log("This is the sidebarMenus", sidebarMenus);
-        for (var i = 0, len = sidebarMenus.length; i < len; i++) {
-          // sidebarMenus[i].onclick = function(){
-          //   sidebarMenus[i].remove
-          // };
-          sidebarMenus[i].classList.remove("clickable")
-          sidebarMenus[i].classList.add("sidebar-heading-normal")
-          sidebarMenus.addEventListener("click", function() {
+          const sidebarMenus = document.querySelectorAll('.sidebar-group.is-sub-group > .sidebar-heading')
+          console.log("This is the sidebarMenus", sidebarMenus);
+          for (var i = 0, len = sidebarMenus.length; i < len; i++) {
             sidebarMenus[i].classList.remove("clickable")
             sidebarMenus[i].classList.add("sidebar-heading-normal")
-        });
+            sidebarMenus.addEventListener("click", function() {
+              sidebarMenus[i].classList.remove("clickable")
+              sidebarMenus[i].classList.add("sidebar-heading-normal")
+          });
         }
-        // if (location.hash) {
-        //   const element = document.getElementById(location.hash.slice(1))
+        const header = document.querySelector('header.navbar');
+        const mobileButton = document.querySelector('.sidebar-button');
+        let isClicked = false;
 
-        //   if (element) {
-        //     element.scrollIntoView()
-        //   }
-        // }
-        // sidebarOnclickListener(function() {
-        // })
+        console.log("header here", header)
+        console.log("mobile button here", mobileButton)
+
+        function setBackgroundTo() {
+          header.style.backgroundColor = '#f2d4e7 !important';
+        }
+
+        mobileButton.addEventListener("click", function onClick(event) {
+          if(!isClicked) {
+            header.style.backgroundColor = '#f2d4e7';
+            console.log("header props", header.style.backgroundColor)
+            isClicked = true
+          } else {
+            header.style.backgroundColor = 'white';
+            console.log("header props", header.style.backgroundColor)
+            isClicked = false
+          }
+        });
       }`,
     ],
   ],
@@ -161,7 +171,7 @@ if(!ignore) {
             path: '/guide/develop/smart-contracts/contracts',
               children: [
                 {
-                 title: 'CosmWasm Contracts',
+                 title: 'CosmWasm contracts',
                  collapsable: true,
                  path: '/guide/develop/smart-contracts/contracts',
                  children: [
