@@ -8,7 +8,7 @@ You can mint an Egg NFT on Ethereum from Paloma by running the bash scripts. Fol
 
 
 ## Prerequisites
-This requires that you have a access to a node on which you can run `palomad`. Follow the setup guide [here](./palomad/install-palomad.md).
+This requires that you have a access to a node on which you can run `palomad`. Follow the setup guide [here](../palomad/install-palomad.md).
 All scripts below, must be run on the machine that is running your Paloma node.
 
 
@@ -144,9 +144,9 @@ Last, but not least, it's time to mint the egg by executing the `PickWinner` sma
 create a JSON variable with the payload from above and export the variable
 ```sh
 export JSON=$(cat <<EOT 
-{
-  "pick_winner": {"payload": "<YOUR BASE64 VALUE>"  }
-}
+ {
+   "pick_winner": {"payload": "<YOUR BASE64 VALUE>" }
+ }
 EOT
 )
 ```

@@ -160,7 +160,6 @@ if(!ignore) {
                 'develop/palomad/palomad',
                 'develop/palomad/commands',
                 'develop/palomad/install-palomad',
-                'develop/palomad/palomad-mac',
                 'develop/palomad/using-palomad',
                 'develop/palomad/subcommands',
               ]

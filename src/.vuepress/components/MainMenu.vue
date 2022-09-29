@@ -3,7 +3,7 @@
     <div class="main-menu">
       <div class="main-menu_container">
         <div @mouseover="showHovered_quickStart = true" @mouseleave="showHovered_quickStart = false" class="menu-items">
-          <a href="/guide/introduction.html">
+          <a href="/guide/develop/quick-start/quick-start.html">
             <img v-show="!showHovered_quickStart" src="/assets/quick_start.svg" alt="Quick Start">
             <img v-show="showHovered_quickStart" src="/assets/quick_start_hovered.svg" alt="Quick Start">
           </a>
