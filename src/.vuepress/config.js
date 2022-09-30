@@ -86,13 +86,6 @@ if(!ignore) {
         const mobileButton = document.querySelector('.sidebar-button');
         let isClicked = false;
 
-        console.log("header here", header)
-        console.log("mobile button here", mobileButton)
-
-        function setBackgroundTo() {
-          header.style.backgroundColor = '#f2d4e7 !important';
-        }
-
         mobileButton.addEventListener("click", function onClick(event) {
           if(!isClicked) {
             header.style.backgroundColor = '#f2d4e7';
