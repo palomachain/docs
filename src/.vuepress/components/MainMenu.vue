@@ -27,7 +27,7 @@
       </div>
       <div class="main-menu_container">
         <div @mouseover="showHovered_pigeonRelayer = true" @mouseleave="showHovered_pigeonRelayer = false" class="menu-items">
-          <a href="/guide/maintain/relayer/pigeon.html" class="href">
+          <a href="/guide/maintain/node/install-pigeon.html" class="href">
             <img v-show="!showHovered_pigeonRelayer" src="/assets/pigeon_relayer.svg" alt="Pigeon relayer">
             <img v-show="showHovered_pigeonRelayer" src="/assets/pigeon_relayer_hovered.svg" alt="Pigeon relayer">
           </a>

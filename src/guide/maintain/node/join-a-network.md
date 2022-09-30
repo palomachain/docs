@@ -1,63 +1,8 @@
 # Join a network
 
-It is **highly recommended that you set up a local private network 
-before joining a public network**. This will help get familiar with 
-the setup process, and provide an environment for testing. The following 
-sections outline this process. If you want to join a public network without 
-setting up a private network, you can skip to 
-[join a public network ](#join-a-public-network).
+## Testnet
 
-## Set up a local private network
-
-Validators can set up a private Paloma network to become familiar with 
-running a full Paloma node before joining a public network.
-
-### Create a single node
-
-The simplest Paloma network you can set up is a local testnet with just 
-a single node. In a single-node environment, you have one account and are 
-the only validator signing blocks for your private network.
-
-Initialize your genesis file that will bootstrap the network. Replace 
-the following variables with your own information:
-
-   ```bash
-   palomad init --chain-id=<testnet-name> <node-moniker>
-   ```
-
-Generate a Paloma account. Replace the variable with your account name:
-
-   ```bash
-   palomad keys add <account-name>
-   ```
-
-### Add your account to the genesis
-
-Run the following commands to add your account and set the initial balance:
-
-   ```bash
-   palomad add-genesis-account $(palomad keys show <account-name> -a) 100000000ugrain
-   palomad gentx <my-account> 10000000ugrain --chain-id=<testnet-name>
-   palomad collect-gentxs
-   ```
-
-### Start your private Paloma network
-
-Run the following command to start your private network:
-
-   ```bash
-   palomad start
-   ```
-
-If the private Paloma network is set up correctly, your `palomad` node will 
-be running on `tcp://localhost:26656`, listening for incoming transactions, 
-and signing blocks.
-
-## Join a public network
-
-These instructions are for setting up a brand new full node from scratch. 
-You can join a public Paloma network, such as the mainnet or testnet, by completing 
-the following steps:
+You can join a the Paloma testnet by completing the following steps:
 
 ### 1. Select a network
 
@@ -68,17 +13,11 @@ To find earlier versions, please consult the [paloma repo](https://github.com/pa
 
 :::
 
-::: warning
-
-Testnet is currently the only public network.
-
-:::
-
 Specify the network you want to join by choosing the corresponding **genesis file** and **seeds**:
 
-| Network       | Type                    | Genesis                                                                                             | Addressbook                                                                                                |
-| :------------ | :---------------------- | :-------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |                                                                                      |
-| `paloma-testnet-10`  | Testnet                 | [Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/genesis.json)                                                                                    | [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/addrbook.json)                                                                                       |
+|Network| Type|Genesis|Addressbook|
+|-------|------|------|------|
+| `paloma-testnet-10`| Testnet|[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/addrbook.json)|
 
 ### 2. Download genesis file and address book
 
@@ -88,10 +27,6 @@ start of the network to use when replaying transactions and syncing.
 **Addressbook** lists a selection of peers for your node to dial to in order 
 to discover other nodes in the network. Public address books of peers are made 
 available by the Paloma community.
-
-Choose a `testnet` or `mainnet` address type and download the appropriate
-genesis-transaction and addressbook. Links to these are posted in 
-[Select-a-network](#select-a-network) above.
 
 - For default `palomad` configurations, the `genesis` and `addressbook` files should 
   be placed under `~/.paloma/config/genesis.json` and `~/.paloma/config/addrbook.json` 
@@ -173,3 +108,51 @@ Before troubleshooting a sync, please wait an hour for the sync to start.
 :::
 
 Continue to the [Sync](sync.md) page to find out more about syncing your node.
+
+
+
+## Set up a local private network
+
+Validators can set up a private Paloma network to become familiar with 
+running a full Paloma node before joining a public network.
+
+### Create a single node
+
+The simplest Paloma network you can set up is a local testnet with just 
+a single node. In a single-node environment, you have one account and are 
+the only validator signing blocks for your private network.
+
+Initialize your genesis file that will bootstrap the network. Replace 
+the following variables with your own information:
+
+   ```bash
+   palomad init --chain-id=<testnet-name> <node-moniker>
+   ```
+
+Generate a Paloma account. Replace the variable with your account name:
+
+   ```bash
+   palomad keys add <account-name>
+   ```
+
+### Add your account to the genesis
+
+Run the following commands to add your account and set the initial balance:
+
+   ```bash
+   palomad add-genesis-account $(palomad keys show <account-name> -a) 100000000ugrain
+   palomad gentx <my-account> 10000000ugrain --chain-id=<testnet-name>
+   palomad collect-gentxs
+   ```
+
+### Start your private Paloma network
+
+Run the following command to start your private network:
+
+   ```bash
+   palomad start
+   ```
+
+If the private Paloma network is set up correctly, your `palomad` node will 
+be running on `tcp://localhost:26656`, listening for incoming transactions, 
+and signing blocks.

@@ -2,10 +2,9 @@
 
 Paloma is a decentralized public blockchain governed by community members. Governance is the democratic process that allows grain holders and validators to make changes to the Paloma protocol. 
 
-
 ### Proposals
 
-Proposals start as ideas within the community. A community member drafts and submits a proposal alongside an initial deposit.
+Proposals start as ideas within the community. A community member drafts and submits a proposal alongside an initial deposit. See details on the process [here](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64)
 
 The most common proposal types include:
 

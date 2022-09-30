@@ -1,4 +1,4 @@
-# Message with Pigeon
+# Set up the Pigeon Relayer
 
 Pigeon is a Golang cross-chain message relayer system for Paloma 
 validators to deliver messages to any blockchain. Pigeon is actively 
@@ -6,9 +6,7 @@ maintained by the Volume Finance team.
 
 ::: warning Validators must run Pigeon
 
-Validators who do not set up Pigeon and keep their Pigeon alive are 
-jailed. This ensures that all validators maintain the core functionality 
-of cross-chain messaging.
+`palomad` requires pigeon to be running. If you're a validator with stake you additionally need to keep the minimum amount of the native token of each supported target chain to avoid getting jailed. This ensures that all validators maintain the core functionality of cross-chain messaging.
 
 :::
 
@@ -24,7 +22,7 @@ balance will be jailed. However, Pigeons are reimbursed for their gas expenses.
 Start by installing the binary on your validator environment:
 
 ```bash
-wget -O - https://github.com/palomachain/pigeon/releases/download/v0.3.2/pigeon_0.3.2_Linux_x86_64v3.tar.gz | \
+wget -O - https://github.com/palomachain/pigeon/releases/latest/download/pigeon_Linux_x86_64.tar.gz | \
 tar -C /usr/local/bin -xvzf - pigeon
 chmod +x /usr/local/bin/pigeon
 mkdir ~/.pigeon
@@ -34,14 +32,24 @@ mkdir ~/.pigeon
 
 Next, set up your EVM keys:
 
+**Ethereum  mainnet**
 ```bash
 pigeon evm keys generate-new ~/.pigeon/keys/evm/eth-main
+```
+**Binance Smart Chain  mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/bnb-main
 ```
 
 Or, you may import existing EVM private keys:
 
+**Ethereum  mainnet**
 ```bash
 pigeon evm keys import ~/.pigeon/keys/evm/eth-main
+```
+**Binance Smart Chain  mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/bnb-main
 ```
 
 Ensure that your keys are stored safe and securly. 
@@ -87,6 +95,13 @@ evm:
     signing-key: ${ETH_SIGNING_KEY}
     keyring-dir: ~/.pigeon/keys/evm/eth-main
     gas-adjustment: 1.5
+  eth-main:
+    chain-id: 56
+    base-rpc-url: ${BNB_RPC_URL}
+    keyring-pass-env-name: BNB_PASSWORD
+    signing-key: ${BNB_SIGNING_KEY}
+    keyring-dir: ~/.pigeon/keys/evm/bnb-main
+    gas-adjustment: 1.5    
 ```
 
 ## Start messaging
@@ -102,6 +117,9 @@ PALOMA_KEYRING_PASS=<your Paloma key password>
 ETH_RPC_URL=<Your Ethereum mainnet RPC URL>
 ETH_PASSWORD=<Your ETH Key Password>
 ETH_SIGNING_KEY=<Your ETH SIGNING KEY>
+BNB_RPC_URL=<Your Ethereum mainnet RPC URL>
+BNB_PASSWORD=<Your ETH Key Password>
+BNB_SIGNING_KEY=<Your ETH SIGNING KEY>
 VALIDATOR=<VALIDATOR NAME>
 EOT
 ```
@@ -113,7 +131,7 @@ source ~/.pigeon/env.sh
 pigeon start
 ```
 
-### Using systemd to run Pigeon
+## Register pigeon as a service
 
 You can run Pigeon as a systemd process on your node
 so that it will automatically restart on server reboots or crashes.
