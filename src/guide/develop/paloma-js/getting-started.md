@@ -16,7 +16,6 @@ This is an in-depth guide on how to use the `Paloma.js` SDK.
 ## Prerequisites
 
 - [npm and node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- Paloma Station browser extension
 
 ## 1. Set up your project
 

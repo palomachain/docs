@@ -214,25 +214,26 @@ if(!ignore) {
               ]
              },
         {
-          title: 'Maintain',
+          title: 'Operate a node',
           collapsable: true,
           children: [
-            {
-              title: 'Operate a node',
-              path: '/guide/maintain/node/requirements',
-              collapsable: true,
-              children: [
-                'maintain/node/requirements',
-                'maintain/node/system-config',
-                'maintain/node/build-paloma-core',
-                'maintain/node/set-up-production',
-                'maintain/node/join-a-network',
-                'maintain/node/sync',
-                'maintain/node/sign-with-multisig',
-                'maintain/node/troubleshoot',
-                'maintain/node/updates-and-additional',
-              ]
-            },
+            'maintain/node/requirements',
+            'maintain/node/install-pigeon',
+            'maintain/node/install-palomad',
+            'maintain/node/join-a-network',
+            'maintain/node/system-config',
+            'maintain/node/build-paloma-core',
+            'maintain/node/set-up-production',
+            'maintain/node/sync',
+            'maintain/node/sign-with-multisig',
+            'maintain/node/troubleshoot',
+            'maintain/node/updates-and-additional',
+          ]
+        },
+        {
+          title: 'Run a validator',
+          collapsable: true,
+          children: [
             {
               title: 'Become a validator',
               collapsable: true,
@@ -246,24 +247,16 @@ if(!ignore) {
                 'maintain/validator/faq',
               ]
             },
-            {
-              title: 'Govern the network',
-              collapsable: true,
-              path: '/guide/maintain/governance/governance',
-              children: [
-                'maintain/governance/proposals',
-              ]
-            },
-            {
-              title: 'Become a relay pigeon',
-              collapsable: true,
-              path: '/guide/maintain/relayer/pigeon',
-              children: [
-                'maintain/relayer/pigeon',
-              ]
-            },
-          ]
-        },
+           ],
+          },
+        {
+            title: 'Resources',
+            collapsable: true,
+            children: [
+              'resources/target-chains',
+              'resources/governance',
+                ]
+          },  
       ],
     }
   },

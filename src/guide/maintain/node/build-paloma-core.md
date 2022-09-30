@@ -21,23 +21,6 @@ recommended that you update these settings with your own information.
 
 :::
 
-### Initialize and configure moniker
-
-Initialize the node with a human-readable name:
-
-```bash
-palomad init <your_custom_moniker> # e.g. palomad init validator-joes-node
-```
-
-::: danger Moniker characters
-
-Monikers can only contain ASCII characters; using Unicode characters 
-will render your node unreachable by other peers in the network.
-
-:::
-
-You can update your node's moniker by editing the `moniker` field 
-in `~/.paloma/config/config.toml`
 
 ### Update minimum gas prices
 
@@ -46,8 +29,6 @@ in `~/.paloma/config/config.toml`
 2. Modify `minimum-gas-prices` and set the minimum price of gas a validator 
    will accept to validate a transaction and to prevent spam.
 
-- You can query API to view the current 
-  gas prices.
 
 **Example**:
 
