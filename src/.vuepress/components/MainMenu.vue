@@ -62,18 +62,42 @@
     </div>
     <div class="etc-menu">
       <div class="etc-menu_container">
-        <div class="menu-items">
-          <a href="https://volumefi.notion.site/Build-on-Paloma-Onboarding-Guide-28abc84384b54db8a5409fd67d97a457" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/devs_grant.svg" alt="Developers Grant Program">
-          </a>
-        </div>
+        <a href="https://volumefi.notion.site/Build-on-Paloma-Onboarding-Guide-28abc84384b54db8a5409fd67d97a457" target="_blank" rel="noopener noreferrer">
+          <div class="menu-items">
+            <div class="menu-container">
+              <div class="etc-left">
+                <img class="devs-grant-img" src="/assets/grants_logo.png" alt="Developers Grant Program">
+              </div>
+              <div class="etc-right">
+                <h2 class="etc-title">
+                  Developers Grant Program
+                </h2>
+                <p class="etc-description">
+                  Paloma seeks innovative projects and stellar teams to join its growing ecosystem. Whether you’re an individual looking to use one of the projects or a developer wanting to build on Paloma, now is the time to get started. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="etc-menu_container">
-        <div class="menu-items">
-          <a data-tf-popup="r0NYlO5S" data-tf-iframe-props="title=Getting Started With Paloma" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
-            <img src="/assets/collab.svg" alt="Collaborate with Paloma">
-          </a>
-        </div>
+        <a data-tf-popup="r0NYlO5S" data-tf-iframe-props="title=Getting Started With Paloma" data-tf-medium="snippet" style="font-family:Helvetica,Arial,sans-serif;display:inline-block;width:100%;white-space:nowrap;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
+          <div class="menu-items">
+            <div class="menu-container">
+              <div class="etc-left collab-img">
+                <img src="/assets/coo_logo.png" alt="Collaborate with Paloma">
+              </div>
+              <div class="etc-right">
+                <h2 class="etc-title">
+                  COOllaborate with Paloma
+                </h2>
+                <p class="etc-description">
+                  Let us know what you're interested in and let's build together.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
