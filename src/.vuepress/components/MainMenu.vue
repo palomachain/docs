@@ -3,7 +3,7 @@
     <div class="main-menu">
       <div class="main-menu_container">
         <div @mouseover="showHovered_quickStart = true" @mouseleave="showHovered_quickStart = false" class="menu-items">
-          <a href="/guide/introduction.html">
+          <a href="/guide/develop/quick-start/quick-start.html">
             <img v-show="!showHovered_quickStart" src="/assets/quick_start.svg" alt="Quick Start">
             <img v-show="showHovered_quickStart" src="/assets/quick_start_hovered.svg" alt="Quick Start">
           </a>
@@ -27,7 +27,7 @@
       </div>
       <div class="main-menu_container">
         <div @mouseover="showHovered_pigeonRelayer = true" @mouseleave="showHovered_pigeonRelayer = false" class="menu-items">
-          <a href="/guide/maintain/relayer/pigeon.html" class="href">
+          <a href="/guide/maintain/node/install-pigeon.html" class="href">
             <img v-show="!showHovered_pigeonRelayer" src="/assets/pigeon_relayer.svg" alt="Pigeon relayer">
             <img v-show="showHovered_pigeonRelayer" src="/assets/pigeon_relayer_hovered.svg" alt="Pigeon relayer">
           </a>

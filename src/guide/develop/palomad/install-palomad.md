@@ -6,19 +6,29 @@ This guide is for developers who want to install `palomad` and interact with Pal
 
 ### Prerequisites
 
+- Linux OS
 - [Golang v1.18 linux/amd64](https://golang.org/doc/install)
 - Ensure your `GOPATH` and `GOBIN` environment variables are set up correctly.
 - Linux users: install [build-essential](http://linux-command.org/en/build-essential.html).
 
-::: danger palomad for Mac
+<!---::: danger palomad for Mac
 
 If you are using a Mac, follow the [`palomad` Mac installation guide](./palomad-mac.md).
 
-:::
+::: --->
 
 ## From binary
 
-The easiest way to install `palomad` and Paloma is by downloading a pre-built binary for your operating system. You can find the latest binaries on the [releases](https://github.com/palomachain/paloma/releases/latest) page. If you have a Mac, follow the [Mac installation instructions](./palomad-mac.md).
+The easiest way to install `palomad` and Paloma is by downloading a pre-built binary for your operating system. You can find the latest binaries on the [releases](https://github.com/palomachain/paloma/releases/latest) page. 
+
+
+```sh
+wget -O - https://github.com/palomachain/paloma/releases/latest/download/paloma_Linux_x86_64.tar.gz  | \
+  sudo tar -C /usr/local/bin -xvzf - palomad
+sudo chmod +x /usr/local/bin/palomad
+# Required until we figure out cgo
+sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/internal/api/libwasmvm.x86_64.so
+```
 
 ## From source
 

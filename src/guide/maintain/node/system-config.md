@@ -1,75 +1,4 @@
-# System configuration
-
-::: danger Recommended operating systems
-
-This guide has been tested against Linux distributions only. 
-To ensure a successful production environment setup, consider 
-using a Linux system.
-
-:::
-
-Running a full Paloma node is a resource-intensive process that 
-requires a persistent server. If you want to use Paloma without 
-downloading the entire blockchain, use the Paloma Station.
-
-## Hardware requirements
-
-These are the the minimum requirements for running a full Paloma node:
-
-- Four or more CPU cores
-- At least 32 GB of memory
-- At least 300 mbps of network bandwidth
-- At least 2 TB NVME SSD
-
-::: danger Storage requirements
-
-As the network grows, the minimum storage requirements will also grow. 
-It is recommended that you use more than the minimum storage requirements 
-to run a robust full node.
-
-:::
-
-## Prerequisites
-
-- [Golang v1.18+ linux/amd64](https://go.dev/dl/)
-
-  ::: details Installing Go for MacOS & Linux
-
-  Go releases can be found here: [ https://go.dev/dl/ ](https://go.dev/dl/)
-
-  In your browser, you can right-click the correct release (V1.18) and `Copy link`.
-
-  ```bash
-  # 1. Download the archive
-
-  wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
-
-  # Optional: remove previous /go files:
-
-  sudo rm -rf /usr/local/go
-
-  # 2. Unpack:
-
-  sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
-
-  # 3. Add the path to the go-binary to your system path:
-  # (for this to persist, add this line to your ~/.profile or ~/.bashrc or  ~/.zshrc)
-
-  export PATH=$PATH:/usr/local/go/bin
-
-  # 4. Verify your installation:
-
-  go version
-
-  # go version go1.18.2 linux/amd64
-
-  ```
-
-  :::
-
-- Linux users: `sudo apt-get install -y build-essential`
-
-## Commonly used ports
+# Commonly used ports
 
 `palomad` uses the following TCP ports. Toggle their settings to fit your environment.
 
@@ -97,7 +26,7 @@ Additional ports:
   querying and sending transactions, it must be open for serving queries from 
   `palomad`.
 
-::: danger
+::: danger Important 
 
 Do not open port `26657` to the public unless you plan to run a public node.
 
