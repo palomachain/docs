@@ -173,6 +173,14 @@ aside.sidebar {
     padding-right: 18px;
 }
 
+aside.sidebar > .sidebar-links {
+    padding: 1.8rem 0;    
+}
+
+aside.sidebar > .sidebar-links > li:not(:first-child) {
+    margin-top: 1.48rem;    
+}
+
 section .sidebar-heading {
     padding: 0;
     margin-left: -18px;
@@ -212,6 +220,21 @@ a span.arrow.right {
     margin-left: 4px;
 }
 
+section.depth-0 ul.sidebar-links {
+    margin-top: 5px;
+    margin-left: -10px;
+}
+
+section.depth-0 ul li a.sidebar-link {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+section.depth-0 ul li a.sidebar-link.active {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
 .sidebar-group li.sidebar-sub-header a.sidebar-link {
     padding-left: 50px;
 }
@@ -222,15 +245,13 @@ a span.arrow.right {
 }
 
 .sidebar-sub-headers a.sidebar-link.active {
-    // border-left: #ff62c4;
     border-left: 0.1rem solid #ff62c4;
     padding-left: 50px - 0.25rem;
-    // border-left: solid;
 }
 
 .sidebar-group.is-sub-group.depth-1 > ul.sidebar-group-items {
     padding-left: 22px;
-    margin-left: 8px; 
+    margin-left: 6px; 
 }
 
 .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link {
@@ -240,7 +261,6 @@ a span.arrow.right {
 
 .sidebar-group.is-sub-group.depth-1 > ul.sidebar-group-items.active {
     padding-left: 18px;
-    // border-left: 0.1rem solid #ff62c4;
     margin-left: 8px; 
 }
 
@@ -258,14 +278,14 @@ a span.arrow.right {
 }
 
 .sidebar-group.is-sub-group > .sidebar-group-items > li > a.sidebar-link {
-    padding-left: 37px;
-    margin-left: -20px;  
+    padding-left: 18px;
+    margin-left: -16px;  
 }
 
 .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link.active {
     border-left: 0.1rem solid #ff62c4;
-    padding-left: 35px;
-    margin-left: -20px;
+    padding-left: 16px;
+    margin-left: -16px;
 }
 
 .sidebar .sidebar-sub-headers {
@@ -275,13 +295,13 @@ a span.arrow.right {
 
 section.sidebar-group.depth-0 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link {
     padding-left: 30px;
-    margin-left: 10px;
+    margin-left: 14px;
     font-size: 12px;
 }
 
 section.sidebar-group.depth-0 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link.active {
     padding-left: 28px;
-    margin-left: 10px;
+    margin-left: 14px;
 }
 
 section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .sidebar-links li section.sidebar-group.depth-2 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link {
@@ -301,11 +321,11 @@ section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .s
 }
 
 section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .sidebar-links li ul.sidebar-sub-headers li a {
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .sidebar-links li ul.sidebar-sub-headers li a.active {
-    padding-left: 48px;
+    padding-left: 28px;
 }
 
 section.sidebar-group .depth-0 > ul li a.sidebar-link.active {
