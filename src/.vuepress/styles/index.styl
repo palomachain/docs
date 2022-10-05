@@ -63,11 +63,11 @@ header.navbar .links {
         transition: all 0.2s ease;
     }
     .page {
-        padding-left: 20rem;    
+        padding-left: 21rem;    
     }
 
     .sidebar {
-        width: 20rem;    
+        width: 21rem;    
     }
 
 }
@@ -225,14 +225,27 @@ section.depth-0 ul.sidebar-links {
     margin-left: -10px;
 }
 
-section.depth-0 ul li a.sidebar-link {
+section.depth-0 ul.sidebar-group-items li a.sidebar-link {
     padding-right: 0px;
-    padding-left: 5px;
+    padding-left: 0px;
+    margin-left: -4px;
 }
 
-section.depth-0 ul li a.sidebar-link.active {
+section.depth-0 ul.sidebar-group-items li a.sidebar-link.active {
     padding-right: 0px;
-    padding-left: 5px;
+    padding-left: 4px;
+    margin-left: -4px;
+}
+
+
+.depth-0 > ul.sidebar-group-items li a.sidebar-link:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background: url(/assets/egg.png);
+    background-size: 10px 12px;
+    margin-right: 0.625rem;
 }
 
 .sidebar-group li.sidebar-sub-header a.sidebar-link {
@@ -250,8 +263,8 @@ section.depth-0 ul li a.sidebar-link.active {
 }
 
 .sidebar-group.is-sub-group.depth-1 > ul.sidebar-group-items {
-    padding-left: 22px;
-    margin-left: 6px; 
+    padding-left: 17px;
+    margin-left: 4px; 
 }
 
 .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link {
@@ -278,13 +291,23 @@ section.depth-0 ul li a.sidebar-link.active {
 }
 
 .sidebar-group.is-sub-group > .sidebar-group-items > li > a.sidebar-link {
-    padding-left: 18px;
+    padding-left: 23px;
     margin-left: -16px;  
 }
 
-.sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link.active {
+.sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link:before {
+    // content: "";
+    display: none !important;
+    width: 10px;
+    height: 12px;
+    background: url(/assets/egg.png);
+    background-size: 10px 12px;
+    margin-right: 0.625rem;
+}
+
+.sidebar-group.is-sub-group > .sidebar-group-items > li > a.sidebar-link.active {
     border-left: 0.1rem solid #ff62c4;
-    padding-left: 16px;
+    padding-left: 21px;
     margin-left: -16px;
 }
 
@@ -294,14 +317,24 @@ section.depth-0 ul li a.sidebar-link.active {
 }
 
 section.sidebar-group.depth-0 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link {
-    padding-left: 30px;
-    margin-left: 14px;
+    padding-left: 35px;
+    margin-left: 8px;
     font-size: 12px;
 }
 
+section.sidebar-group.depth-0 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link:before {
+    // content: "";
+    display: none !important;
+    width: 10px;
+    height: 12px;
+    background: url(/assets/egg.png);
+    background-size: 10px 12px;
+    margin-right: 0.625rem;
+}
+
 section.sidebar-group.depth-0 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link.active {
-    padding-left: 28px;
-    margin-left: 14px;
+    padding-left: 33px;
+    margin-left: 9px;
 }
 
 section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .sidebar-links li section.sidebar-group.depth-2 .sidebar-links li ul.sidebar-sub-headers .sidebar-sub-header a.sidebar-link {
@@ -322,10 +355,12 @@ section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .s
 
 section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .sidebar-links li ul.sidebar-sub-headers li a {
     padding-left: 30px;
+    margin-left: 14px;
 }
 
 section.sidebar-group.depth-0 .sidebar-links li section.sidebar-group.depth-1 .sidebar-links li ul.sidebar-sub-headers li a.active {
     padding-left: 28px;
+    margin-left: 14px;
 }
 
 section.sidebar-group .depth-0 > ul li a.sidebar-link.active {
@@ -335,12 +370,24 @@ section.sidebar-group .depth-0 > ul li a.sidebar-link.active {
 
 section.sidebar-group .depth-1 a.sidebar-heading {
     font-size:1rem;
-    padding-left: 24px;
+    padding-left: 0px;
+    margin-left: -4px;
 }
 
 section.sidebar-group .depth-1 a.sidebar-heading.active {
     border-left: none;
-    padding-left: 28px;
+    padding-left: 4px;
+    margin-left: -4px;
+}
+
+section.sidebar-group .depth-1 a.sidebar-heading:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background: url(/assets/egg.png);
+    background-size: 10px 12px;
+    margin-right: 0.625rem;
 }
 
 section.sidebar-group .depth-2 a.sidebar-heading {
