@@ -164,7 +164,7 @@ if(!ignore) {
               path: '/guide/develop/smart-contracts/hello-world-solidity',
               children: [
                 ['develop/smart-contracts/hello-world-solidity', 'Solidity'],
-                ['develop/smart-contracts/hello-world-vyper', 'Solidity'],
+                ['develop/smart-contracts/hello-world-vyper', 'Vyper'],
               ]
             },
             'develop/smart-contracts/open-source',
