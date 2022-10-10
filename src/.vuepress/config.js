@@ -67,7 +67,28 @@ if(!ignore) {
   mixpanel.init('eaae482845dadd88e1ce07b9fa03dd6b'); 
   mixpanel.track('DOCUMENT_VISIT');
 }
-      `],
+    `],
+    [
+      "script",
+      {},
+      `
+        const header = document.querySelector('header.navbar');
+        const mobileButton = document.querySelector('.sidebar-button');
+        let isClicked = false;
+
+        mobileButton.addEventListener("click", function onClick(event) {
+          if(!isClicked) {
+            header.style.backgroundColor = '#f2d4e7';
+            console.log("header props", header.style.backgroundColor)
+            isClicked = true
+          } else {
+            header.style.backgroundColor = 'white';
+            console.log("header props", header.style.backgroundColor)
+            isClicked = false
+          }
+        });
+      `,
+    ],
   ],
 
   /**
@@ -128,30 +149,25 @@ if(!ignore) {
           collapsable: true,
           children: [
             {
-            title: 'Writing Smart Contracts',
+            title: 'Writing CosmWasm contracts',
             collapsable: true,
-            path: '/guide/develop/smart-contracts/contracts',
+            path: '/guide/develop/smart-contracts/contracts'
+            },
+            {
+              title: 'Interact with contracts',
+              collapsable: true,
+              path: '/guide/develop/smart-contracts/interact-with-smart-contract',
+            },
+            {
+              title: 'Writing EVM contracts',
+              collapsable: true,
+              path: '/guide/develop/smart-contracts/hello-world-solidity',
               children: [
-                {
-                 title: 'CosmWasm Contracts',
-                 collapsable: false,
-                 children: [
-                   ['develop/smart-contracts/contracts', 'CosmWasm'],
-                   'develop/smart-contracts/interact-with-smart-contract',
-                  ]
-                },
-                {
-                  title: 'EVM contracts',
-                  path: '/guide/develop/smart-contracts/hello-world-solidity',
-                  collapsable: false,
-                  children: [
-                    ['develop/smart-contracts/hello-world-solidity', 'Solidity'],
-                    ['develop/smart-contracts/hello-world-vyper', 'Vyper'],
-                  ]
-                },
-                'develop/smart-contracts/open-source',
+                ['develop/smart-contracts/hello-world-solidity', 'Solidity'],
+                ['develop/smart-contracts/hello-world-vyper', 'Vyper'],
               ]
             },
+            'develop/smart-contracts/open-source',
             {
               title: 'CLI',
               path: '/guide/develop/palomad/palomad',
