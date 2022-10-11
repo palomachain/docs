@@ -269,7 +269,7 @@ if(!ignore) {
             title: 'Resources',
             collapsable: true,
             children: [
-              'resources/target-chains',
+              'resources/networks',
               'resources/governance',
                 ]
           },  
