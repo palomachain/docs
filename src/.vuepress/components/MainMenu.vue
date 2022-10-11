@@ -61,24 +61,6 @@
       </div>
     </div>
     <div class="etc-menu">
-      <div class="etc-menu_container">
-        <a href="https://volumefi.notion.site/Build-on-Paloma-Onboarding-Guide-28abc84384b54db8a5409fd67d97a457" target="_blank" rel="noopener noreferrer">
-          <div class="menu-items">
-            <div class="menu-container">
-              <div class="etc-left">
-                <img class="devs-grant-img" src="/assets/grants_logo.png" alt="Developers Grant Program">
-              </div>
-              <div class="etc-right">
-                <h2 class="etc-title">
-                  Developers Grant Program
-                </h2>
-                <p class="etc-description">
-                  Paloma seeks innovative projects and stellar teams to join its growing ecosystem. Whether you’re an individual looking to use one of the projects or a developer wanting to build on Paloma, now is the time to get started. 
-                </p>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
       <div class="etc-menu_container">
         <a data-tf-popup="r0NYlO5S" data-tf-iframe-props="title=Getting Started With Paloma" data-tf-medium="snippet" style="font-family:Helvetica,Arial,sans-serif;display:inline-block;width:100%;white-space:nowrap;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
