@@ -2,13 +2,9 @@
 
 Use the following common examples to learn how to use Paloma.js. If this is your first time using Paloma.js, use the [Paloma.js installation guide](./getting-started.md).
 
-::: tip
-If you are new to Paloma and don't know where to start, visit the [getting started guide](../get-started.md).
-:::
-
 ## Configuring LCDClient
 
-The following code example shows how to initialize the LCDClient. The rest of the examples assume you initialized it by using this example or similar code. The LCDCClient configuration accepts a boolean `legacy` value that is false by default. When set to `true` the LCD will connect to Paloma Classic.
+The following code example shows how to initialize the LCDClient. The rest of the examples assume you initialized it by using this example or similar code. Check the [available networks](../../../resources/networks.md) to chose the right `chainID`
 
 ```ts
 import fetch from "isomorphic-fetch";
@@ -22,7 +18,7 @@ const gasPricesCoins = new Coins(gasPrices);
 
 const lcd = new LCDClient({
   URL: "http://testnet.palomaswap.com:1317",
-  chainID: "paloma-testnet-10",
+  chainID: "<paloma chain id>", 
   gasPrices: gasPricesCoins,
   gasAdjustment: "1.5",
   gas: 10000000,

@@ -60,7 +60,7 @@ Paloma’s LCD or Light Client Daemon allows users to connect to the blockchain,
    npm install --save isomorphic-fetch
    ```
 
-2. Open your `index.js` file in a code editor and input the following to initialize the LCD:
+2. Open your `index.js` file in a code editor and input the following to initialize the LCD. Check the [available networks](../../../resources/networks.md) to chose the right `chainID`:
 
    ```ts
    import fetch from "isomorphic-fetch";
@@ -72,7 +72,7 @@ Paloma’s LCD or Light Client Daemon allows users to connect to the blockchain,
    const gasPricesCoins = new Coins(gasPricesJson);
    const lcd = new LCDClient({
      URL: "http://testnet.palomaswap.com:1317",
-     chainID: "paloma-testnet-10",
+     chainID: "<paloma chain ID>",
      gasPrices: gasPricesCoins,
      gasAdjustment: "1.5", // Increase gas price slightly so transactions go through smoothly.
      gas: 10000000,

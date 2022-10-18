@@ -141,8 +141,23 @@ if(!ignore) {
           children: [
             ['develop/quick-start/quick-start', 'Send a message'],
             ['develop/quick-start/mint-egg', 'Mint an EGG'],
-            ['develop/quick-start/resources', 'Resources and tools'],
+            {
+              title: 'Javascript SDK',
+              collapsable: true,
+              path: '/guide/develop/quick-start/paloma-js/getting-started',
+              children: [
+                ['develop/quick-start/paloma-js/getting-started', 'Getting Started'],
+                ['develop/quick-start/paloma-js/wallets', 'Wallet'],
+                ['develop/quick-start/paloma-js/transactions', 'Transactions'],
+                ['develop/quick-start/paloma-js/smart-contracts', 'Smart Contracts'],
+                ['develop/quick-start/paloma-js/keys', 'Keys'],
+                'develop/quick-start/paloma-js/fees',
+                ['develop/quick-start/paloma-js/common-examples', 'Common Examples'],
+                'develop/quick-start/paloma-js/add-modules',
               ]
+              },
+            ['develop/quick-start/resources', 'Resources and tools'],              
+            ]
           },
         {
           title: 'Develop',
@@ -178,21 +193,6 @@ if(!ignore) {
                 'develop/palomad/install-palomad',
                 'develop/palomad/using-palomad',
                 'develop/palomad/subcommands',
-              ]
-            },
-            {
-              title: 'Javascript SDK',
-              collapsable: true,
-              path: '/guide/develop/paloma-js/getting-started',
-              children: [
-                ['develop/paloma-js/getting-started', 'Getting Started'],
-                ['develop/paloma-js/wallets', 'Wallet'],
-                ['develop/paloma-js/transactions', 'Transactions'],
-                ['develop/paloma-js/smart-contracts', 'Smart Contracts'],
-                ['develop/paloma-js/keys', 'Keys'],
-                'develop/paloma-js/fees',
-                ['develop/paloma-js/common-examples', 'Common Examples'],
-                'develop/paloma-js/add-modules',
               ]
             },
             {
