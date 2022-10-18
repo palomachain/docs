@@ -15,7 +15,7 @@ const mk = new MnemonicKey()
 
 // connect to a network
 const Paloma = new LCDClient({
-  URL: 'http://testnet.palomaswap.com:1317',
+  URL: 'http://testnet.palomaswap.com',
   chainID: '<paloma chain id>'
 });
 

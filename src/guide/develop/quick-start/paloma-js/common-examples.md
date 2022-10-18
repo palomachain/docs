@@ -17,7 +17,7 @@ const gasPrices = await (
 const gasPricesCoins = new Coins(gasPrices);
 
 const lcd = new LCDClient({
-  URL: "http://testnet.palomaswap.com:1317",
+  URL: "http://testnet.palomaswap.com",
   chainID: "<paloma chain id>", 
   gasPrices: gasPricesCoins,
   gasAdjustment: "1.5",
