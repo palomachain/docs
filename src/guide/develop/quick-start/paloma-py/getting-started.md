@@ -4,6 +4,7 @@ Paloma.py is a Python SDK for writing applications that interacts with the Palom
 # Get started with Paloma.py
 
 This is an in-depth guide on how to use the `Paloma.py` SDK.
+
 *NOTE: All code starting with a $ is meant to run on your terminal (a bash prompt). All code starting with a >>> is meant to run in a python interpreter, like ipython.*
 
 ## Prerequisites

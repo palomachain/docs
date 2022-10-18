@@ -27,8 +27,8 @@ A `Wallet` allows you to create and sign a transaction in a single step by autom
 Use `LCDClient.wallet()` to create a Wallet from any Key instance. The Key provided should
 correspond to the account you intend to sign the transaction with.
 
-::: Bad Key length error
-NOTE: If you are using MacOS and got an exception 'bad key length' from MnemonicKey, please check your python implementation. if python3 -c "import ssl; print(ssl.OPENSSL_VERSION)" returns LibreSSL 2.8.3, you need to reinstall python via pyenv or homebrew.
+::: details `bad Key length` error
+NOTE: If you are using MacOS and got an exception `bad key length` from MnemonicKey, please check your python implementation. if ```python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"``` returns LibreSSL 2.8.3, you need to reinstall python via pyenv or homebrew.
 :::
 
 ```py
