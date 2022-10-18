@@ -17,12 +17,12 @@ If you don't specify a fee when you create your transaction, it will automatical
 const tx = await wallet.createAndSignTx({ msgs });
 ```
 
-You can define the fee estimation parameters when you create your `LCDClient` instance. The defaults are:
+You can define the fee estimation parameters when you create your `LCDClient` instance. Check the [available networks](../../../resources/networks.md) to chose the right `chainID` The defaults are:
 
 ```ts
 const Paloma = new LCDClient({
   URL: "https://testnet.palomaswap.com:1317",
-  chainID: "paloma-testnet-10",
+  chainID: "<paloma chain id>",
   gasPrices: { ugrain: 0.015 },
   gasAdjustment: 1.4,
 });

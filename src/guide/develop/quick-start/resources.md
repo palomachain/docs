@@ -4,9 +4,9 @@ The command line interface and node daemon for interacting with the Paloma block
 
 ## SDKs
 
-paloma.js seeks to provide a compatible way to work with the Paloma blockchain within JavaScript runtimes, such as Node.js and the browser. use paloma.js to create bots, mint NFTs, and build out applications. Follow the [paloma.js tutorial](../paloma-js/getting-started.md) to get started.
+**paloma.js** provides a compatible way to work with the Paloma blockchain within JavaScript runtimes, such as Node.js and the browser. use paloma.js to create bots, mint NFTs, and build out applications. Follow the [paloma.js tutorial](./paloma-js/getting-started.md) to get started.
 
-<!--- Use paloma.py ... ---> 
+**paloma.py** allows Python developers to interact directly with the Paloma blockchain. For example Defi users can set up trading strategies or query state. Learn more [here](./paloma-py/getting-started.md).
 
 <!--- ## Testnet
 
@@ -24,7 +24,7 @@ Get some GRAINs to send or delegate on Paloma testnet here [Paloma Faucet](https
 ## Developer support
     
 Find developer support on [Discord](https://discord.gg/tNqkNHvVNc).
-Find resources and updates on the [Forum](https://forum.palomachain.com/)
+Find resources and updates on the [Forum](https://forum.palomachain.com/).
     
 <!---## Wallet Provider and Templates
 

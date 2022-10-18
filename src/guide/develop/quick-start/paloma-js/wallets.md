@@ -1,6 +1,6 @@
 # Wallets
 
-Use `LCDClient.wallet()` to create a `Wallet` from a `Key`.
+Use `LCDClient.wallet()` to create a `Wallet` from a `Key`. Check the [available networks](../../../resources/networks.md) to chose the right `chainID`.
 
 ## Create a wallet
 
@@ -8,8 +8,8 @@ Use `LCDClient.wallet()` to create a `Wallet` from a `Key`.
 import { LCDClient, MnemonicKey } from "@paloma/Paloma.js";
 
 const lcd = new LCDClient({
-  URL: "http://testnet.palomaswap.com:1317",
-  chainId: "paloma-testnet-10",
+  URL: "http://testnet.palomaswap.com",
+  chainId: "<paloma chain id>",
   classic: true,
 });
 
@@ -17,15 +17,15 @@ const new_mk = new MnemonicKey();
 const new_wallet = Paloma.wallet(new_mk);
 ```
 
-In the above example, a `MnemonicKey` was specified for the wallet, but any type of `Key` implementation can be used instead.
+In the above example, a `MnemonicKey` was specified for the wallet, but any type of `Key` implementation can be used instead. 
 
 ## Recover a wallet from a mnemonic
 ```ts
 import { LCDClient, MnemonicKey } from "@paloma/Paloma.js";
 
 const lcd = new LCDClient({
-  URL: "http://testnet.palomaswap.com:1317",
-  chainId: "paloma-testnet-10",
+  URL: "http://testnet.palomaswap.com",
+  chainId: "<paloma chain id>",
   classic: true,
 });
 

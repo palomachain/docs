@@ -1,5 +1,16 @@
 # Commonly used ports
 
+## pigeon
+
+Pigeon uses port `5757` as default port for the health check. You can set this in the `~/.pigeon/config.yaml` file. An environment variable referencing this port needs to be set for all `palomad ` commands that reference the `staking` module. 
+```sh 
+export PIGEON_HEALTHCHECK_PORT=5757
+```
+If you're running palomad as a [service](./install-palomad.md) add this variable to your system file as well.
+
+
+## palomad
+
 `palomad` uses the following TCP ports. Toggle their settings to fit your environment.
 
 Most validators will only need to open the following port:

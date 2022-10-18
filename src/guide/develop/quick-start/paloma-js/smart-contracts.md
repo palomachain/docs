@@ -4,7 +4,7 @@ This document explains how to perform work with smart contracts with Paloma.js.
 
 ## Upload contract code
 
-You will first need a compiled WASM smart contract's binary to upload.
+You will first need a compiled WASM smart contract's binary to upload. Check the [available networks](../../../resources/networks.md) to chose the right `chainID`
 
 ```ts
 import { LCDClient, MsgStoreCode, MnemonicKey, isTxError } from '@paloma/Paloma.js';
@@ -13,10 +13,10 @@ import * as fs from 'fs';
 // create a new mnemonic key
 const mk = new MnemonicKey()
 
-// connect to paloma-testnet-10
+// connect to a network
 const Paloma = new LCDClient({
-  URL: 'http://testnet.palomaswap.com:1317',
-  chainID: 'paloma-testnet-10'
+  URL: 'http://testnet.palomaswap.com',
+  chainID: '<paloma chain id>'
 });
 
 const wallet = Paloma.wallet(mk);
