@@ -1,8 +1,11 @@
 # Active Networks on Paloma
 
 ## Testnet
-Paloma Testnet 12 (Oct 7, 2022)
-`chain-id: paloma-testnet-12`
+### Paloma networks 
+
+|Chain ID| Type|Live Since | Genesis|Addressbook|
+|-------|------|------|------|------|
+| `paloma-testnet-12`| Testnet|Oct 7, 2022 |[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-12/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-12/addrbook.json)|
 
 ### Target chains 
 

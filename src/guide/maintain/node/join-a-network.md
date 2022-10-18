@@ -1,6 +1,6 @@
-# Join a network
+# Join or set up a network
 
-## Testnet
+## Join Testnet
 
 You can join a the Paloma testnet by completing the following steps:
 
@@ -17,7 +17,7 @@ Specify the network you want to join by choosing the corresponding **genesis fil
 
 |Network| Type|Genesis|Addressbook|
 |-------|------|------|------|
-| `paloma-testnet-10`| Testnet|[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/addrbook.json)|
+| `paloma-testnet-12`| Testnet|[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-12/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-12/addrbook.json)|
 
 ### 2. Download genesis file and address book
 
