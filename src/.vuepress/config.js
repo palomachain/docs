@@ -156,6 +156,17 @@ if(!ignore) {
                 'develop/quick-start/paloma-js/add-modules',
               ]
               },
+            {
+              title: 'Python SDK',
+              collapsable: true,
+              path: '/guide/develop/quick-start/paloma-py/getting-started',
+              children: [
+                ['develop/quick-start/paloma-py/getting-started', 'Getting Started'],
+                'develop/quick-start/paloma-py/async',
+                'develop/quick-start/paloma-py/transactions',
+                'develop/quick-start/paloma-py/smart-contracts',
+                ]
+             },  
             ['develop/quick-start/resources', 'Resources and tools'],              
             ]
           },
