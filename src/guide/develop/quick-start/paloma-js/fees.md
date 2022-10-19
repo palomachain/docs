@@ -21,7 +21,7 @@ You can define the fee estimation parameters when you create your `LCDClient` in
 
 ```ts
 const Paloma = new LCDClient({
-  URL: "https://testnet.palomaswap.com:1317",
+  URL: "https://lcd.testnet.palomaswap.com",
   chainID: "<paloma chain id>",
   gasPrices: { ugrain: 0.015 },
   gasAdjustment: 1.4,

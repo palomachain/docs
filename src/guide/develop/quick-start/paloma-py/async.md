@@ -12,7 +12,7 @@ import asyncio
 from paloma_sdk.client.lcd import AsyncLCDClient
 
 async def main():
-  paloma = AsyncLCDClient("http://testnet.palomaswap.com", "<paloma chain id>")
+  paloma = AsyncLCDClient("https://lcd.testnet.palomaswap.com", "<paloma chain id>")
   total_supply = await paloma.bank.total()
   print(total_supply)
   await paloma.session.close() # you must close the session
@@ -29,7 +29,7 @@ import asyncio
 from paloma_sdk.client.lcd import AsyncLCDClient
 
 async def main():
-    async with AsyncLCDClient("http://testnet.palomaswap.com", "<paloma chain id>") as paloma:
+    async with AsyncLCDClient("https://lcd.testnet.palomaswap.com", "<paloma chain id>") as paloma:
         total_supply = await paloma.bank.total()
         print(total_supply)
 
@@ -51,7 +51,7 @@ mk = MnemonicKey()
 recipient = "paloma1..."
 
 async def main():
-    async with AsyncLCDClient("http://testnet.palomaswap.com", "<paloma chain id>") as paloma:
+    async with AsyncLCDClient("https://lcd.testnet.palomaswap.com", "<paloma chain id>") as paloma:
         wallet = paloma.wallet(mk)
         account_number = await wallet.account_number()
         tx = await wallet.create_and_sign_tx(
@@ -76,7 +76,7 @@ import uvloop
 from paloma_sdk.client.lcd import AsyncLCDClient
 
 async def main():
-    async with AsyncLCDClient("http://testnet.palomaswap.com", "<paloma chain id>") as paloma:
+    async with AsyncLCDClient("https://lcd.testnet.palomaswap.com", "<paloma chain id>") as paloma:
         total_supply = await wallet.bank.total()
 
 uvloop.install() 

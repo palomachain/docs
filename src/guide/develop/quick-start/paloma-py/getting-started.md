@@ -47,6 +47,6 @@ Paloma’s LCD or Light Client Daemon allows users to connect to the blockchain,
 
 ```py
 >>> from paloma_sdk.client.lcd import LCDClient
->>> paloma = LCDClient(chain_id="<paloma chain id>", url="https://testnet.palomaswap.com")
+>>> paloma = LCDClient(chain_id="<paloma chain id>", url="https://lcd.testnet.palomaswap.com")
 >>> print(terra.tendermint.node_info())
 ```
