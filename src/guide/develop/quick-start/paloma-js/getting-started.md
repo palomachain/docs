@@ -71,7 +71,7 @@ Paloma’s LCD or Light Client Daemon allows users to connect to the blockchain,
    const gasPricesJson = await gasPrices.json();
    const gasPricesCoins = new Coins(gasPricesJson);
    const lcd = new LCDClient({
-     URL: "http://testnet.palomaswap.com",
+     URL: "https://lcd.testnet.palomaswap.com",
      chainID: "<paloma chain ID>",
      gasPrices: gasPricesCoins,
      gasAdjustment: "1.5", // Increase gas price slightly so transactions go through smoothly.

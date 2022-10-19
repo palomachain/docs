@@ -36,7 +36,7 @@ from paloma_sdk.client.lcd import LCDClient
 from paloma_sdk.key.mnemonic import MnemonicKey
 
 mk = MnemonicKey(mnemonic=MNEMONIC) 
-paloma = LCDClient("http://testnet.palomaswap.com", "<paloma chain id>")
+paloma = LCDClient("https://lcd.testnet.palomaswap.com", "<paloma chain id>")
 wallet = paloma.wallet(mk)
 ```
 Check the [available networks](../../../resources/networks.md) to chose the right `chainID`.
