@@ -294,16 +294,6 @@ if(!ignore) {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    //["@maginapp/vuepress-plugin-code-copy", {
-      ////selector: String,
-      //color: "#ffffff",
-      //backgroundColor: "#ffffff",
-      //backgroundTransition: false,
-      //successText: "Copied",
-      //duration: 350,
-      //iconVisible: true,
-      //showInMobile: false,
-      //align: { bottom: '7px', right: '12px' },
-    //}],
+    ['@dovyp/vuepress-plugin-clipboard-copy', true]
   ]
 }
