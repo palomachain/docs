@@ -294,6 +294,13 @@ if(!ignore) {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    ['@dovyp/vuepress-plugin-clipboard-copy', true]
+    ['vuepress-plugin-code-copy', {
+      color: "#f1d1e5",
+      backgroundColor: "#f778c7",
+      successText: "Copied!",
+      staticIcon: true,
+      backgroundTransition: true,
+      align: "bottom",
+    }]
   ]
 }

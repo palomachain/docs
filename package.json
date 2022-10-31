@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
+    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
 }
