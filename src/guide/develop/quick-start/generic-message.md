@@ -18,33 +18,45 @@ To create the job, you'll need to define the following parameters:
 
 Here is an example for creating a job called demo to be executed on Ethereum Mainnet for [this example contract](https://etherscan.io/address/0x51eca2efb15afacc612278c71f5edb35986f172f). In this case we want to update the storage variable to 234.
 
-**CLI command**
+#### Define the def.json
 ```sh
-palomad tx create job --job-id demo -chain-type evm --chain-ref-id eth-main --definition /tmp/def.json --payload /tmp/payload.json --payload-modifiable=true --from <your paloma address> --gas auto --fees 300ugrain --b block
-```
-
-**Definition JSON**
-```json
+cat << EOF > def.json
 {
-  "abi":"[{\"inputs\":[],\"name\":\"retrieve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"store\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
-  "address": "0x51eca2efb15afacc612278c71f5edb35986f172f"
+   "abi": "[{\"inputs\":[],\"name\":\"retrieve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"store\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+   "address": "0x51eca2efb15afacc612278c71f5edb35986f172f"
 }
+EOF
 ```
 ::: tip
 User `jq` or an [online tool](https://www.freeformatter.com/json-escape.html) to escape your contracts ABI
 :::
 
-
-**Payload JSON**
-```json
-{
+#### Define the payload.json
+```sh
+cat << EOF > payload.json
+JSON="{
   "hexPayload":"6057361d00000000000000000000000000000000000000000000000000000000000000ea"
 }
+EOF
 ```
 ::: details Retrieving the Payload
 If you're retrieving the payload manually, you can use this [online tool](https://abi.hashex.org/) to generate the hex encoding of your payload. Simply chose the function and value that you're aiming to update. 
 <img src="../../images/hex_payload.png">
 :::
+
+#### Schedule the job
+```bash
+palomad tx scheduler create-job 
+  --job-id <your job name> \
+  --chain-type evm \
+  --chain-ref-id eth-main \
+  --definition def.json \
+  --payload payload.json \
+  --payload-modifiable=true \
+  --from <your paloma address> \
+  --gas auto --fees 300ugrain -b block
+```
+
 
 ## Execute the Job
 Once you have defined your job, you can execute your job by simply referencing the job id you chose. Optionally, (if `modifiable` was set to true) you can pass in the `payload` again. If not set, it will default to the default payload.
@@ -52,6 +64,8 @@ Once you have defined your job, you can execute your job by simply referencing t
 In our example from above, this would look like this:
 
 ```sh 
-palomad tx scheduler execute-job  demo --from <your paloma address> --gas auto --fees 300ugrain --b block
+palomad tx scheduler execute-job  <your job name> \
+  --from <your paloma address> \
+  --gas auto --fees 300ugrain --b block
 ```
 
