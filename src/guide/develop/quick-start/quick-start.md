@@ -4,6 +4,7 @@ Using the CLI: Paloma testnet has two examples deployed that allow you to send a
 
 Using Javascript or Python: Paloma has Javascript and Python SDKs that allows you to interact with the Paloma blockchain directly through Javascript or Python.
 
+- [Send a generic message](generic-message.md)
 - [Mint an Egg](mint-egg.md)
 - [Javascript SDK](paloma-js/getting-started.md)
 - [Python SDK](paloma-py/getting-started.md)
