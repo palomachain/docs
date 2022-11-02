@@ -6,8 +6,7 @@ as providing the ABI and HEX of the contract you want to control.
 
 The Compass-EVM contract resembles a validator-set multisig with a few 
 tweaks. Even though it is designed to be used with a consensus process on Paloma, 
-the Compass-EVM contract itself encodes nothing about this consensus process and 
-instead focuses on two main operations:
+the Compass-EVM contract itself encodes nothing about this consensus process. Find the available contract addresses [here](../../../resources/networks.md)
 
 ## Model
 
