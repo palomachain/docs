@@ -11,7 +11,7 @@
 
 All blockchains listed below are supported by Paloma's relay pigeons and allow for remote message execution.
 
-|Target Chain|Compass Contract address|Status|
-|------------|-------------------------|-------|
-|Ethereum Mainnet| - |In proposal|
-|Binance Smartchain Mainnet| - |In proposal|
+|Target Chain|chain-ref-id|Chain Type|Compass Contract address|Status|
+|------------|------------|----------|------------------------|------|
+|Ethereum Mainnet|`eth-main`|EVM| - |In proposal|
+|Binance Smartchain Mainnet|`bnb-main`|EVM| - |In proposal|
