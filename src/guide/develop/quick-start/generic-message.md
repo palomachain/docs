@@ -19,25 +19,21 @@ To create the job, you'll need to define the following parameters:
 Here is an example for creating a job called demo to be executed on Ethereum Mainnet for [this example contract](https://etherscan.io/address/0x51eca2efb15afacc612278c71f5edb35986f172f). In this case we want to update the storage variable to 234.
 
 #### Define the def.json
-```sh
-cat << EOF > def.json
+```json
 {
    "abi": "[{\"inputs\":[],\"name\":\"retrieve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"store\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
    "address": "0x51eca2efb15afacc612278c71f5edb35986f172f"
 }
-EOF
 ```
 ::: tip
 User `jq` or an [online tool](https://www.freeformatter.com/json-escape.html) to escape your contracts ABI
 :::
 
 #### Define the payload.json
-```sh
-cat << EOF > payload.json
-JSON="{
+```json
+{
   "hexPayload":"6057361d00000000000000000000000000000000000000000000000000000000000000ea"
 }
-EOF
 ```
 ::: details Retrieving the Payload
 If you're retrieving the payload manually, you can use this [online tool](https://abi.hashex.org/) to generate the hex encoding of your payload. Simply chose the function and value that you're aiming to update. 
