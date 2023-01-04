@@ -1,8 +1,3 @@
----
-order: 4
-title: Ledger Support
----
-
 # Ledger Nano Support for Paloma
 
 Using a hardware wallet to store your keys greatly improves the security of your crypto assets. The Ledger device acts as an enclave of the seed and private keys, and the process of signing transaction takes place within it. No private information ever leaves the Ledger device. The following is a short tutorial on using the Cosmos Ledger app with the Gaia CLI or the [Keplr](https://www.keplr.app/) wallet extension.
