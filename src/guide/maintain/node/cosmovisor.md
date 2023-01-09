@@ -7,7 +7,7 @@ Comsmovisor expects certain environment variables and folder structure to be set
 1. Install Cosmovisor
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.3.0
 
-confirm the latest tag on the [Cosmos SDK github](https://github.com/cosmos/cosmos-sdk/releases)
+confirm the latest tag on the [Cosmos SDK github](https://github.com/cosmos/cosmos-sdk/releases?q=cosmovisor&expanded=true)
 
 2. Create the following required directories
 ```sh

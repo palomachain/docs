@@ -1,8 +1,8 @@
 # Ledger Nano Support for Paloma
 
-Using a hardware wallet to store your keys greatly improves the security of your crypto assets. The Ledger device acts as an enclave of the seed and private keys, and the process of signing transaction takes place within it. No private information ever leaves the Ledger device. The following is a short tutorial on using the Cosmos Ledger app with the Gaia CLI or the [Keplr](https://www.keplr.app/) wallet extension.
+Using a hardware wallet to store your keys greatly improves the security of your crypto assets. The Ledger device acts as an enclave of the seed and private keys, and the process of signing transaction takes place within it. No private information ever leaves the Ledger device. The following is a short tutorial on using the Cosmos Ledger app with the Paloma CLI.
 
-At the core of a Ledger device there is a mnemonic seed phrase that is used to generate private keys. This phrase is generated when you initialize you Ledger. The mnemonic is compatible with Cosmos and can be used to seed new accounts.
+At the core of a Ledger device there is a mnemonic seed phrase that is used to generate private keys. This phrase is generated when you initialize you Ledger. The mnemonic is compatible with Paloma and can be used to seed new accounts.
 
 ::: danger
 Do not lose or share your 24 words with anyone. To prevent theft or loss of funds, it is best to keep multiple copies of your mnemonic stored in safe, secure places. If someone is able to gain access to your mnemonic, they will fully control the accounts associated with them.
@@ -10,16 +10,15 @@ Do not lose or share your 24 words with anyone. To prevent theft or loss of fund
 
 ## Install the Cosmos Ledger application
 
-Installing the `Cosmos` application on your ledger device is required before you can use either [Keplr](#keplr-+-ledger-nano) or [`palomad`](#gaia-cli-+-ledger-nano). To do so, you need to:
+Installing the `Cosmos` application on your ledger device is required before you can use Ledger with `palomad`. To do so, you need to:
 
 1. Install [Ledger Live](https://shop.ledger.com/pages/ledger-live) on your desktop machine.
-<!-- markdown-link-check-disable -->
-2. Using Ledger Live, [update your Ledger Nano S with the latest firmware](https://support.ledger.com/hc/en-us/articles/360002731113?docs=true).
-<!-- markdown-link-check-enable -->
-3. On the Ledger Live application, navigate to the `Manager` menu .
+2. Using Ledger Live, [update your Ledger device with the latest firmware](https://support.ledger.com/hc/en-us/categories/4404376139409-Documentation-?docs=true).
+3. On the Ledger Live application, [navigate to `My Ledger` in the left panel menu](https://support.ledger.com/hc/en-us/articles/4404382258961-Install-uninstall-and-update-apps?docs=true).
     ![manager](../images/ledger-tuto-manager.png)
-4. Connect your Ledger Nano device and allow Ledger Manager from it.
-5. On the Ledger Live application, Search for `Cosmos`.
+4. Connect your Ledger device and unlock it.
+5. Press both buttons on your Ledger device to allow Ledger Live on your device.
+5. On the Ledger Live application, search for `Cosmos`.
     ![search](../images/ledger-tuto-search.png)
 6. Install the Cosmos application by clicking on `Install`.
 
@@ -29,49 +28,45 @@ To see the `Cosmos` application when you search for it, you might need to activa
 
 ![Devmode](../images/ledger-tuto-dev-mode.png)
 
-## Keplr + Ledger Nano  
-
-**Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before following this section**
-
-1. Connect your Ledger device to your computer, unlock it with the PIN and open the Cosmos app.
-2. Install the [Keplr browser extension](https://www.keplr.app/).
-3. Click on the Keplr extension icon and select `Import Ledger` and choose an account name and password.
-5. Make sure your Ledger device is unlocked and has the Cosmos app open and then follow the instructions on the Keplr pop-up.
-
-That's it! You can now use Keplr with your Ledger Nano S. You can use the [Keplr web app](https://wallet.keplr.app/#/dashboard) to get a more detailed overview of your Cosmos account.
-
-**Note: Each time you will send a transaction, you will need to confirm it on your Ledger device. Indication will be prompted from the Keplr interface**
-
-### (Optional) Confirm your address
-
-You can double check that Keplr is displaying the correct address directly on your Ledger Nano device. To do so:
-
-1. Connect your Ledger to your computer and open the Cosmos application on the device.
-2. Once the Cosmos app is open, click on the right button to access the `Show Address` option.
-3. Click on both button, then select `Account 0` and `Index 0`.
-
-You should now see the same address that is displayed on the Keplr extension.
-
-To learn more about using Keplr, we suggest you have a look at their [support documentation](https://keplr.crunch.help).
-<!-- markdown-link-check-disable -->
-You can also have a look at the [Ledger support page](https://support.ledger.com/hc/en-us/articles/4411149814417?docs=true) for more details.
-<!-- markdown-link-check-enable -->
 
 ## Paloma CLI + Ledger Nano
 
-**Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before using following this section**
+**Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before following this section**
 
-The tool used to generate addresses and transactions on the Cosmos Hub network is `palomad`. Here is how to get started. If using a CLI tool is unfamiliar to you, scroll down and follow instructions for using the Keplr wallet instead.
+The tool used to generate addresses and transactions on the Paloma network is `palomad`. Here is how to get started.
 
 ### Before you Begin
 
-- [Install Golang](https://golang.org/doc/install)
-- [Install Paloma with Ledger Support](Paloma with Ledger Install)
+1. [Install Golang](https://golang.org/doc/install)
+2. [Install Paloma with Ledger Support](#install-paloma-with-ledger-support)
 
-Verify that palomad is installed correctly with the following command
+#### Install Paloma with Ledger Support
+To install  `palomad` with Ledger support, you'll need to build the binary from source
+Clone the paloma github repository
+```
+git clone https://github.com/palomachain/paloma
+```
+Confirm the [`latest tag` for paloma](https://github.com/palomachain/paloma/releases/latest)
+
+```
+LEDGER_ENABLED=true VERSION=`latest_tag` make install
+```
+
+Verify that palomad is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on github.
 
 ```bash
 palomad version --long
+```
+The beginning of the output should look like this and allows to confirm the VERSION
+```
+name: paloma
+server_name: palomad
+version: v0.11.4
+commit: eccfb3dc37e353b2418ee574e9ef8a3271e3b677
+build_tags: netgo,ledger
+go: go version go1.19.4 darwin/amd64
+build_deps:
+...
 ```
 
 ### Add your Ledger key
@@ -91,7 +86,7 @@ palomad keys add <keyName> --ledger
 <keyName> ledger paloma1... palomapub1...
 ```
 
-Cosmos uses [HD Wallets](./hd-wallets.md). This means you can setup many accounts using the same Ledger seed. To create another account from your Ledger device, run (change the integer i to some value >= 0 to choose the account for HD derivation):
+Cosmos uses [HD Wallets](https://hub.cosmos.network/main/resources/hd-wallets.html). This means you can setup many accounts using the same Ledger seed. To create another account from your Ledger device, run (change the integer i to some value >= 0 to choose the account for HD derivation):
 
 ```bash
 palomad keys add <secondKeyName> --ledger --account <i>
@@ -99,7 +94,7 @@ palomad keys add <secondKeyName> --ledger --account <i>
 
 ### Confirm your address
 
-Run this command to display your address on the device. Use the `keyName` you gave your ledger key. The `-d` flag is supported in version `1.5.0` and higher.
+Run this command to display your address on the device. Use the `keyName` you gave your ledger key.
 
 ```bash
 palomad keys show <keyName> -d
@@ -109,11 +104,11 @@ Confirm that the address displayed on the device matches that displayed when you
 
 ### Connect to a full node
 
-Next, you need to configure palomad with the URL of a Cosmos full node and the appropriate `chain_id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-13` chain. But you can point your `palomad` to any Cosmos full node. Be sure that the `chain-id` is set to the same chain as the full node.
+Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-13` chain. But you can point your `palomad` to any Paloma full node. Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).
 
 ```bash
-palomad config node https://faucet.palomaswap.com
-palomad config chain_id paloma-testnet-13
+palomad config node http://testnet.palomaswap.com
+palomad config chain-id paloma-testnet-13
 ```
 
 Test your connection with a query such as:
@@ -123,7 +118,7 @@ palomad query staking validators
 ```
 
 ::: tip
-To run your own full node locally [read more here.](../hub-tutorials/join-mainnet.md).
+To run your own full node locally [read more here](../maintain/node/requirements).
 :::
 
 ### Sign a Ledger transaction
@@ -141,14 +136,14 @@ Be sure to unlock your device with the PIN and open the Cosmos app before trying
 Use the `keyName` you set for your Ledger key and gaia will connect with the Cosmos Ledger app to then sign your transaction.
 
 ```bash
-palomad tx bank send <keyName> <destinationAddress> <amount><denomination>
+palomad tx bank send <keyName> <destinationAddress> <amount>ugrain --gas auto --fees 300ugrain
 ```
 
 When prompted with `confirm transaction before signing`, Answer `Y`.
 
 Next you will be prompted to review and approve the transaction on your Ledger device. Be sure to inspect the transaction JSON displayed on the screen. You can scroll through each field and each message. Scroll down to read more about the data fields of a standard transaction object.
 
-Now, you are all set to start [sending transactions on the network](delegators guide to sending transactions).
+<!-- Now, you are all set to start [sending transactions on the network](delegators guide to sending transactions). -->
 
 ### Receive funds
 
@@ -163,7 +158,7 @@ palomad keys list
 
 ### Further documentation
 
-Not sure what `palomad` can do? Simply run the command without arguments to output documentation for the commands in supports.
+Not sure what `palomad` can do? Take a look at [commands documentation](../develop/palomad/commands) or simply run the command without arguments to output documentation for the commands in supports.
 
 ::: tip
 The `palomad` help commands are nested. So `$ palomad` will output docs for the top level commands (status, config, query, and tx). You can access documentation for sub commands with further help commands.
@@ -186,7 +181,7 @@ Or to print the `tx` (transaction) commands:
 
 Transactions in Cosmos embed the [Standard Transaction type](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx) from the Cosmos SDK. The Ledger device displays a serialized JSON representation of this object for you to review before signing the transaction. Here are the fields and what they mean:
 
-- `chain-id`: The chain to which you are broadcasting the tx, such as the `gaia-13003` testnet or `cosmoshub-2`: mainnet.
+- `chain-id`: The chain to which you are broadcasting the tx. Find the available chain-ids [here](./networks). 
 - `account_number`: The global id of the sending account assigned when the account receives funds for the first time.
 - `sequence`: The nonce for this account, incremented with each transaction.
 - `fee`: JSON object describing the transaction fee, its gas amount and coin denomination
@@ -195,6 +190,6 @@ Transactions in Cosmos embed the [Standard Transaction type](https://godoc.org/g
 
 ## Support
 
-For further support, start by looking over the posts in our [Paloma forum](https://https://forum.palomachain.com/)
+For further support, start by looking over the posts in our [Paloma forum](https://forum.palomachain.com/)
 
 Feel welcome to reach out in our [Discord Channel](https://discord.gg/HtUvgxvh5N) to ask for help.
