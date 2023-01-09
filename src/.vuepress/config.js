@@ -283,6 +283,7 @@ if(!ignore) {
             children: [
               'resources/networks',
               'resources/governance',
+              'resources/paloma-ledger'
                 ]
           },  
       ],

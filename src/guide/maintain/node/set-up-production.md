@@ -1,4 +1,4 @@
-# Set up a production environment
+# Tips for a production level full-node
 
 Use the following information to set up and manage your production-level 
 full Paloma node.  
