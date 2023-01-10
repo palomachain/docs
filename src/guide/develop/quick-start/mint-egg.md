@@ -54,7 +54,7 @@ EOT
 
 
 #palomad command to instantiate the contract
-exec palomad tx wasm instantiate 3 \
+exec palomad tx wasm instantiate 47 \
 "$JSON" \
 --from "$ADDRESS" \
 --fees 400ugrain \
