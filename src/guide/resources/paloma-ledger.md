@@ -28,19 +28,7 @@ To see the `Cosmos` application when you search for it, you might need to activa
 
 ![Devmode](../images/ledger-tuto-dev-mode.png)
 
-
-## Paloma CLI + Ledger Nano
-
-**Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before following this section**
-
-The tool used to generate addresses and transactions on the Paloma network is `palomad`. Here is how to get started.
-
-### Before you Begin
-
-1. [Install Golang](https://golang.org/doc/install)
-2. [Install Paloma with Ledger Support](#install-paloma-with-ledger-support)
-
-#### Install Paloma with Ledger Support
+## Install Paloma with Ledger Support
 To install  `palomad` with Ledger support, you'll need to build the binary from source
 Clone the paloma github repository
 ```
@@ -68,6 +56,19 @@ go: go version go1.19.4 darwin/amd64
 build_deps:
 ...
 ```
+
+
+## Paloma CLI + Ledger Nano
+
+**Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before following this section**
+
+The tool used to generate addresses and transactions on the Paloma network is `palomad`. Here is how to get started.
+
+### Before you Begin
+
+1. [Install Golang](https://golang.org/doc/install)
+2. [Install Paloma with Ledger Support](#install-paloma-with-ledger-support)
+
 
 ### Add your Ledger key
 
@@ -107,7 +108,7 @@ Confirm that the address displayed on the device matches that displayed when you
 Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-13` chain. But you can point your `palomad` to any Paloma full node. Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).
 
 ```bash
-palomad config node http://testnet.palomaswap.com
+palomad config node https://testnet.palomaswap.com:443
 palomad config chain-id paloma-testnet-13
 ```
 
