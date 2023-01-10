@@ -29,23 +29,27 @@ To see the `Cosmos` application when you search for it, you might need to activa
 ![Devmode](../images/ledger-tuto-dev-mode.png)
 
 ## Install Paloma with Ledger Support
-To install  `palomad` with Ledger support, you'll need to build the binary from source
-Clone the paloma github repository
+To install  `palomad` with Ledger support, you'll need to build the binary from source.
+
+1. [Install Golang.](https://golang.org/doc/install)
+2. Clone the paloma github repository.
 ```
 git clone https://github.com/palomachain/paloma
 ```
-Confirm the [`latest tag` for paloma](https://github.com/palomachain/paloma/releases/latest)
+3. Confirm the [`latest tag` for Paloma.](https://github.com/palomachain/paloma/releases/latest)
+
+4. Install `palomad`.
 
 ```
 LEDGER_ENABLED=true VERSION=`latest_tag` make install
 ```
 
-Verify that palomad is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on github.
+5. Verify that `palomad` is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on Github.
 
 ```bash
 palomad version --long
 ```
-The beginning of the output should look like this and allows to confirm the VERSION
+The beginning of the output should look like this and allows to confirm the Version.
 ```
 name: paloma
 server_name: palomad
@@ -60,24 +64,17 @@ build_deps:
 
 ## Paloma CLI + Ledger Nano
 
-**Note: You need to [install the Cosmos app](#install-the-cosmos-ledger-application) on your Ledger Nano before following this section**
-
-The tool used to generate addresses and transactions on the Paloma network is `palomad`. Here is how to get started.
-
-### Before you Begin
-
-1. [Install Golang](https://golang.org/doc/install)
-2. [Install Paloma with Ledger Support](#install-paloma-with-ledger-support)
-
+Prerequisites for this section
+1. [Install the Cosmos app.](#install-the-cosmos-ledger-application) on your Ledger Nano
+2. [Install Paloma with Ledger Support.](#install-paloma-with-ledger-support) 
 
 ### Add your Ledger key
-
 - Connect and unlock your Ledger device.
 - Open the Cosmos app on your Ledger.
-- Create an account in palomad from your ledger key.
+- Create an account in palomad from your Ledger key.
 
 ::: tip
-Be sure to change the _keyName_ parameter to be a meaningful name. The `ledger` flag tells `plaomad` to use your Ledger to seed the account.
+Be sure to change the _keyName_ parameter to be a meaningful name. The `ledger` flag tells `palomad` to use your Ledger to seed the account.
 :::
 
 ```bash
@@ -87,7 +84,7 @@ palomad keys add <keyName> --ledger
 <keyName> ledger paloma1... palomapub1...
 ```
 
-Cosmos uses [HD Wallets](https://hub.cosmos.network/main/resources/hd-wallets.html). This means you can setup many accounts using the same Ledger seed. To create another account from your Ledger device, run (change the integer i to some value >= 0 to choose the account for HD derivation):
+Cosmos uses [HD Wallets](https://hub.cosmos.network/main/resources/hd-wallets.html). This means you can setup many accounts using the same Ledger seed. To create another account from your Ledger device, run (change the integer i to some value >= 0 to choose the account for HD derivation). You'll only need to specify the account number during account creation, for other transactions the keyName is sufficient:
 
 ```bash
 palomad keys add <secondKeyName> --ledger --account <i>
@@ -180,7 +177,7 @@ Or to print the `tx` (transaction) commands:
 
 ## The Cosmos Standard Transaction
 
-Transactions in Cosmos embed the [Standard Transaction type](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx) from the Cosmos SDK. The Ledger device displays a serialized JSON representation of this object for you to review before signing the transaction. Here are the fields and what they mean:
+Paloma transactions follow the [Standard Transaction type](https://godoc.org/github.com/cosmos/cosmos-sdk/x/auth#StdTx) from the Cosmos SDK. The Ledger device displays a serialized JSON representation of this object for you to review before signing the transaction. Here are the fields and what they mean:
 
 - `chain-id`: The chain to which you are broadcasting the tx. Find the available chain-ids [here](./networks). 
 - `account_number`: The global id of the sending account assigned when the account receives funds for the first time.
