@@ -75,7 +75,7 @@ palomad tx send \
     test1 \
     paloma1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
     10000000ugrain \
-    --chain-id=paloma-testnet-10 \
+    --chain-id=<chain-id> \
     --gas=auto \
     --fees=100000ugrain \
     --broadcast-mode=block
@@ -92,7 +92,7 @@ palomad tx bank send \
     5000000ugrain \
     --gas=200000 \
     --fees=100000ugrain \
-    --chain-id=paloma-testnet-10 \
+    --chain-id=<chain-id> \
     --generate-only > unsignedTx.json
 ```
 
@@ -132,7 +132,7 @@ palomad tx sign \
     --multisig=paloma1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
     --from=test1 \
     --output-document=test1sig.json \
-    --chain-id=paloma-testnet-10
+    --chain-id=<chain-id>
 ```
 
 ```sh
@@ -141,7 +141,7 @@ palomad tx sign \
     --multisig=paloma1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
     --from=test2 \
     --output-document=test2sig.json \
-    --chain-id=paloma-testnet-10
+    --chain-id=<chain-id>
 ```
 
 ### Step 4: Create multisignature
@@ -153,7 +153,7 @@ palomad tx multisign \
     unsignedTx.json \
     multi \
     test1sig.json test2sig.json \
-    --chain-id=paloma-testnet-10 > signedTx.json
+    --chain-id=<chain-id> > signedTx.json
 ```
 
 The TX is now signed:
@@ -210,6 +210,6 @@ The TX is now signed:
 
 ```sh
 palomad tx broadcast signedTx.json \
-    --chain-id=paloma-testnet-10 \
+    --chain-id=<chain-id> \
     --broadcast-mode=block
 ```

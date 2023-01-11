@@ -4,7 +4,7 @@ Use the following information to set up and manage your production-level
 full Paloma node.  
 
 For information about running a validator node, visit the 
-[validator guide](../validator/set-up-validator).
+[validator guide](../validator/set-up-validator).  FIX LINK
 
 ## Create a dedicated user
 

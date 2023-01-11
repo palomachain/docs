@@ -76,7 +76,7 @@ In the pigeon directory, create your validator's configuration file
 loop-timeout: 5s
 
 paloma:
-  chain-id: paloma-testnet-10
+  chain-id: <chain-id>
   call-timeout: 20s
   keyring-dir: ~/.paloma
   keyring-pass-env-name: PALOMA_KEYRING_PASS
@@ -94,14 +94,14 @@ evm:
     keyring-pass-env-name: ETH_PASSWORD
     signing-key: ${ETH_SIGNING_KEY}
     keyring-dir: ~/.pigeon/keys/evm/eth-main
-    gas-adjustment: 1.5
-  eth-main:
+    gas-adjustment: 2
+  bnb-main:
     chain-id: 56
     base-rpc-url: ${BNB_RPC_URL}
     keyring-pass-env-name: BNB_PASSWORD
     signing-key: ${BNB_SIGNING_KEY}
     keyring-dir: ~/.pigeon/keys/evm/bnb-main
-    gas-adjustment: 1.5    
+    gas-adjustment: 1    
 ```
 
 ## Start messaging
@@ -138,7 +138,7 @@ so that it will automatically restart on server reboots or crashes.
 Validators are responsible for actively maintaining relayed messages
 and verifying the state of the chain.
 
-Make sure you have configured `.pigeon/env.sh` as above. Then create a systemctl configuration:
+Make sure you have configured `~/.pigeon/env.sh` as above. Then create a systemctl configuration:
 
 ```sh
 cat <<EOT >/etc/systemd/system/pigeond.service

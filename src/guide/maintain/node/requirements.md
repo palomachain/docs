@@ -1,4 +1,4 @@
-# Prerequisites
+# Requirements to run a node
 ::: danger Important 
 Paloma requires anyone wishing to run a full node to run two pieces of software. 
 - The **Paloma Core** blockchain code ([Github](https://github.com/palomachain/paloma))
@@ -29,40 +29,4 @@ to run a robust full node.
 
 ## Software requirements
 
-- [Golang v1.18+ linux/amd64](https://go.dev/dl/)
-
-  ::: details Installing Go
-
-  Go releases can be found here: [ https://go.dev/dl/ ](https://go.dev/dl/)
-
-  In your browser, you can right-click the correct release (V1.18) and `Copy link`.
-
-  ```bash
-  # 1. Download the archive
-
-  wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
-
-  # Optional: remove previous /go files:
-
-  sudo rm -rf /usr/local/go
-
-  # 2. Unpack:
-
-  sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
-
-  # 3. Add the path to the go-binary to your system path:
-  # (for this to persist, add this line to your ~/.profile or ~/.bashrc or  ~/.zshrc)
-
-  export PATH=$PATH:/usr/local/go/bin
-
-  # 4. Verify your installation:
-
-  go version
-
-  # go version go1.18.2 linux/amd64
-
-  ```
-
-  :::
-
-- Linux users: `sudo apt-get install -y build-essential`
+[Golang v1.19+ linux/amd64](https://go.dev/doc/install)

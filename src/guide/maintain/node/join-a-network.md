@@ -1,6 +1,8 @@
 # Join or set up a network
 
-## Join Testnet
+Pre-requistes for joining or starting a network is installing and configuring [Paloma](./install-palomad) as well as [Pigeon.](./install-pigeon)
+
+## Join the public testnet
 
 You can join a the Paloma testnet by completing the following steps:
 
@@ -8,7 +10,7 @@ You can join a the Paloma testnet by completing the following steps:
 
 ::: tip Selecting a network
 
-Note that the versions of the network listed above are the latest versions. 
+Note that the versions of the network listed below are the latest versions. 
 To find earlier versions, please consult the [paloma repo](https://github.com/palomachain/paloma/releases).
 
 :::
@@ -36,10 +38,10 @@ available by the Paloma community.
 
 ```bash
 # Obtain the genesis for the testnet:
-wget https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/genesis.json -I ~/.paloma/config/genesis.json
+wget -O ~/.paloma/config/genesis.json <Link to genesis file>
 
 # Obtain the addressbook for the testnet:
-wget https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-10/addrbook.json -O ~/.paloma/config/addrbook.json
+wget -O ~/.paloma/config/addrbook.json <Link to address book file>
 ```
 
 ### 3. `palomad start`
