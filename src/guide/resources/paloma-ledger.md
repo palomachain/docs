@@ -36,7 +36,11 @@ To install  `palomad` with Ledger support, you'll need to build the binary from 
 ```
 git clone https://github.com/palomachain/paloma
 ```
-3. Confirm the [`latest tag` for Paloma.](https://github.com/palomachain/paloma/releases/latest)
+3. Confirm and check out the [`latest tag` for Paloma.](https://github.com/palomachain/paloma/releases/latest) 
+
+```
+git checkout `latest tag`
+```
 
 4. Install `palomad`.
 
@@ -54,7 +58,7 @@ The beginning of the output should look like this and allows to confirm the Vers
 name: paloma
 server_name: palomad
 version: v0.11.4
-commit: eccfb3dc37e353b2418ee574e9ef8a3271e3b677
+commit: cca8efa4607c39ef8004220c325173b76532bfef
 build_tags: netgo,ledger
 go: go version go1.19.4 darwin/amd64
 build_deps:

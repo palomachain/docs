@@ -8,7 +8,7 @@ To query the state and send transactions, you must connect to a node, which is t
 
 ### Running your own full node
 
-Running your own full node is the most secure option, but it comes with relatively high resource requirements. For more information about the requirements to run your own full node and a tutorial for installing `palomad`, see [installation](../../full-node/run-a-full-Paloma-node/build-Paloma-core.md). For a tutorial that explains how to connect to an existing Paloma network, see [joining a network](../../full-node/run-a-full-Paloma-node/join-a-network.md).
+Running your own full node is the most secure option, but it comes with relatively high resource requirements. For more information about the requirements to run your own full node see the [full node guide.](../../maintain/node/requirements) For a tutorial that explains how to connect to an existing Paloma network, see the [joining a network](../../maintain/node/join-a-network) section.
 
 ### Connecting to a remote full node
 
@@ -16,11 +16,19 @@ If you don't want to run your own full node, you can connect to someone else's f
 
 To connect to the full-node, you need an address in the `https://<host>:<port>` format, for example `https://77.87.106.33:26657`. This address has to be communicated by the full-node operator you choose to trust. You will use this address in the following section.
 
-If you are not running a node yet would like to communicate through palomad, lists of public nodes can be found [here](../endpoints.md).
+Volume operates a full node on the testnet that can be accessed at https://testnet.palomaswap.com:443. 
 
 ## Configuring palomad
 
-`palomad` enables you to interact with the node that runs on the Paloma network, whether you run it yourself or not. To configure `palomad`, edit the the `config.toml` file in the `~/.paloma/config/` directory.
+```
+palomad config <key> [value] [flags]
+```
+This allows you to configure `palomad` directly. For example if you're connecting to a remote node, you'll want to set the node as well as the chain id: 
+
+```
+palomad config chain-id <chain ID>
+palomad config node <remote node address>
+```
 
 ## Querying Blockchain State
 
@@ -79,7 +87,7 @@ palomad tx bank send \
     paloma1ru2ySENDER-EXAMPLEtf9cva9kp33h0jnsm9ss \
     paloma1rRECIPIENT-EXAMPLEtf9cva9kp33h0jnsm9ss \
     1uGRAIN \
-    --chain-id=paloma-testnet-10 \
+    --chain-id=paloma-testnet-13 \
     --dry-run
 ```
 

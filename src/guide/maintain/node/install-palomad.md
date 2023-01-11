@@ -19,7 +19,7 @@ sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/internal/api/l
 
 ### 1. Get the Paloma source code
 
-Use `git` to retrieve [Paloma](https://github.com/palomachain/paloma), and check 
+Use `git` to retrieve [Paloma,](https://github.com/palomachain/paloma) and check 
 out the `main` branch, which contains the latest stable release.
 
  ```bash
@@ -87,7 +87,26 @@ You can update your node's moniker by editing the `moniker` field
 in `~/.paloma/config/config.toml`
 
 
-# Run the server as a daemon
+## Add or import your Keys
+```
+VALIDATOR=<choose a name>
+```
+
+If you want to create a new key:
+```
+palomad keys add "$VALIDATOR"
+```
+
+If you have a mnemonic already, you can recover the keys with:
+```
+palomad keys add "$VALIDATOR" --recover
+```
+
+## Join or start a network
+For more details on this step see [Join or start a network.](./join-a-network)
+
+
+## Run the server as a daemon
 
 `palomad` must be running at all times. It is recommended that you 
 register `palomad` as a `systemd` service so that it will be started 

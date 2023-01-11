@@ -15,7 +15,7 @@ The end of each module specification includes lists of various module parameters
 
 ## Module architecture
 The Paloma Core is organized into the following individual modules that implement different parts of the Paloma protocol. They are listed in the order in which they are initialized during genesis:
-
+<!-- todo: add Paloma specific modules --> 
 1. `genaccounts` - import & export genesis account
 
 2. [`distribution`](spec-distribution.md): distribute rewards between validators and delegators    
