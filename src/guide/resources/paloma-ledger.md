@@ -36,9 +36,10 @@ To install  `palomad` with Ledger support, you'll need to build the binary from 
 ```
 git clone https://github.com/palomachain/paloma
 ```
-3. Confirm and check out the [`latest tag` for Paloma.](https://github.com/palomachain/paloma/releases/latest) 
+3. Confirm and check out the [`latest tag` for Paloma](https://github.com/palomachain/paloma/releases/latest) in the cloned `paloma` directory. 
 
 ```
+cd paloma
 git checkout `latest tag`
 ```
 
