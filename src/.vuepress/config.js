@@ -271,6 +271,7 @@ if(!ignore) {
                 'maintain/validator/set-up-validator',
                 'maintain/validator/court-delegations',
                 'maintain/validator/implement-security',
+                'maintain/validator/cosmovisor',
                 'maintain/validator/troubleshoot-validator-problems',
                 'maintain/validator/faq',
               ]
