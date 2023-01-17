@@ -40,7 +40,7 @@ git clone https://github.com/palomachain/paloma
 
 ```
 cd paloma
-git checkout `latest tag`
+git checkout `latest_tag`
 ```
 
 4. Install `palomad`.
