@@ -15,3 +15,10 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 |------------|------------|----------|------------------------|------|
 |Ethereum Mainnet|`eth-main`|EVM| - |In proposal|
 |Binance Smartchain Mainnet|`bnb-main`|EVM| - |In proposal|
+
+
+### Deployed contracts 
+
+|Code ID|Description|
+|-------|-----------| 
+|49     | CW20 contract that allows [creating](../././develop/quick-start/paloma-py/cw20) new CW20 tokens|
