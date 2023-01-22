@@ -19,7 +19,7 @@ Specify the network you want to join by choosing the corresponding **genesis fil
 
 |Network| Type|Genesis|Addressbook|
 |-------|------|------|------|
-| `paloma-testnet-13`| Testnet|[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-13/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-13/addrbook.json)|
+| `paloma-testnet-15`| Testnet|[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/addrbook.json)|
 
 ### 2. Download genesis file and address book
 

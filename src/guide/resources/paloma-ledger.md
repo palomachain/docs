@@ -107,11 +107,10 @@ Confirm that the address displayed on the device matches that displayed when you
 
 ### Connect to a full node
 
-Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-13` chain. But you can point your `palomad` to any Paloma full node. Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).
+Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-15` chain. But you can point your `palomad` to any Paloma full node. Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).
 
 ```bash
 palomad config node https://testnet.palomaswap.com:443
-palomad config chain-id paloma-testnet-13
 ```
 
 Test your connection with a query such as:
