@@ -5,7 +5,7 @@
 
 |Chain ID| Type|Live Since | Genesis|Addressbook|
 |-------|------|------|------|------|
-| `paloma-testnet-15`| Testnet|Jan 19, 2023 |[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/addrbook.json)|
+| `paloma-testnet-15`| Testnet|Jan 20, 2023 |[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/addrbook.json)|
 
 ### Target chains 
 
