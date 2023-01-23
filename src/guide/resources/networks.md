@@ -5,7 +5,7 @@
 
 |Chain ID| Type|Live Since | Genesis|Addressbook|
 |-------|------|------|------|------|
-| `paloma-testnet-13`| Testnet|Oct 27, 2022 |[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-13/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-13/addrbook.json)|
+| `paloma-testnet-15`| Testnet|Jan 20, 2023 |[Genesis Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/genesis.json)| [Addressbook Link](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-15/addrbook.json)|
 
 ### Target chains 
 
@@ -21,4 +21,4 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Code ID|Description|
 |-------|-----------| 
-|49     | CW20 contract that allows [creating](../././develop/quick-start/paloma-py/cw20) new CW20 tokens|
+|    | |
