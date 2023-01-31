@@ -166,7 +166,8 @@ if(!ignore) {
                 'develop/quick-start/paloma-py/async',
                 'develop/quick-start/paloma-py/transactions',
                 'develop/quick-start/paloma-py/smart-contracts',
-                'develop/quick-start/paloma-py/cw20'
+                'develop/quick-start/paloma-py/cw20',
+                'develop/quick-start/paloma-py/cw721'
                 ]
              },  
             ['develop/quick-start/resources', 'Resources and tools'],              
