@@ -32,7 +32,8 @@ To see the `Cosmos` application when you search for it, you might need to activa
 To install  `palomad` with Ledger support, you'll need to build the binary from source.
 
 1. [Install Golang.](https://golang.org/doc/install)
-2. Clone the paloma github repository.
+2. [Install Git.](https://git-scm.com/downloads )
+3. Clone the paloma github repository.
 ```
 git clone https://github.com/palomachain/paloma
 ```
