@@ -28,7 +28,7 @@ To see the `Cosmos` application when you search for it, you might need to activa
 
 ![Devmode](../images/ledger-tuto-dev-mode.png)
 
-## Install Paloma with Ledger Support
+## Install palomad with Ledger Support
 To install  `palomad` with Ledger support, you'll need to build the binary from source.
 
 1. [Install Golang.](https://golang.org/doc/install)
@@ -76,7 +76,7 @@ build_deps:
 ```
 
 
-## Paloma CLI + Ledger Nano
+## Create a Paloma address with Ledger
 
 Prerequisites for this section
 1. [Install the Cosmos app.](#install-the-cosmos-ledger-application) on your Ledger Nano
@@ -114,12 +114,13 @@ palomad keys show <keyName> -d
 
 Confirm that the address displayed on the device matches that displayed when you added the key.
 
-### Connect to a full node
+## Connect to a full node
 
-Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-15` chain. But you can point your `palomad` to any Paloma full node. Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).
+Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-15` chain. But you can point your `palomad` to any Paloma full node. **Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).**
 
 ```bash
 palomad config node https://testnet.palomaswap.com:443
+palomad config chain-id paloma-testnet-15
 ```
 
 Test your connection with a query such as:
@@ -131,6 +132,8 @@ palomad query staking validators
 ::: tip
 To run your own full node locally [read more here](../maintain/node/requirements).
 :::
+
+## Some helpful CLI commands 
 
 ### Sign a Ledger transaction
 
@@ -166,6 +169,15 @@ palomad keys list
 ➜ NAME: TYPE: ADDRESS:     PUBKEY:
 <keyName> ledger palomad1... palomapub1...
 ```
+
+### Check your wallet balance
+
+Run this command to check your wallet balance
+
+``` bash
+palomad q bank balances <your Paloma wallet address>
+```
+
 
 ### Further documentation
 

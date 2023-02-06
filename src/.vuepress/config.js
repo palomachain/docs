@@ -140,7 +140,7 @@ if(!ignore) {
           collapsable: true,
           children: [
             ['develop/quick-start/quick-start', 'Overview'],
-            ['develop/quick-start/generic-message', 'Send a generic message'],
+            ['develop/quick-start/generic-message', 'Execute EVM smart contracts'],
             ['develop/quick-start/mint-egg', 'Mint an EGG'],
             {
               title: 'Javascript SDK',
@@ -166,7 +166,8 @@ if(!ignore) {
                 'develop/quick-start/paloma-py/async',
                 'develop/quick-start/paloma-py/transactions',
                 'develop/quick-start/paloma-py/smart-contracts',
-                'develop/quick-start/paloma-py/cw20'
+                'develop/quick-start/paloma-py/cw20',
+                'develop/quick-start/paloma-py/cw721'
                 ]
              },  
             ['develop/quick-start/resources', 'Resources and tools'],              
