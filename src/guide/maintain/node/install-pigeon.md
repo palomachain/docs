@@ -28,9 +28,9 @@ chmod +x /usr/local/bin/pigeon
 mkdir ~/.pigeon
 ```
 
-### Set your keys
+## Set up your keys
 
-Next, set up your EVM keys:
+Next, set up your EVM keys. You will need a different key for each supported [live target chain](../../resources/networks). 
 
 **Ethereum  mainnet**
 ```bash
@@ -40,6 +40,12 @@ pigeon evm keys generate-new ~/.pigeon/keys/evm/eth-main
 ```bash
 pigeon evm keys generate-new ~/.pigeon/keys/evm/bnb-main
 ```
+
+**Polygon mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/matic-main
+```
+
 
 Or, you may import existing EVM private keys:
 
@@ -51,13 +57,17 @@ pigeon evm keys import ~/.pigeon/keys/evm/eth-main
 ```bash
 pigeon evm keys import ~/.pigeon/keys/evm/bnb-main
 ```
+**Polygon mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/matic-main
+```
 
 Ensure that your keys are stored safe and securly. 
 
 ## Configuration
 
 Ensure your Paloma Cosmos-SDK keys are stored and available on 
-your environment with:
+your environment.
 
 ```bash
 palomad keys add "$VALIDATOR" --recover
@@ -95,16 +105,25 @@ evm:
     signing-key: ${ETH_SIGNING_KEY}
     keyring-dir: ~/.pigeon/keys/evm/eth-main
     gas-adjustment: 2
+    tx-type: 2
   bnb-main:
     chain-id: 56
     base-rpc-url: ${BNB_RPC_URL}
     keyring-pass-env-name: BNB_PASSWORD
     signing-key: ${BNB_SIGNING_KEY}
     keyring-dir: ~/.pigeon/keys/evm/bnb-main
-    gas-adjustment: 1    
+    gas-adjustment: 1
+    tx-type: 0
+  matic-main:
+    chain-id: 137
+    base-rpc-url: ${MATIC_RPC_URL}
+    keyring-pass-env-name: MATIC_PASSWORD
+    signing-key: ${MATIC_SIGNING_KEY}
+    keyring-dir: ~/.pigeon/keys/evm/matic-main
+    gas-adjustment: 2
+    tx-type: 2      
 ```
 
-## Start messaging
 
 Once the setup of Pigeon is successful, you can
 start sending messages. Before that, Pigeon must know
@@ -120,14 +139,21 @@ ETH_SIGNING_KEY=<Your ETH SIGNING KEY>
 BNB_RPC_URL=<Your Ethereum mainnet RPC URL>
 BNB_PASSWORD=<Your ETH Key Password>
 BNB_SIGNING_KEY=<Your ETH SIGNING KEY>
+MATIC_RPC_URL=<Your Binance mainnet RPC URL>
+MATIC_PASSWORD=<Your BNB Key Password>
+MATIC_SIGNING_KEY=<Your BNB SIGNING KEY>
 VALIDATOR=<VALIDATOR NAME>
 EOT
 ```
 
-Then, run Pigeon with:
-
+Ensure that the new variables are avaible for use:
 ```bash
 source ~/.pigeon/env.sh
+```
+
+You can then, start pigeon with:
+
+```bash
 pigeon start
 ```
 
