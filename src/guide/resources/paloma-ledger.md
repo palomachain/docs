@@ -32,21 +32,29 @@ To see the `Cosmos` application when you search for it, you might need to activa
 To install  `palomad` with Ledger support, you'll need to build the binary from source.
 
 1. [Install Golang.](https://golang.org/doc/install)
-2. Clone the paloma github repository.
+2. [Install Git.](https://git-scm.com/downloads)
+3. Clone the paloma github repository. In your computers terminal run the following command:
+   
 ```
 git clone https://github.com/palomachain/paloma
 ```
-3. Confirm and check out the [`latest tag` for Paloma](https://github.com/palomachain/paloma/releases/latest) in the cloned `paloma` directory. 
+4. Confirm and check out the [<latest_tag> for Paloma](https://github.com/palomachain/paloma/releases/latest) in the cloned `paloma` directory. 
 
 ```
 cd paloma
-git checkout `latest_tag`
+git checkout <latest_tag>
+```
+
+For example if the latest tag is `v0.11.6` the command would be
+
+```
+git checkout v0.11.6
 ```
 
 4. Install `palomad`.
 
 ```
-LEDGER_ENABLED=true VERSION=`latest_tag` make install
+LEDGER_ENABLED=true VERSION=<latest_tag> make install
 ```
 
 5. Verify that `palomad` is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on Github.
@@ -54,6 +62,7 @@ LEDGER_ENABLED=true VERSION=`latest_tag` make install
 ```bash
 palomad version --long
 ```
+
 The beginning of the output should look like this and allows to confirm the Version.
 ```
 name: paloma
@@ -84,7 +93,10 @@ Be sure to change the _keyName_ parameter to be a meaningful name. The `ledger` 
 
 ```bash
 palomad keys add <keyName> --ledger
+```
 
+The output after the above command will look like this:
+```bash
 ➜ NAME: TYPE: ADDRESS:     PUBKEY:
 <keyName> ledger paloma1... palomapub1...
 ```
@@ -107,11 +119,11 @@ Confirm that the address displayed on the device matches that displayed when you
 
 ## Connect to a full node
 
-Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `paloma-testnet-15` chain. But you can point your `palomad` to any Paloma full node. **Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).**
+Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `messenger` mainnet chain. But you can point your `palomad` to any Paloma full node. **Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](./networks).**
 
 ```bash
-palomad config node https://testnet.palomaswap.com:443
-palomad config chain-id paloma-testnet-15
+palomad config node https://rpc.palomachain.com:443
+palomad config chain-id messenger
 ```
 
 Test your connection with a query such as:
@@ -204,6 +216,6 @@ Paloma transactions follow the [Standard Transaction type](https://godoc.org/git
 
 ## Support
 
-For further support, start by looking over the posts in our [Paloma forum](https://forum.palomachain.com/)
+For further support, start by looking over the posts in our [Paloma forum.](https://forum.palomachain.com/)
 
 Feel welcome to reach out in our [Discord Channel](https://discord.gg/HtUvgxvh5N) to ask for help.
