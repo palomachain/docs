@@ -33,7 +33,7 @@ To install  `palomad` with Ledger support, you'll need to build the binary from 
 
 1. [Install Golang.](https://golang.org/doc/install)
 2. [Install Git.](https://git-scm.com/downloads)
-3. Clone the paloma github repository. In your computers terminal run the following command:
+3. Clone the paloma github repository. In your computer's terminal run the following command:
    
 ```
 git clone https://github.com/palomachain/paloma
@@ -49,15 +49,15 @@ For example if the latest tag is `v0.11.6` the command would be
 
 ```
 git checkout v0.11.6
-```
 
-4. Install `palomad`.
+
+5. Install `palomad`.
 
 ```
 LEDGER_ENABLED=true VERSION=<latest_tag> make install
 ```
 
-5. Verify that `palomad` is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on Github.
+6. Verify that `palomad` is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on Github.
 
 ```bash
 palomad version --long
