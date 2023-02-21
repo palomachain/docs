@@ -1,11 +1,11 @@
-# Execute smart contracts on EVM chains
+# Execute EVM smart contracts from Paloma
 With Paloma, you can execute smart contracts that are deployed on [any supported EVM chain.](../../resources/networks). This is done in two steps by first defining a job and then executing it on Paloma. Remote execution can be done using CosmWasm smart contracts or directly using palomad. The below steps use `palomad` CLI commands for demonstration purposes. To see some examples of CosmWasm contracts take a look at Github [here](https://github.com/palomachain/cross-chain-amm-cosmwasm/blob/main/src/contract.rs) and [here](https://github.com/palomachain/paloma-rs/tree/main/egg).
 
 ## Prepare your EVM compatible smart contract for execution 
 Before defining the job, you need to ensure that your smart contract is good to go. 
 
 1. Deploy your EVM compatible contract on the Paloma supported target chain. See currently active chains [here.](../../resources/networks)
-2. Allow Paloma's [Compass-EVM contract](../applications/compass-evm/overview) to run the functions that you want to execute. The available contract addresses are listed [here.](../../resources/networks)
+2. Allow Paloma's [Compass-EVM contract](../../resources/networks) to run the functions that you want to execute. The available contract addresses are listed [here.](../../resources/networks)
 
 ::: warning
 Anybody can currently use Paloma to send a message to Paloma's Compass EVM and target your EVM contract. Don't use this functionality for anything that you don't want anybody to be able to run.

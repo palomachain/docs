@@ -2,11 +2,6 @@
 
 The command line interface and node daemon for interacting with the Paloma blockchain. Use `palomad` to run a full node or interact with the chain. Follow the [`palomad` install guide](../palomad/install-palomad) to get started.
 
-## SDKs
-
-**paloma.js** provides a compatible way to work with the Paloma blockchain within JavaScript runtimes, such as Node.js and the browser. use paloma.js to create bots, mint NFTs, and build out applications. Follow the [paloma.js tutorial](./paloma-js/getting-started.md) to get started.
-
-**paloma.py** allows Python developers to interact directly with the Paloma blockchain. For example Defi users can set up trading strategies or query state. Learn more [here](./paloma-py/getting-started.md).
 
 <!--- ## Testnet
 
