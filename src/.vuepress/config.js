@@ -141,7 +141,6 @@ if(!ignore) {
           children: [
             ['develop/quick-start/quick-start', 'Overview'],
             ['develop/quick-start/generic-message', 'Execute EVM smart contracts'],
-            ['develop/quick-start/mint-egg', 'Mint an EGG'],
             {
               title: 'Javascript SDK',
               collapsable: true,
