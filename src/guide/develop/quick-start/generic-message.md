@@ -1,11 +1,11 @@
-# Execute smart contracts on EVM chains
-With Paloma, you can execute smart contracts that are deployed on [any supported EVM chain.](../../resources/networks). This is done in two steps by first defining a job and then executing it on Paloma. Remote execution can be done using CosmWasm smart contracts or directly using palomad. The below steps use `palomad` CLI commands for demonstration purposes. To see some examples of CosmWasm contracts take a look at Github [here](https://github.com/palomachain/cross-chain-amm-cosmwasm/blob/main/src/contract.rs) and [here](https://github.com/palomachain/paloma-rs/tree/main/egg).
+# Execute EVM smart contracts from Paloma
+With Paloma, you can execute smart contracts that are deployed on [any supported EVM chain.](../../resources/networks) This is done in two steps by first defining a job and then executing it on Paloma. Remote execution can be done using CosmWasm smart contracts or directly using palomad. The below steps use `palomad` CLI commands for demonstration purposes. To see some examples of CosmWasm contracts take a look at Github [here](https://github.com/palomachain/cross-chain-amm-cosmwasm/blob/main/src/contract.rs) and [here](https://github.com/palomachain/paloma-rs/tree/main/egg).
 
 ## Prepare your EVM compatible smart contract for execution 
 Before defining the job, you need to ensure that your smart contract is good to go. 
 
-1. Deploy your EVM compatible contract on the Paloma supported target chain. See currently active chains [here.](../../resources/networks)
-2. Allow Paloma's [Compass-EVM contract](../applications/compass-evm/overview) to run the functions that you want to execute. The available contract addresses are listed [here.](../../resources/networks)
+1. Deploy your EVM compatible contract on the Paloma supported target chain. See currently active chains [here.](../../resources/networks.md)
+2. Allow Paloma's [Compass-EVM contract](../applications/compass-evm/overview.md) to run the functions that you want to execute. The available contract addresses are listed [here.](../../resources/networks.md)
 
 ::: warning
 Anybody can currently use Paloma to send a message to Paloma's Compass EVM and target your EVM contract. Don't use this functionality for anything that you don't want anybody to be able to run.
@@ -17,12 +17,12 @@ To create the job, you'll need to define the following parameters:
 - `job-id` string that you chose as name for the job
 - `chain-type` e.g. EVM
 - `chain-ref-id` the chain the contract your sending a message to is deployed on
-- `definition` path to json file containing the escaped `abi` and address of the contract you're sending a message to.
+- `definition` path to json file containing the escaped `abi` and address of the contract you're sending a message to
 - `payload` path to job's default json file containing the payload of your message in HEX encoding. This can be empty, but then the `payload-mofifiable` flag must be set
 - `payload-modifiable` if set to true, the payload can be changed when executing the job
 
 ### Example
-Here is an example for creating a job called demo to be executed on Binance Mainnet for [this example contract](). In this case we want to update the storage variable to 234.
+Here is an example for creating a job called demo to be executed on Binance Mainnet for [this example contract.](https://bscscan.com/address/0x1f576f2021b6ebdf229750f54fdfd31206141e65) In this case we want to update the storage variable to 234.
 
 #### `definition` - definition.json
 ```json
@@ -51,7 +51,7 @@ If you're retrieving the payload manually, you can use this [online tool](https:
 palomad tx scheduler create-job 
   --job-id <your job name> \
   --chain-type evm \
-  --chain-ref-id eth-main \
+  --chain-ref-id bnb-main \
   --definition definition.json \
   --payload payload.json \
   --payload-modifiable=true \
