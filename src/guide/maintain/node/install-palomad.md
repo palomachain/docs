@@ -4,14 +4,29 @@
 
 ## Install from binary
 
-The easiest way to install `palomad` and Paloma is by downloading a pre-built binary for your operating system. You can find the latest binaries on the [releases](https://github.com/palomachain/paloma/releases/latest) page. 
+The easiest way to install `palomad` and Paloma is by downloading a pre-built binary for your operating system. You can find the binaries on the [releases](https://github.com/palomachain/paloma/releases) page. 
+
+
+### Mainnet
+On mainnet `messenger` the latest tag is v0.11.6
 
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/latest/download/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v0.11.6/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
-# Required until we figure out cgo
+
+sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/internal/api/libwasmvm.x86_64.so
+```
+
+### Testnet
+On testnet `paloma-testnet-15` the latest tag is v0.11.7
+
+```sh
+wget -O - https://github.com/palomachain/paloma/releases/download/v0.11.7/paloma_Linux_x86_64.tar.gz  | \
+sudo tar -C /usr/local/bin -xvzf - palomad
+sudo chmod +x /usr/local/bin/palomad
+
 sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/internal/api/libwasmvm.x86_64.so
 ```
 
@@ -19,14 +34,13 @@ sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/raw/main/internal/api/l
 
 ### 1. Get the Paloma source code
 
-Use `git` to retrieve [Paloma,](https://github.com/palomachain/paloma) and check 
-out the `main` branch, which contains the latest stable release.
+Use `git` to retrieve [Paloma](https://github.com/palomachain/paloma), and check out the correct `tag` depending on your network [Github](https://github.com/palomachain/paloma/releases).
 
  ```bash
  git clone https://github.com/palomachain/paloma.git
  cd paloma
- git checkout [latest version]
-```
+ git checkout [tag]
+ ```
    
  > Example: git checkout v0.4.0-alpha
 
