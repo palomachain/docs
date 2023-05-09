@@ -48,7 +48,7 @@ If you're retrieving the payload manually, you can use this [online tool](https:
 
 #### Schedule the job
 ```bash
-palomad tx scheduler create-job 
+palomad tx scheduler create-job \
   --job-id <your job name> \
   --chain-type evm \
   --chain-ref-id bnb-main \
@@ -56,7 +56,7 @@ palomad tx scheduler create-job
   --payload payload.json \
   --payload-modifiable=true \
   --from <your paloma address> \
-  --gas auto --fees 300ugrain -b block
+  --gas auto --fees 300ugrain
 ```
 
 
@@ -68,6 +68,6 @@ In our example from above, this would look like this:
 ```sh 
 palomad tx scheduler execute-job  <your job name> \
   --from <your paloma address> \
-  --gas auto --fees 300ugrain -b block
+  --gas auto --fees 300ugrain
 ```
 
