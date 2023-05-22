@@ -48,7 +48,7 @@ If you're retrieving the payload manually, you can use this [online tool](https:
 
 #### Schedule the job
 ```bash
-palomad tx scheduler create-job 
+palomad tx scheduler create-job \
   --job-id <your job name> \
   --chain-type evm \
   --chain-ref-id bnb-main \
