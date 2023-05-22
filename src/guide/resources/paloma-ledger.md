@@ -45,10 +45,10 @@ cd paloma
 git checkout <latest_tag>
 ```
 
-For example if the latest tag is `v0.11.6` the command would be
+For example if the latest tag is `v1.0.0` the command would be
 
 ```
-git checkout v0.11.6
+git checkout v1.0.0
 
 
 5. Install `palomad`.
