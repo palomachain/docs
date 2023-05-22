@@ -57,5 +57,5 @@ exec palomad tx wasm instantiate 5 \
 --label "limit-order-bot" \
 --chain-id ""$CHAIN_ID"
 --gas auto \
--y --no-admin -b block
+-y --no-admin -b sync
 ```

@@ -78,7 +78,7 @@ palomad tx send \
     --chain-id=<chain-id> \
     --gas=auto \
     --fees=100000ugrain \
-    --broadcast-mode=block
+    --broadcast-mode=sync
 ```
 
 ### Step 2: Create the multisig transaction
@@ -211,5 +211,5 @@ The TX is now signed:
 ```sh
 palomad tx broadcast signedTx.json \
     --chain-id=<chain-id> \
-    --broadcast-mode=block
+    --broadcast-mode=sync
 ```

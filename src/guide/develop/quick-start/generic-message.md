@@ -56,7 +56,7 @@ palomad tx scheduler create-job
   --payload payload.json \
   --payload-modifiable=true \
   --from <your paloma address> \
-  --gas auto --fees 300ugrain -b block
+  --gas auto --fees 300ugrain -b sync
 ```
 
 
@@ -68,6 +68,6 @@ In our example from above, this would look like this:
 ```sh 
 palomad tx scheduler execute-job  <your job name> \
   --from <your paloma address> \
-  --gas auto --fees 300ugrain -b block
+  --gas auto --fees 300ugrain -b sync
 ```
 
