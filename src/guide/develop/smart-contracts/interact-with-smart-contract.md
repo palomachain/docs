@@ -32,12 +32,12 @@ Make sure that the **optimized build** of `my_first_contract.wasm` that you crea
 the last section is in your current working directory.
 
 ```sh
-palomad tx wasm store artifacts/my_first_contract.wasm --from test1 --chain-id=paloma-testnet-10 --gas=auto --fees=100000ugrain --broadcast-mode=block
+palomad tx wasm store artifacts/my_first_contract.wasm --from test1 --chain-id=paloma-testnet-10 --gas=auto --fees=100000ugrain --broadcast-mode=sync
 ```
 Or, if you are on an arm64 machine:
 
 ```sh
-palomad tx wasm store artifacts/my_first_contract-aarch64.wasm --from test1 --chain-id=paloma-testnet-10 --gas=auto --fees=100000ugrain --broadcast-mode=block
+palomad tx wasm store artifacts/my_first_contract-aarch64.wasm --from test1 --chain-id=paloma-testnet-10 --gas=auto --fees=100000ugrain --broadcast-mode=sync
 ```
 
 This will ask for a confirmation before broadcasting to testnet, type `y` and press enter.
@@ -99,7 +99,7 @@ Create it with the following InitMsg:
 You can compress the JSON into 1 line with [this online tool](https://goonlinetools.com/json-minifier/).
 
 ```sh
-palomad tx wasm instantiate 1 '{"count":0}' --from test1 --chain-id=paloma-testnet-10 --fees=10000ugrain --gas=auto --broadcast-mode=block
+palomad tx wasm instantiate 1 '{"count":0}' --from test1 --chain-id=paloma-testnet-10 --fees=10000ugrain --gas=auto --broadcast-mode=sync
 ```
 
 You should get a response like the following:
@@ -185,7 +185,7 @@ First, to burn:
 ```
 
 ```sh
-palomad tx wasm execute paloma18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"reset":{"count":5}}' --from test1 --chain-id=paloma-testnet-10 --fees=1000000ugrain --gas=auto --broadcast-mode=block
+palomad tx wasm execute paloma18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"reset":{"count":5}}' --from test1 --chain-id=paloma-testnet-10 --fees=1000000ugrain --gas=auto --broadcast-mode=sync
 ```
 
 #### Incrementing
@@ -197,7 +197,7 @@ palomad tx wasm execute paloma18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"reset":
 ```
 
 ```sh
-palomad tx wasm execute paloma18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"increment":{}}' --from test1 --chain-id=paloma-testnet-10 --gas=auto --fees=1000000ugrain --broadcast-mode=block
+palomad tx wasm execute paloma18vd8fpwxzck93qlwghaj6arh4p7c5n896xzem5 '{"increment":{}}' --from test1 --chain-id=paloma-testnet-10 --gas=auto --fees=1000000ugrain --broadcast-mode=sync
 ```
 
 #### Querying count

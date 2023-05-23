@@ -10,8 +10,10 @@ You'll need to set up some environment variables and folder structure in additio
 confirm the latest tag on the [Cosmos SDK github](https://github.com/cosmos/cosmos-sdk/releases?q=cosmovisor&expanded=true)
 
 ```
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@`latest_tag`
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 ```
+
+Check the version with `cosmovisor version`
 
 **2. Create the following required directories**
 ```sh
@@ -20,7 +22,7 @@ mkdir ~/.paloma/cosmovisor/genesis
 mkdir ~/.paloma/cosmovisor/genesis/bin
 mkdir ~/.paloma/cosmovisor/upgrades
 ```
-The `~/.paloma/cosmovisor` directory has a `genesis` subfolder which contains the `palomad` version of when you first set up Cosmovisor. All subsequent `palomad` binary versions will be placed in inside the `upgrades` subfolder directory. Addittionaly, comsmovisor creates a `current` symlink to the currently active directory.
+The `~/.paloma/cosmovisor` directory has a `genesis` subfolder which contains the `palomad` version of when you first set up Cosmovisor. All subsequent `palomad` binary versions will be placed in inside the `upgrades` subfolder directory. Additionally, comsmovisor creates a `current` symlink to the currently active directory.
 
 ```text
 .
@@ -39,7 +41,7 @@ Please note that `~/.paloma/cosmovisor` only stores the `palomad` binaries. The 
 
 **3. Set the environment variables**
 
-Visit the [official documentation](https://github.com/cosmos/cosmos-sdk/tree/cosmovisor/v1.3.0/cosmovisor) for more information on these variables. 
+Visit the [official documentation](https://docs.cosmos.network/main/tooling/cosmovisor) for more information on these variables. 
 
 ```bash
 cat <<EOT >> ~/.profile
@@ -92,15 +94,13 @@ WantedBy=multi-user.target
 ## Upgrades 
 When there is a new release for `palomad`, create a new directory that contains the new binary. You can do this as soon as the new binary is confirmed and available. 
 ```bash
-mkdir -p ~/.paloma/cosmovisor/upgrades/`upgrade_tag_name`
+mkdir -p ~/.paloma/cosmovisor/upgrades/{upgrade_tag_name}/bin
 ```
 Then get the new binary and copy it into the new directory.
 
 ```bash
 wget -O - https://github.com/palomachain/paloma/releases/download/{upgrade_tag_name}/paloma_Linux_x86_64.tar.gz  | \
-tar -C /usr/local/bin -xvzf - palomad
-
-cp /usr/local/bin/palomad $DAEMON_HOME/cosmovisor/upgrades/`upgrade_tag_name`
+tar -C $DAEMON_HOME/cosmovisor/upgrades/{upgrade_tag_name}/bin -xvzf - palomad
 ```
 
 That's it. At the chain halt upgrade time Cosmovisor will switch over to the new binary. 
