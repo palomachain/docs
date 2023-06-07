@@ -103,4 +103,14 @@ wget -O - https://github.com/palomachain/paloma/releases/download/{upgrade_tag_n
 tar -C $DAEMON_HOME/cosmovisor/upgrades/{upgrade_tag_name}/bin -xvzf - palomad
 ```
 
+Confirm that you have the right version of paloma in the cosmovisor upgrades directory
+```bash
+cd ~/.paloma/cosmovisor/upgrades/{upgrade_tag_name}/bin
+./palomad version
+```
+
+::: tip Note
+You may run into a GLIBC error that is caused by a difference in the libraries of the host that built the binary and the host running the binary. The workaround is to build the binary from source as detailed in the [install guide](../../develop/palomad/install-palomad.md#from-source).
+:::
+
 That's it. At the chain halt upgrade time Cosmovisor will switch over to the new binary. 

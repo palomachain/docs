@@ -70,7 +70,8 @@ Use `git` to retrieve [Paloma](https://github.com/palomachain/paloma), and check
 Build Paloma, and install the `palomad` executable to your `GOPATH` environment variable.
 
 ```bash
-VERSION=`latest tag` make install
+make build
+sudo mv ./build/palomad /usr/local/bin/palomad
 ```
 
 3. Verify your Paloma installation
