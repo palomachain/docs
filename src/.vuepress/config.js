@@ -288,6 +288,13 @@ if(!ignore) {
               'resources/paloma-ledger'
                 ]
           },  
+        {
+          title: 'Security',
+          collapsable: true,
+          children: [
+            'security/security'
+              ]
+          },    
       ],
     }
   },
