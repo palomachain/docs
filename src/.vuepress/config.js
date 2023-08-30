@@ -16,6 +16,10 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
+    ['meta', { property: 'og:title', content: 'Paloma Docs' }],
+    ['meta', { property: 'og:description', content: 'Official Paloma Protocol Documentation' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:image', content: 'https://docs.palomachain.com/assets/coo_logo.png' }],
     ['meta', { name: 'theme-color', content: '#fffff' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
