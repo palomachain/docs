@@ -62,25 +62,6 @@
     </div>
     <div class="etc-menu">
       </div>
-      <div class="etc-menu_container">
-        <a data-tf-popup="r0NYlO5S" data-tf-iframe-props="title=Getting Started With Paloma" data-tf-medium="snippet" style="font-family:Helvetica,Arial,sans-serif;display:inline-block;width:100%;white-space:nowrap;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">
-          <div class="menu-items">
-            <div class="menu-container">
-              <div class="etc-left collab-img">
-                <img src="/assets/coo_logo.png" alt="Collaborate with Paloma">
-              </div>
-              <div class="etc-right">
-                <h2 class="etc-title">
-                  COOllaborate with Paloma
-                </h2>
-                <p class="etc-description">
-                  Let us know what you're interested in and let's build together.
-                </p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
     </div>
   </div>
 </template>
