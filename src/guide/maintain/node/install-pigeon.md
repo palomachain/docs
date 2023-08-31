@@ -32,10 +32,10 @@ mkdir ~/.pigeon
 ```
 
 ### Testnet
-On testnet `paloma-testnet-15` the latest tag is v1.5.5
+On testnet `paloma-testnet-15` the latest tag is v1.6.0
 
 ```bash
-wget -O - https://github.com/palomachain/pigeon/releases/download/v1.5.5/pigeon_Linux_x86_64.tar.gz | \
+wget -O - https://github.com/palomachain/pigeon/releases/download/v1.6.0/pigeon_Linux_x86_64.tar.gz | \
 tar -C /usr/local/bin -xvzf - pigeon
 chmod +x /usr/local/bin/pigeon
 mkdir ~/.pigeon
