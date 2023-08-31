@@ -2,7 +2,7 @@
 home: true
 actionText: 
 actionLink: /guide/introduction
-footer: © 2022 Columbidae Networks LTD (Caymans)
+footer: © 2023 Columbidae Networks LTD (Caymans)
 ---
 <MainMenu />
 <div class="nav-item">
