@@ -20,11 +20,11 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Target Chain|chain-ref-id|Chain Type|Compass Contract address|Status|
 |------------|------------|----------|------------------------|------|
-| BNB Chain mainnet| bnb-main | EVM | [0x83fAA28424d2819C4c4c2F701998C47d572fB2f4](https://bscscan.com/address/0x83fAA28424d2819C4c4c2F701998C47d572fB2f4) | Live |
-| Ethereum Mainnet | eth-main | EVM | [0x7Eec3e2f4d567794B927B6d904Fbf973bC8D15e6](https://etherscan.io/address/0x7Eec3e2f4d567794B927B6d904Fbf973bC8D15e6) | Live |
-| Polygon Mainnet | matic-main| EVM | [0x05d7b3A021DAFA1A52Aef09B8057493847cb6800](https://polygonscan.com/address/0x05d7b3a021dafa1a52aef09b8057493847cb6800) | Live |
-| Optimism Mainnet | op-main  | EVM | [0x05d7b3A021DAFA1A52Aef09B8057493847cb6800](https://optimistic.etherscan.io/address/0x05d7b3A021DAFA1A52Aef09B8057493847cb6800) | Live |
-| Base Mainnet | base-main |    EVM | [0x2F9AF8dBBA61898c86Fe56452a2CEddc8aEb139E](https://basescan.org/address/0x2F9AF8dBBA61898c86Fe56452a2CEddc8aEb139E) | Live |
+| BNB Chain mainnet| bnb-main | EVM | [0xFca1FBA89e880666f0851B211CBDa98027E3AbB4](https://bscscan.com/address/0xFca1FBA89e880666f0851B211CBDa98027E3AbB4) | Live |
+| Ethereum Mainnet | eth-main | EVM | [0x4473eA62D337140879719FACD6dbF2D1931C09C1](https://etherscan.io/address/0x4473eA62D337140879719FACD6dbF2D1931C09C1) | Live |
+| Polygon Mainnet | matic-main| EVM | [0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2](https://polygonscan.com/address/0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2) | Live |
+| Optimism Mainnet | op-main  | EVM | [0xEdB353a241d6efD19494635FF966acc12aEEAeec](https://optimistic.etherscan.io/address/0xEdB353a241d6efD19494635FF966acc12aEEAeec) | Live |
+| Base Mainnet | base-main |    EVM | [0x3C89a1FD995d35a0E87952B0c3F3aC2a46cF83Ab](https://basescan.org/address/0x3C89a1FD995d35a0E87952B0c3F3aC2a46cF83Ab) | Live |
 
 
 ::: tip 
@@ -53,10 +53,10 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Target Chain|chain-ref-id|Chain Type|Compass Contract address|Status|
 |------------|------------|----------|------------------------|------|
-| BNB Chain mainnet | bnb-main | EVM | [0xBE3AeB2953B6757AA7Eaf4c69a66D6316c98363e](https://bscscan.com/address/0xBE3AeB2953B6757AA7Eaf4c69a66D6316c98363e) |Live|
-| Polygon Mainnet | matic-main | EVM | [0x18298C5424a6a63b679eC190E8421855D7184Dd4](https://polygonscan.com/address/0x18298C5424a6a63b679eC190E8421855D7184Dd4)|Live|
-| Ethereum Mainnet | eth-main | EVM | [0x35416C737FE972ec0BB9fB18A0DdD4A24A9990DE](https://etherscan.io/address/0x35416C737FE972ec0BB9fB18A0DdD4A24A9990DE) | Live |
-| Optimism Mainnet | op-main  | EVM | [0x66eDE8aB441D16D49C7b34a1503AD0a66B14ea81](https://optimistic.etherscan.io/address/0x66eDE8aB441D16D49C7b34a1503AD0a66B14ea81) | Live |
+| BNB Chain mainnet | bnb-main | EVM | [0xb77B80f08E05beF080bfD2022d0Ef277EA815dC6](https://bscscan.com/address/0xb77B80f08E05beF080bfD2022d0Ef277EA815dC6) |Live|
+| Polygon Mainnet | matic-main | EVM | [0x16F8fA1BfE2c7eEdEB8C644CdE73b172B8529E11](https://polygonscan.com/address/0x16F8fA1BfE2c7eEdEB8C644CdE73b172B8529E11)|Live|
+| Ethereum Mainnet | eth-main | EVM | [0x4911920E9F354DbCA895CA4eE5F8f6E02d560996](https://etherscan.io/address/0x4911920E9F354DbCA895CA4eE5F8f6E02d560996) | Live |
+| Optimism Mainnet | op-main  | EVM | [0x6FaF9429c05DA406F77292CcCc0F42D4eF7Cc6a8](https://optimistic.etherscan.io/address/0x6FaF9429c05DA406F77292CcCc0F42D4eF7Cc6a8) | Live |
 
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
