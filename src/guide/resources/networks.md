@@ -6,8 +6,8 @@
  - Live since: February 8th, 2023
  - [Genesis file](https://raw.githubusercontent.com/palomachain/mainnet/master/messenger/genesis.json) 
  - [Address book](https://raw.githubusercontent.com/palomachain/mainnet/master/messenger/addrbook.json)
- - current tag for Paloma: [**v1.7.2**](https://github.com/palomachain/paloma/releases/tag/v1.7.2)
- - current tag for Pigeon: [**v1.6.0**](https://github.com/palomachain/pigeon/releases/tag/v1.6.0)
+ - current tag for Paloma: [**v1.8.0**](https://github.com/palomachain/paloma/releases/tag/v1.8.0)
+ - current tag for Pigeon: [**v1.8.0**](https://github.com/palomachain/pigeon/releases/tag/v1.8.0)
 
 
 ### Available endpoints
