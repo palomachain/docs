@@ -20,11 +20,11 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Target Chain|chain-ref-id|Chain Type|Compass Contract address|Status|
 |------------|------------|----------|------------------------|------|
-| BNB Chain mainnet| bnb-main | EVM | [0xFca1FBA89e880666f0851B211CBDa98027E3AbB4](https://bscscan.com/address/0xFca1FBA89e880666f0851B211CBDa98027E3AbB4) | Live |
-| Ethereum Mainnet | eth-main | EVM | [0x4473eA62D337140879719FACD6dbF2D1931C09C1](https://etherscan.io/address/0x4473eA62D337140879719FACD6dbF2D1931C09C1) | Live |
-| Polygon Mainnet | matic-main| EVM | [0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2](https://polygonscan.com/address/0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2) | Live |
-| Optimism Mainnet | op-main  | EVM | [0xEdB353a241d6efD19494635FF966acc12aEEAeec](https://optimistic.etherscan.io/address/0xEdB353a241d6efD19494635FF966acc12aEEAeec) | Live |
-| Base Mainnet | base-main |    EVM | [0x3C89a1FD995d35a0E87952B0c3F3aC2a46cF83Ab](https://basescan.org/address/0x3C89a1FD995d35a0E87952B0c3F3aC2a46cF83Ab) | Live |
+| BNB Chain mainnet| bnb-main | EVM | [0x79e9f573D908E012aC6E1F7978cb09e0065E6355](https://bscscan.com/address/0x79e9f573D908E012aC6E1F7978cb09e0065E6355) | Live |
+| Ethereum Mainnet | eth-main | EVM | [0xa00CF3504FfaCff301E4973e21B44C052d087157](https://etherscan.io/address/0xa00CF3504FfaCff301E4973e21B44C052d087157) | Live |
+| Polygon Mainnet | matic-main| EVM | [0x92c5D97a2069b9cbC117d5Df9eA119fc635a9319](https://polygonscan.com/address/0x92c5D97a2069b9cbC117d5Df9eA119fc635a9319) | Live |
+| Optimism Mainnet | op-main  | EVM | [0xe3e2E3ebd228485FCbC812D1DBA0B2F90233E56c](https://optimistic.etherscan.io/address/0xe3e2E3ebd228485FCbC812D1DBA0B2F90233E56c) | Live |
+| Base Mainnet | base-main |    EVM | [0xcBbADBD4aAdA4Db509F3ba80E69E37bFB793e333](https://basescan.org/address/0xcBbADBD4aAdA4Db509F3ba80E69E37bFB793e333) | Live |
 
 
 ::: tip 
