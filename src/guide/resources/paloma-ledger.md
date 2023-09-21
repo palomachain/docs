@@ -49,12 +49,13 @@ For example if the latest tag is `v1.0.0` the command would be
 
 ```
 git checkout v1.0.0
-
+```
 
 5. Install `palomad`.
 
 ```
-LEDGER_ENABLED=true VERSION=<latest_tag> make install
+LEDGER_ENABLED=true make build
+sudo mv ./build/palomad /usr/local/bin/palomad
 ```
 
 6. Verify that `palomad` is installed correctly with the following command. The build commit should match the latest commit on the tag as shown on Github.
@@ -63,16 +64,16 @@ LEDGER_ENABLED=true VERSION=<latest_tag> make install
 palomad version --long
 ```
 
-The beginning of the output should look like this and allows to confirm the Version.
+The end of the output should look like this and allows to confirm the Version.
 ```
+...
+build_tags: netgo,ledger
+commit: 869235eb3e3ea2e4e97281b048f2263eb11081de
+cosmos_sdk_version: v0.47.4
+go: go version go1.19.4 darwin/amd64
 name: paloma
 server_name: palomad
-version: v0.11.4
-commit: cca8efa4607c39ef8004220c325173b76532bfef
-build_tags: netgo,ledger
-go: go version go1.19.4 darwin/amd64
-build_deps:
-...
+version: 1.0.0
 ```
 
 

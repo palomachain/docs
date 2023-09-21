@@ -289,6 +289,7 @@ if(!ignore) {
             children: [
               'resources/networks',
               'resources/governance',
+              'resources/staking',
               'resources/paloma-ledger'
                 ]
           },  
