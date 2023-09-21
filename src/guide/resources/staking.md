@@ -1,6 +1,7 @@
 # Staking GRAIN tokens on Paloma
 
 Delegating your tokens to validators of your choosing earns you a return on Paloma and ensures that your holdings don't lose value due to the inflation on the network. 
+
 [The full list of active validators is here](https://paloma.explorers.guru/validators).
 
 For the best security and control over your funds, we recommend [using a Ledger Hardware Wallet](./paloma-ledger.md). To delegate your tokens, you should ensure they are stored on your Ledger, and then follow these steps below: 
