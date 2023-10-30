@@ -18,7 +18,7 @@ To create the job, you'll need to define the following parameters:
 - `chain-type` e.g. EVM
 - `chain-ref-id` the chain the contract your sending a message to is deployed on
 - `definition` path to json file containing the escaped `abi` and address of the contract you're sending a message to
-- `payload` path to job's default json file containing the payload of your message in HEX encoding. This can be empty, but then the `payload-mofifiable` flag must be set
+- `payload` path to job's default json file containing the payload of your message in HEX encoding. This can be empty, but then the `payload-modifiable` flag must be set
 - `payload-modifiable` if set to true, the payload can be changed when executing the job
 
 ### Example
