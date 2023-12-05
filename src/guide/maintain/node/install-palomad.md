@@ -8,11 +8,11 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `messenger` the latest tag is v1.9.2
+On mainnet `messenger` the latest tag is v1.10.1
 
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v1.9.2/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v1.10.1/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
@@ -20,10 +20,10 @@ sudo wget -P /usr/lib
 ```
 
 ### Testnet
-On testnet `paloma-testnet-15` the latest tag is v1.9.2
+On testnet `paloma-testnet-15` the latest tag is v1.10.1
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v1.9.2/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v1.10.1/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
