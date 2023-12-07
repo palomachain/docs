@@ -32,6 +32,7 @@ mkdir ~/.pigeon
 ```
 
 ### Testnet
+
 On testnet `paloma-testnet-15` the latest tag is v1.10.1
 
 ```bash
@@ -46,6 +47,7 @@ mkdir ~/.pigeon
 
 Next, set up your EVM keys. You will need a different key for each supported [live target chain](../../resources/networks). 
 
+### Create a new key
 **Ethereum  mainnet**
 ```bash
 pigeon evm keys generate-new ~/.pigeon/keys/evm/eth-main
@@ -60,8 +62,28 @@ pigeon evm keys generate-new ~/.pigeon/keys/evm/bnb-main
 pigeon evm keys generate-new ~/.pigeon/keys/evm/matic-main
 ```
 
+**Optimism Mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/op-main
+```
 
-Or, you may import existing EVM private keys:
+**Kava Mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/kava-main
+```
+
+**Base Mainnet**
+``` bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/base-main
+```
+
+**Gnosis Mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/gnosis-main
+```
+
+
+### Import existing EVM private keys:
 
 **Ethereum  mainnet**
 ```bash
@@ -74,6 +96,27 @@ pigeon evm keys import ~/.pigeon/keys/evm/bnb-main
 **Polygon mainnet**
 ```bash
 pigeon evm keys import ~/.pigeon/keys/evm/matic-main
+```
+
+**Optimism Mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/op-main
+```
+
+**Kava Mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/kava-main
+```
+
+**Base Mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/base-main
+```
+
+
+**Gnosis Mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/gnosis-main
 ```
 
 Ensure that your keys are stored safe and securly. 
@@ -98,17 +141,18 @@ In the pigeon directory, create your validator's configuration file
 
 ```yaml
 loop-timeout: 5s
+health-check-port: 5757
 
 paloma:
-  chain-id: <chain-id>
+  chain-id: <paloma chain id>
   call-timeout: 20s
   keyring-dir: ~/.paloma
   keyring-pass-env-name: PALOMA_KEYRING_PASS
-  keyring-type: test
+  keyring-type: os
   signing-key: ${VALIDATOR}
   base-rpc-url: http://localhost:26657
-  gas-adjustment: 1.5
-  gas-prices: 0.001ugrain
+  gas-adjustment: 3.0
+  gas-prices: 0.01ugrain
   account-prefix: paloma
 
 evm:
@@ -120,6 +164,7 @@ evm:
     keyring-dir: ~/.pigeon/keys/evm/eth-main
     gas-adjustment: 2
     tx-type: 2
+
   bnb-main:
     chain-id: 56
     base-rpc-url: ${BNB_RPC_URL}
@@ -128,6 +173,7 @@ evm:
     keyring-dir: ~/.pigeon/keys/evm/bnb-main
     gas-adjustment: 1
     tx-type: 0
+
   matic-main:
     chain-id: 137
     base-rpc-url: ${MATIC_RPC_URL}
@@ -135,7 +181,52 @@ evm:
     signing-key: ${MATIC_SIGNING_KEY}
     keyring-dir: ~/.pigeon/keys/evm/matic-main
     gas-adjustment: 2
-    tx-type: 2      
+    tx-type: 2
+  
+  op-main:
+    chain-id: 10
+    base-rpc-url: ${OP_RPC_URL}
+    keyring-pass-env-name: OP_PASSWORD
+    signing-key: ${OP_SIGNING_KEY}
+    keyring-dir: /root/.pigeon/keys/evm/op-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  kava-main:
+    chain-id: 2222
+    base-rpc-url: ${KAVA_RPC_URL}
+    keyring-pass-env-name: KAVA_PASSWORD
+    signing-key: ${KAVA_SIGNING_KEY}
+    keyring-dir: /root/.pigeon/keys/evm/kava-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  base-main:
+    chain-id: 8453
+    base-rpc-url: ${BASE_RPC_URL}
+    keyring-pass-env-name: BASE_PASSWORD
+    signing-key: ${BASE_SIGNING_KEY}
+    keyring-dir: /root/.pigeon/keys/evm/base-main
+    gas-adjustment: 1
+    tx-type: 2
+
+  arb-main:
+    chain-id: 42161
+    base-rpc-url: ${ARB_RPC_URL}
+    keyring-pass-env-name: ARB_PASSWORD
+    signing-key: ${ARB_SIGNING_KEY}
+    keyring-dir: /root/.pigeon/keys/evm/arb-main
+    gas-adjustment: 2
+    tx-type: 2
+
+ gnosis-main:
+    chain-id: 100
+    base-rpc-url: ${GNOSIS_RPC_URL}
+    keyring-pass-env-name: GNOSIS_PASSWORD
+    signing-key: ${GNOSIS_SIGNING_KEY}
+    keyring-dir: /root/.pigeon/keys/evm/gnosis-main
+    gas-adjustment: 2
+    tx-type: 2
 ```
 
 
@@ -156,6 +247,12 @@ BNB_SIGNING_KEY=<Your ETH SIGNING KEY>
 MATIC_RPC_URL=<Your Binance mainnet RPC URL>
 MATIC_PASSWORD=<Your BNB Key Password>
 MATIC_SIGNING_KEY=<Your BNB SIGNING KEY>
+BASE_RPC_URL=<Your Base mainnet RPC URL>
+BASE_PASSWORD=<Your Base Key Password>
+BASE_SIGNING_KEY=<Your Base SIGNING KEY>
+GNOSIS_RPC_URL=<Your Gnosis mainnet RPC URL>
+GNOSIS_PASSWORD=<Your Gnosis Key Password>
+GNOSIS_SIGNING_KEY=<Your Gnosis SIGNING KEY>
 VALIDATOR=<VALIDATOR NAME>
 EOT
 ```

@@ -27,7 +27,6 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 | Base Mainnet | base-main |    EVM | [0x817F591aedBebb58a9118021Af3f0c7bF59F6C84](https://basescan.org/address/0x817F591aedBebb58a9118021Af3f0c7bF59F6C84) | Live |
 | Gnosis Mainnet | gnosis-main | EVM | [0x8aB57eB10950564b9B24Fdf5a7aBd866Fb2F64ce](https://gnosisscan.io/address/0x8aB57eB10950564b9B24Fdf5a7aBd866Fb2F64ce) | Live |
 
-
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
 :::
