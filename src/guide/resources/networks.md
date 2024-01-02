@@ -26,6 +26,7 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 | Optimism Mainnet | op-main  | EVM | [0xe6566872ACec5074361E992321C6F98d93f0042d](https://optimistic.etherscan.io/address/0xe6566872ACec5074361E992321C6F98d93f0042d) | Live |
 | Base Mainnet | base-main |    EVM | [0x817F591aedBebb58a9118021Af3f0c7bF59F6C84](https://basescan.org/address/0x817F591aedBebb58a9118021Af3f0c7bF59F6C84) | Live |
 | Gnosis Mainnet | gnosis-main | EVM | [0x8aB57eB10950564b9B24Fdf5a7aBd866Fb2F64ce](https://gnosisscan.io/address/0x8aB57eB10950564b9B24Fdf5a7aBd866Fb2F64ce) | Live |
+| Arbitrum Mainnet | arbitrum-main | EVM | [0x05d7b3A021DAFA1A52Aef09B8057493847cb6800](https://arbiscan.io/address/0x05d7b3A021DAFA1A52Aef09B8057493847cb6800) | Live |
 
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
@@ -58,6 +59,7 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 | Ethereum Mainnet | eth-main | EVM | [0x4911920E9F354DbCA895CA4eE5F8f6E02d560996](https://etherscan.io/address/0x4911920E9F354DbCA895CA4eE5F8f6E02d560996) | Live |
 | Optimism Mainnet | op-main  | EVM | [0xC137433e767bdDE473511B84df834e5D13389015](https://optimistic.etherscan.io/address/0xC137433e767bdDE473511B84df834e5D13389015) | Live |
 | Gnosis Mainnet | gnosis-main | EVM | N/A | Deployment pending |
+| Arbitrum Mainnet | arbitrum-main | EVM | [0xb2B78F9666D298d3EF42B22B9D0C21Ab0c80066C](https://arbiscan.io/address/0xb2B78F9666D298d3EF42B22B9D0C21Ab0c80066C) | Live |
 
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
