@@ -67,11 +67,6 @@ pigeon evm keys generate-new ~/.pigeon/keys/evm/matic-main
 pigeon evm keys generate-new ~/.pigeon/keys/evm/op-main
 ```
 
-**Kava Mainnet**
-```bash
-pigeon evm keys generate-new ~/.pigeon/keys/evm/kava-main
-```
-
 **Base Mainnet**
 ``` bash
 pigeon evm keys generate-new ~/.pigeon/keys/evm/base-main
@@ -82,6 +77,10 @@ pigeon evm keys generate-new ~/.pigeon/keys/evm/base-main
 pigeon evm keys generate-new ~/.pigeon/keys/evm/gnosis-main
 ```
 
+**Arbitrum Mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/arbitrum-main
+```
 
 ### Import existing EVM private keys:
 
@@ -117,6 +116,11 @@ pigeon evm keys import ~/.pigeon/keys/evm/base-main
 **Gnosis Mainnet**
 ```bash
 pigeon evm keys import ~/.pigeon/keys/evm/gnosis-main
+```
+
+**Arbitrum Mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/arbitrum-main
 ```
 
 Ensure that your keys are stored safe and securly. 
@@ -210,12 +214,12 @@ evm:
     gas-adjustment: 1
     tx-type: 2
 
-  arb-main:
+  arbitrum-main:
     chain-id: 42161
     base-rpc-url: ${ARB_RPC_URL}
     keyring-pass-env-name: ARB_PASSWORD
     signing-key: ${ARB_SIGNING_KEY}
-    keyring-dir: /root/.pigeon/keys/evm/arb-main
+    keyring-dir: /root/.pigeon/keys/evm/arbitrum-main
     gas-adjustment: 2
     tx-type: 2
 
