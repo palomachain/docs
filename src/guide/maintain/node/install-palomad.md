@@ -20,10 +20,10 @@ sudo wget -P /usr/lib
 ```
 
 ### Testnet
-On testnet `paloma-testnet-15` the latest tag is v1.11.0
+On testnet `paloma-testnet-15` the latest tag is v1.12.0
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v1.11.0/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v1.12.0/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
