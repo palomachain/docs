@@ -220,7 +220,7 @@ evm:
     keyring-pass-env-name: BASE_PASSWORD
     signing-key: ${BASE_SIGNING_KEY}
     keyring-dir: /root/.pigeon/keys/evm/base-main
-    gas-adjustment: 1
+    gas-adjustment: 2
     tx-type: 2
 
   arbitrum-main:
