@@ -82,6 +82,11 @@ pigeon evm keys generate-new ~/.pigeon/keys/evm/gnosis-main
 pigeon evm keys generate-new ~/.pigeon/keys/evm/arbitrum-main
 ```
 
+**Blast Mainnet**
+```bash
+pigeon evm keys generate-new ~/.pigeon/keys/evm/blast-main
+```
+
 ### Import existing EVM private keys:
 
 **Ethereum  mainnet**
@@ -121,6 +126,10 @@ pigeon evm keys import ~/.pigeon/keys/evm/gnosis-main
 **Arbitrum Mainnet**
 ```bash
 pigeon evm keys import ~/.pigeon/keys/evm/arbitrum-main
+```
+**Blast Mainnet**
+```bash
+pigeon evm keys import ~/.pigeon/keys/evm/blast-main
 ```
 
 Ensure that your keys are stored safe and securly. 
@@ -231,6 +240,15 @@ evm:
     keyring-dir: /root/.pigeon/keys/evm/gnosis-main
     gas-adjustment: 2
     tx-type: 2
+    
+ blast-main:
+  chain-id: 81457
+  base-rpc-url: ${BLAST_RPC_URL}
+  keyring-pass-env-name: BLAST_PASSWORD
+  signing-key: ${BLAST_SIGNING_KEY}
+  keyring-dir: ~/.pigeon/keys/evm/blast-main
+  gas-adjustment: 2
+  tx-type: 2   
 ```
 
 
