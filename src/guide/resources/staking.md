@@ -24,7 +24,7 @@ For the best security and control over your funds, we recommend [using a Ledger 
     ii. Run the delegation command
     ```
     palomad tx staking delegate $VALIDATOR $AMOUNT \
-    --chain-id messenger \
+    --chain-id tubmler \
     --node $NODE \
     --fees 200ugrain --gas auto \
     --from $WALLET --ledger \
