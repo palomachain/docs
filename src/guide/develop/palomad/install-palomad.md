@@ -30,10 +30,10 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v1.13.3
+On mainnet `tumbler` the latest tag is v1.13.4
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v1.13.3/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v1.13.4/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
