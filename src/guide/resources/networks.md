@@ -7,7 +7,7 @@
  - [Genesis file](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/genesis.json) 
  - [Address book](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/addrbook.json)
  - current tag for Paloma: [**v1.13.4**](https://github.com/palomachain/paloma/releases/tag/v1.13.4)
- - current tag for Pigeon: [**v1.11.1**](https://github.com/palomachain/pigeon/releases/tag/v1.11.1)
+ - current tag for Pigeon: [**v1.11.2**](https://github.com/palomachain/pigeon/releases/tag/v1.11.2)
 
 
 ### Available endpoints
