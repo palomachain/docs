@@ -5,14 +5,6 @@
 This guide is for developers who want to install `palomad` and interact with Paloma without running a full node. If you want to run a full node or join a network, visit the [full node guide.](../../maintain/node/requirements) Visit the [Ledger Nano guide](../../resources/paloma-ledger) if you're looking for using a Ledger Nano device together with Paloma CLI.
 
 ## Prerequisites
-- [Golang v1.19](https://golang.org/doc/install)
-- Ensure your `GOPATH` and `GOBIN` environment variables are set up correctly.
-
-<!---::: danger palomad for Mac
-
-If you are using a Mac, follow the [`palomad` Mac installation guide](./palomad-mac.md).
-
-::: --->
 
 ### Install libwasm
 The current required version of libwasm is `1.5.2`. If you're upgrading from a prior version it is recommended to remove the cache to avoid errors. If you're already have palomad running, you will need to stop it before doing these steps.
@@ -53,6 +45,8 @@ sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/releases/download/v1.5.
 
 ## From source
 
+- Install [Golang v1.22.4](https://golang.org/doc/install)
+- Ensure your `GOPATH` and `GOBIN` environment variables are set up correctly.
 1. Get the Paloma source code
 
 Use `git` to retrieve [Paloma](https://github.com/palomachain/paloma), and check out the correct `tag` depending on your network [Github](https://github.com/palomachain/paloma/releases).

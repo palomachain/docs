@@ -29,4 +29,4 @@ to run a robust full node.
 
 ## Software requirements
 
-[Golang v1.19+ linux/amd64](https://go.dev/doc/install)
+[Golang v1.22+ linux/amd64](https://go.dev/doc/install)
