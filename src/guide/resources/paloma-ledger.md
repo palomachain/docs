@@ -123,8 +123,8 @@ Confirm that the address displayed on the device matches that displayed when you
 Next, you need to configure palomad with the URL of a Paloma full node and the appropriate `chain-id`. In this example we connect to the public load balanced full node operated by Volume on the `tubmler` mainnet chain. But you can point your `palomad` to any Paloma full node. **Be sure that the `chain-id` is set to the same chain as the full node. See the list of active `chain-id`s [here](../resources/networks.md).**
 
 ```bash
-palomad config node https://rpc.palomachain.com:443
-palomad config chain-id tumbler
+palomad config set client node https://rpc.palomachain.com:443
+palomad config set client chain-id tumbler
 ```
 
 Test your connection with a query such as:

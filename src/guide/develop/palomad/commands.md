@@ -1,36 +1,120 @@
 # Commands
 
-This section describes the commands available from `palomad`, the command line interface that connects a running `palomad` process.
+This section gives an overview of the commands available from `palomad`, the command line interface that connects a running `palomad` process. To view all optional flags associated with each command use the `palomad help` command. 
 
-## `add-genesis-account`
 
-Adds a genesis account to `genesis.json`.
+## `comet`    
+
+[CometBFT](https://cometbft.com/) subcommands. 
+
+### `unsafe-reset-all`
+
+Removes the blockchain data, removes address book files, and resets `data/priv_validator_state.json` to the genesis state.
 
 **Syntax**
 ```bash
-palomad add-genesis-account <address-or-key-name> '<amount><coin-denominator>,<amount><coin-denominator>'
+palomad unsafe-reset-all
+```
+
+
+Use the help function to get more details on the following CometBFT sub-commands. 
+
+- `bootstrap-state`  Bootstraps CometBFT state at an arbitrary block height using a light client
+- `reset-state`      Remove all the data and WAL
+- `show-address`     Shows this node's CometBFT validator consensus address
+- `show-node-id`     Show this node's ID
+- `show-validator`   Show this node's CometBFT validator info
+- `version`          Print CometBFT libraries' version
+ 
+
+## `completion`  
+
+Generates the autocompletion script for palomad for the specified shell. See each sub-command's help for details on how to use the generated script.
+
+- `bash`        Generate the autocompletion script for bash
+- `fish`        Generate the autocompletion script for fish
+- `powershell`  Generate the autocompletion script for powershell
+- `zsh`         Generate the autocompletion script for zsh
+
+## `config`      
+
+Commands for managing application configuration.
+
+### `set` 
+Sets an application config value. Available config values to set are `node`, `chain-id`, `output` and `broadcast-mode`.
+
+**Syntax**
+```bash
+palomad config set node <rpc endpoint>
+palomad config set chain-id <chain-id>
+palomad config set output <text|json>
+palomad config set broadcast-mode <sync|async>
+```
+
+### `get`
+Prints the config value for a specific config. 
+
+**Syntax**
+```bash
+palomad config get node
+palomad config get chain-id
+palomad config get output
+palomad config get broadcast-mode
+```
+
+## `debug`       
+
+Tool for helping with debugging your application.
+
+### `debug addr`
+
+Changes an address from hex encoding to bech32.
+
+**Syntax**
+
+```bash
+palomad debug addr <address>
 ```
 
 **Example**
+
 ```bash
-palomad add-genesis-account acc1 '200000000uGRAIN'
+palomad debug addr paloma14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm
 ```
 
-## `collect-gentxs`
+### `debug pubkey`
 
-Collects genesis transactions and outputs them to `genesis.json`.
+Decodes a pubkey from proto JSON and displays the address.
 
 **Syntax**
+
 ```bash
-palomad collect-gentxs
+palomad debug pubkey <pubkey>
 ```
 
-## `debug`
+**Example**
 
-Helps debug the application. For a list of syntax and subcommands, see the [debug subcommands](subcommands.md#debug-addr).
+```bash
+palomad debug pubkey '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AurroA7jvfPd1AadmmOvWM2rJSwipXfRf8yD6pLbA2DJ"}'
+```
 
-## `export`
+### `debug raw-bytes`
 
+Changes raw bytes to hex.
+
+**Syntax**
+
+```bash
+palomad debug raw-bytes <raw-bytes>
+```
+
+**Example**
+
+```bash
+palomad debug raw-bytes [72 101 108 108 111 44 32 112 108 97 121 103 114 111 117 110 100]
+```
+
+## export      
 Exports the state to JSON.
 
 **Syntax**
@@ -38,18 +122,46 @@ Exports the state to JSON.
 palomad export
 ```
 
-## `gentx`
+
+## `genesis`  
+
+Application's genesis-related subcommands.
+
+### `add-genesis-account`
+
+Adds a genesis account to `genesis.json`.
+
+**Syntax**
+```bash
+palomad genesis add-genesis-account <address-or-key-name> <amount><coin-denominator>
+```
+
+**Example**
+```bash
+palomad genesis add-genesis-account acc1 200000000ugrain
+```
+
+### `collect-gentxs`
+
+Collects genesis transactions and outputs them to `genesis.json`.
+
+**Syntax**
+```bash
+palomad genesis collect-gentxs
+```
+
+### `gentx`
 
 Adds a genesis transaction to `genesis.json`.
 
 **Syntax**
 ```bash
-palomad gentx <key-name> <amount><coin-denominator>
+palomad genesis gentx <key-name> <amount><coin-denominator>
 ```
 
 **Example**
 ```bash
-palomad gentx myKey 1000000uGRAIN --home=/path/to/home/dir --keyring-backend=os --chain-id=test-chain-1 \
+palomad genesis gentx myKey 1000000ugrain --home=/path/to/home/dir --keyring-backend=os --chain-id=test-chain-1 \
     --moniker="myValidator" \
     --commission-max-change-rate=0.01 \
     --commission-max-rate=1.0 \
@@ -59,13 +171,41 @@ palomad gentx myKey 1000000uGRAIN --home=/path/to/home/dir --keyring-backend=os 
     --website="..."
 ```
 
-## `help`
+### `migrate`
+Migrates the source genesis into the target version and prints to STDOUT.
 
-Shows help information.
+**Syntax**
+```bash
+palomad genesis migrate <path-to-genesis-file>
+```
+
+**Example**
+```bash
+palomad migrate /genesis.json --chain-id=paloma-testnet-16 --genesis-time=2024-06-26T17:00:00Z --initial-height=4000
+```
+
+### `validate`
+
+Validates the genesis file at the default location or at the location specified.
+
+**Syntax**
+```bash
+palomad genesis validate </path-to-file>
+```
+
+
+## `help`       
+
+Shows help information about any `palomad` command. 
 
 **Syntax**
 ```bash
 palomad help
+```
+
+To get more details on a specific command append `help` to the command you're looking for. E.g. 
+```bash
+palomad tx help
 ```
 
 ## `init`
@@ -77,33 +217,47 @@ Initializes the configuration files for a validator and a node.
 palomad init <moniker>
 ```
 
-**Example**
-```bash
-palomad init myNode
-```
-
 ## `keys`
 
-Manages Keyring commands. For a list of syntax and subcommands, see the [keys subcommands](subcommands.md#keys-add).
+Manages Keyring commands. For a list of syntax and subcommands, see the [keys subcommands](subcommands-keys.md).
 
+## `prune`  
 
-## `migrate`
-Migrates the source genesis into the target version and prints to STDOUT.
+Prune app history states by keeping the recent heights and deleting old heights
 
 **Syntax**
 ```bash
-palomad migrate <path-to-genesis-file>
+palomad prune [pruning-method] [flags]
 ```
 
 **Example**
 ```bash
-palomad migrate /genesis.json --chain-id=paloma-testnet-10 --genesis-time=2020-04-19T17:00:00Z --initial-height=4000
+prune custom --pruning-keep-recent 100 --app-db-backend 'goleveldb'
 ```
 
-## `query`
+## `query`     
 
-Manages queries. For a list of syntax and subcommands, see the [query subcommands](subcommands.md#query-authz-grants).
+Querying subcommands. For a list of syntax and subcommands, see the [query subcommands](subcommands-q.md).
 
+## `rollback`    
+
+Rolls back Cosmos SDK and CometBFT state by one height.
+
+**Syntax**
+```bash
+palomad rollback
+```
+
+## `snapshots`  
+
+Manages local snapshots. Available subcommands are
+
+- `delete`      Delete a local snapshot
+- `dump`        Dump the snapshot as portable archive format
+- `export`      Export app state to snapshot store
+- `list`        List local snapshots
+- `load`        Load a snapshot archive file (.tar.gz) into snapshot store
+- `restore`     Restore app state from local snapshot
 
 ## `start`
 
@@ -123,72 +277,39 @@ Displays the status of a remote node.
 palomad status
 ```
 
-## `tendermint`
 
-Manages the Tendermint protocol.
+## `testnet`     
 
+Subcommands for starting or configuring local testnets.
+
+### `init-files` 
+
+Initialize config directories & files for a multi-validator testnet running locally. 
+
+**Syntax**
+```bash
+palomad testnet init-files
+```
+
+### `start`
+
+Launch an in-process multi-validator testnet
+
+**Syntax**
+```bash
+palomad testnet init-files
+```
 
 ## `tx`
 
-Retrieves a transaction by its hash, account sequence, or signature. For a list of full syntax and subcommands, see the [tx subcommands](subcommands.md#tx-authz-exec).
+Transaction subcommands. For a list of syntax and subcommands, see the [tx subcommands](subcommands-tx.md).
 
-**Syntax to query by hash**
-```bash
-palomad query tx <hash>
-```
+  
+## `version`   
 
-**Syntax to query by account sequence**
-```bash
-palomad query tx --type=acc_seq <address>:<sequence>
-```
-
-**Syntax to query by signature**
-```bash
-palomad query tx --type=signature <sig1_base64,sig2_base64...>
-```
-
-## `txs`
-
-Retrieves transactions that match the specified events where results are paginated.
+Returns the version of Paloma you're running. Append the option `--long` flag to confirm that your version is using the correct commit hash.
 
 **Syntax**
 ```bash
-palomad query txs --events '<event>' --page <page-number> --limit <number-of-results>
-```
-
-**Example**
-```bash
-palomad query txs --events 'message.sender=cosmos1...&message.action=withdraw_delegator_reward' --page 1 --limit 30
-```
-
-## `unsafe-reset-all`
-
-Resets the blockchain database, removes address book files, and resets `data/priv_validator_state.json` to the genesis state.
-
-**Syntax**
-```bash
-palomad unsafe-reset-all
-```
-
-## `validate-genesis`
-
-Validates the genesis file at the default location or at the location specified.
-
-**Syntax**
-```bash
-palomad validate-genesis </path-to-file>
-```
-
-**Example**
-```bash
-palomad validate-genesis </genesis.json>
-```
-
-## `version`
-
-Returns the version of Paloma you're running.
-
-**Syntax**
-```bash
-palomad version
-```
+palomad version --long
+``` 
