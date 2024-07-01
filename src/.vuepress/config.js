@@ -206,10 +206,12 @@ if(!ignore) {
               collapsable: true,
               children: [
                 'develop/palomad/palomad',
-                'develop/palomad/commands',
                 'develop/palomad/install-palomad',
                 'develop/palomad/using-palomad',
-                'develop/palomad/subcommands',
+                'develop/palomad/commands',
+                'develop/palomad/subcommands-keys',
+                'develop/palomad/subcommands-q',
+                'develop/palomad/subcommands-tx'
               ]
             },
             {
