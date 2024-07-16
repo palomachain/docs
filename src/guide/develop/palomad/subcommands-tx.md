@@ -289,30 +289,34 @@ palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance <chain-ref
 palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance eth-main 50000000
 ```
 
-### `gov submit-legacy-proposal gravity set-bridge-transfer-limit`
-Proposal to set the gravity Brige transfer limit for the specified token.
+### `gov submit-legacy-proposal skyway set-bridge-transfer-limit`
+Proposal to set the skyway Brige transfer limit for the specified token denom.
 `limit-period` must be one of: NONE, DAILY, WEEKLY, MONTHLY, YEARLY. Setting it to NONE effectively disables the limit.    
 `limit-period` will be converted to a block window. At most, `limit` tokens can be transferred within each block window. After that transfers will fail.
 
 
 **Syntax**
 ```bash
-palomad tx gov submit-legacy-proposal gravity set-bridge-transfer-limit <token> <limit> <limit-period>
+palomad tx gov submit-legacy-proposal skyway set-bridge-transfer-limit <token-denom> <limit> <limit-period>
 ```
 
-**Examples**
+**Example**
 ```bash
 set-bridge-transfer-limit ugrain 1000000 DAILY
 ```
 
-### `gov submit-legacy-proposal gravity set-bridge-tax`
-Proposal to set the gravity brige tax
+### `gov submit-legacy-proposal skyway set-bridge-tax`
+Proposal to set the skyway brige tax for a specific token denom. Each outgoing transfer from Paloma will pay a tax. Tax amount is calculated using `tax-rate`, which must be non-negative. The tax rate is defined as ratio not as percentage. E.g. for a 20% tax it is defined as 0.2 in the proposal.
 
 **Syntax**
 ```bash
-palomad tx gov submit-legacy-proposal gravity set-bridge-tax <tax-rate> 
+palomad tx gov submit-legacy-proposal skyway set-bridge-tax <token-denom> <tax-rate> 
 ```
-Each outgoing transfer from Paloma will pay a tax. Tax amount is calculated using `tax-rate`, which must be non-negative.
+
+**Example**
+```bash
+palomad tx gov submit-legacy-proposal skyway set-bridge-tax ugrain 0.2
+```
 
 
 ### `gov evm propose-chain-removal`
@@ -379,29 +383,29 @@ palomad tx gov vote \
     --chain-id=paloma-testnet-16
 ```
 
-## `gravity2 cancel-send-to-eth`
+## `skyway cancel-tx`
 Removes an entry from the transaction pool, preventing your tokens from going to the target chain and refunding the send.
 
 **Syntax**
 ```bash
-palomad tx gravity2 cancel-send-to-eth <transaction id>
+palomad tx skyway cancel-tx <transaction id>
 ```
 
-## `gravity2 send-to-eth`
-Adds a new entry to the transaction pool to withdraw an amount from the EVM bridge contract. This will not execute until a batch is requested and then actually relayed. Your funds can be reclaimed using cancel-send-to-eth so long as they remain in the pool
+## `skyway send-tx`
+Adds a new entry to the transaction pool to withdraw an amount from the EVM bridge contract. This will not execute until a batch is requested and then actually relayed. Your funds can be reclaimed using cancel-tx so long as they remain in the pool
 
 **Syntax**
 ```bash
-palomad tx gravity2 send-to-eth \
+palomad tx skyway send-tx \
   <destination address> <amount> <chain-reference-id>
 ```
 
 **Example**
 ```bash
-palomad tx gravity2 send-to-eth \
+palomad tx skyway send-tx \
   0xd80fc91e72505e61bf07f189190b087651713000 \
   10000000ugrain \
-  "gnosis-main"
+  "arbitrum-main"
   ```
 
 ## `scheduler create-job`  
