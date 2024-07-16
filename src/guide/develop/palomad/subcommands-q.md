@@ -392,58 +392,68 @@ deposit_parmas:
   max_deposit_period: 48h0m0s
 ```
 
-## `gravity2 attestations`
-Queries current and historical gravity attestations (only the most recent 1000 are stored). Optionally provide a limit to reduce the number of attestations returned.
+## `skyway attestations`
+Queries current and historical skyway attestations (only the most recent 1000 are stored). Optionally provide a limit to reduce the number of attestations returned.
 
 **Syntax**
 ```bash
-palomad q gravity2 attestations <chain-reference-id> <optional limit>
+palomad q skyway attestations <chain-reference-id> <optional limit>
 ```
 
-## `gravity2 erc20-to-denoms`         
+## `skyway erc20-to-denoms`         
 Queries mapping of erc20 token addresses to denoms
 
 **Syntax**
 ```bash
-palomad query gravity2 erc20-to-denoms
+palomad query skyway erc20-to-denoms
 ```
 
-<!---## `gravity2 last-observed-eth-block` 
-Queries the last observed Ethereum block height. This value is expected to lag the actual Ethereum block height significantly due to 1. Ethereum Finality and 2. Consensus mirroring the state on Ethereum.
+## `skyway last-observed-block` 
+Queries the last observed remote target chain block height. This value is expected to lag the actual block height significantly due to 1. target chain finality and 2. Consensus mirroring the state on the target chain when there is an observable transaction.
 
-## `gravity2 last-observed-eth-nonce Query the last observed Ethereum event nonce
---->
+**Syntax**
+```bash
+palomad query skyway last-observed-block <chain-reference-id>
+```
 
-## `gravity2 outgoing-tx-batches`     
+## `skyway last-observed-nonce` 
+Query the last observed event nonce the remote chain.
+
+**Syntax**
+```bash
+palomad query skyway last-observed-nonce <chain-reference-id>
+```
+
+## `skyway outgoing-tx-batches`     
 Queries all current outgoing transaction batches.
 
 **Syntax**
 ```bash
-palomad query gravity2 outgoing-tx-batches <chain-reference-id> <orchestrator-address>
+palomad query skyway outgoing-tx-batches <chain-reference-id> <orchestrator-address>
 ```
 
-## `gravity2 params`                  
-Queries parameters for the gravity module.
+## `skyway params`                  
+Queries parameters for the skyway module.
 
 **Syntax**
 ```bash
-palomad query params
+palomad skyway params
 ```
 
-## `gravity2 pending-batch-request`   
+## `skyway pending-batch-request`   
 Prints the latest outgoing TX batch request which has not been signed by a particular orchestrator.
 
 **Syntax**
 ```bash
-palomad query gravity2 pending-batch-request <orchestrator address>
+palomad query skyway pending-batch-request <orchestrator address>
 ```
 
-## `gravity2 pending-send-to-eth`     
-Queries transactions waiting to go to Ethereum.
+## `skyway pending-txs`     
+Queries pending outgoing transactions waiting to go to remote target chain from an address.
 
 **Syntax**
 ```bash
-palomad q gravity2 pending-send-to-eth <address>
+palomad q skyway pending-txs <address>
 ```
 
 ## `mint annual-provisions`
