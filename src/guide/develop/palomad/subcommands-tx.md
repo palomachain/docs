@@ -318,6 +318,41 @@ palomad tx gov submit-legacy-proposal skyway set-bridge-tax <token-denom> <tax-r
 palomad tx gov submit-legacy-proposal skyway set-bridge-tax ugrain 0.2
 ```
 
+### `gov submit-legacy-proposal skyway set-erc20-to-denom`
+Proposal to set an association between a denom and a deployed ERC-20 token for a given chain
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal skyway set-erc20-to-denom <chain-reference-id> <token-denom> <erc20 address>
+```
+
+**Example**
+```bash
+palomad tx gov submit-legacy-proposal skyway set-erc20-to-denom "arbitrum-main" \
+  "ugrain" \
+  "0xea45aa071f12518853cFB9f340bB0b209a7931e3" \
+  --title "Set Gnosis ERC20 to uGRAIN Denom" \
+  --summary "Set ERC20 deployed on Gnosis to uGRAIN Denom" \
+  --deposit 10000000ugrain
+```
+
+### `gov submit-legacy-proposal treasury propose-community-fund-fee`
+Proposal to change the community fund fee. The fee is denoted as a fraction - e.g. 0.1 for 10%.
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal treasury propose-community-fund-fee <fee>
+```
+
+
+### `gov submit-legacy-proposal treasury propose-security-fee`       
+Proposal to change the security fee. The fee is denoted as a fraction - e.g. 0.1 for 10%.
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal treasury propose-security-fee <fee>
+```
+
 
 ### `gov evm propose-chain-removal`
 Proposal to remove an existing EVM chain from Paloma. 
@@ -534,6 +569,22 @@ palomad tx staking unbond <validator-address> <stake-amount>
 
 ```bash
 palomad tx staking unbond Palomavaloper1gghjut3ccd8ay0zduzj64hwre2fxs9ldmqhffj 600stake
+```
+
+## `treasury upsert-relayer-fee`
+Sets the relayer fee for the message relayer to the given multiplicator value for a specific chain. The multiplicator determines the total fee a relayer may claim based on the total cost of a relayed transaction. In order to aim for an even reimbursement, the multiplicator value must be 1. To make a profit, the multiplicator value must be higher than 1.
+
+Example: Using a fee multiplicator value of 1.1 entitles the relayer to a claimable reimbursement of 11COIN for a transaction relayed totalling in 10COIN of gas.
+
+**Syntax**
+```bash
+palomad tx treasury upsert-relayer-fee <chain-reference-id> <fee-multiplicator>
+```
+
+**Example**
+
+```bash
+palomad tx treasury upsert-relayer-fee eth-main 1.05
 ```
 
 ## `upgrade software-upgrade`
