@@ -456,6 +456,38 @@ Queries pending outgoing transactions waiting to go to remote target chain from 
 palomad q skyway pending-txs <address>
 ```
 
+## `treasury fees`
+Retrieves the current values for the community fee and the security fee.
+
+**Syntax**
+```bash
+palomad q treasury fees
+```
+
+## `treasury params`
+Shows the parameters of the module.
+
+**Syntax**
+```bash
+palomad q treasury params
+```
+
+## `treasury relayer-fee`
+Retrieve relayer fee values for all chains for a specific validator 
+
+**Syntax**
+```bash
+palomad q treasury relayer-fee <validator-address>
+```
+
+## `treasury relayer-fees`
+Retrieve all set relayer fees values for a given chain
+
+**Syntax**
+```bash
+palomad q treasury relayer-fees <chain-reference-id>
+```
+
 ## `mint annual-provisions`
 
 Retrieves the value of annual provisions.
