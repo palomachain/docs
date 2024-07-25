@@ -13,7 +13,7 @@ Removes the blockchain data, removes address book files, and resets `data/priv_v
 
 **Syntax**
 ```bash
-palomad unsafe-reset-all
+palomad comet unsafe-reset-all
 ```
 
 
@@ -45,10 +45,10 @@ Sets an application config value. Available config values to set are `node`, `ch
 
 **Syntax**
 ```bash
-palomad config set node <rpc endpoint>
-palomad config set chain-id <chain-id>
-palomad config set output <text|json>
-palomad config set broadcast-mode <sync|async>
+palomad config set client node <rpc endpoint>
+palomad config set client chain-id <chain-id>
+palomad config set client output <text|json>
+palomad config set client broadcast-mode <sync|async>
 ```
 
 ### `get`
@@ -56,10 +56,10 @@ Prints the config value for a specific config.
 
 **Syntax**
 ```bash
-palomad config get node
-palomad config get chain-id
-palomad config get output
-palomad config get broadcast-mode
+palomad config get client node
+palomad config get client chain-id
+palomad config get client output
+palomad config get client broadcast-mode
 ```
 
 ## `debug`       
