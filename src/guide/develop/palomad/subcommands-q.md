@@ -392,6 +392,137 @@ deposit_parmas:
   max_deposit_period: 48h0m0s
 ```
 
+
+## `mint annual-provisions`
+
+Retrieves the value of annual provisions.
+
+**Syntax**
+
+```sh
+palomad query mint annual-provisions
+```
+
+## `mint inflation`
+
+Retrieves the current value of inflation.
+
+**Syntax**
+
+```sh
+palomad query mint inflation
+```
+
+## `mint params`
+
+Retrieves the mint module's parameters.
+
+**Syntax**
+
+```sh
+palomad query mint params
+```
+
+Parameters are returned in the following format:
+
+```yaml
+mint_denom: ugrain
+inflation_rate_change: "0.130000000000000000"
+inflation_max: "0.200000000000000000"
+inflation_min: "0.070000000000000000"
+goal_bonded: "0.670000000000000000"
+blocks_per_year: 6311520
+```
+
+## `paloma light-node-client-feegranter`
+Shows the current light node client fee granter settings, set by governance vote
+
+**Syntax**
+```bash
+palomad query paloma light-node-client-feegranter
+```
+
+## `paloma light-node-client-funders`
+Shows the current light node client funders settings, set by governance vote
+
+**Syntax**
+```bash
+palomad query paloma light-node-client-funders
+```
+
+## `paloma light-node-client-licenses`
+Shows the current light node client licenses waiting to be claimed
+
+**Syntax**
+```bash
+palomad query paloma light-node-client-licenses
+```
+
+## `paloma params`
+shows the parameters of the module
+
+**Syntax**
+```bash
+palomad paloma params
+```
+
+## `palomaconsensus get-all-queue-names `
+Prints all existing queue names.
+
+**Syntax**
+```bash
+palomad q palomaconsensus get-all-queue-names
+```
+
+## `palomaconsensus message-by-id`
+Queries a message by queue name and message id.
+
+**Syntax**
+```bash
+palomad q palomaconsensus message-by-id <queue-name> <message-id>
+```
+
+## `palomaconsensus messages-in-queue`          
+Queries all messages in a specific queue.
+
+**Syntax**
+```bash
+palomad q palomaconsensus messages-in-queue <queue-name>
+```
+
+## `palomaconsensus params`                      
+Prints the parameters of the module.
+
+**Syntax**
+```bash
+palomad q palomaconsensus params
+```
+
+
+## `palomaconsensus queued-messages-for-signing` 
+Queries all messages that need to be signed for a specific validator and queue.
+**Syntax**
+```bash
+palomad q palomaconsensus queued-messages-for-signing <validator address> <queue name>
+```
+
+## `scheduler job`         
+Finds a job by providing the job's ID. 
+
+**Syntax**
+```bash
+palomad q scheduler job <job-id>
+```
+
+## `scheduler params`      
+Prints the parameters of the module.
+
+**Syntax**
+```bash
+palomad q scheduler params
+```
+
+
 ## `skyway attestations`
 Queries current and historical skyway attestations (only the most recent 1000 are stored). Optionally provide a limit to reduce the number of attestations returned.
 
@@ -454,135 +585,6 @@ Queries pending outgoing transactions waiting to go to remote target chain from 
 **Syntax**
 ```bash
 palomad q skyway pending-txs <address>
-```
-
-## `treasury fees`
-Retrieves the current values for the community fee and the security fee.
-
-**Syntax**
-```bash
-palomad q treasury fees
-```
-
-## `treasury params`
-Shows the parameters of the module.
-
-**Syntax**
-```bash
-palomad q treasury params
-```
-
-## `treasury relayer-fee`
-Retrieve relayer fee values for all chains for a specific validator 
-
-**Syntax**
-```bash
-palomad q treasury relayer-fee <validator-address>
-```
-
-## `treasury relayer-fees`
-Retrieve all set relayer fees values for a given chain
-
-**Syntax**
-```bash
-palomad q treasury relayer-fees <chain-reference-id>
-```
-
-## `mint annual-provisions`
-
-Retrieves the value of annual provisions.
-
-**Syntax**
-
-```sh
-palomad query mint annual-provisions
-```
-
-## `mint inflation`
-
-Retrieves the current value of inflation.
-
-**Syntax**
-
-```sh
-palomad query mint inflation
-```
-
-## `mint params`
-
-Retrieves the mint module's parameters.
-
-**Syntax**
-
-```sh
-palomad query mint params
-```
-
-Parameters are returned in the following format:
-
-```yaml
-mint_denom: ugrain
-inflation_rate_change: "0.130000000000000000"
-inflation_max: "0.200000000000000000"
-inflation_min: "0.070000000000000000"
-goal_bonded: "0.670000000000000000"
-blocks_per_year: 6311520
-```
-
-## `palomaconsensus get-all-queue-names `
-Prints all existing queue names.
-
-**Syntax**
-```bash
-palomad q palomaconsensus get-all-queue-names
-```
-
-## `palomaconsensus message-by-id`
-Queries a message by queue name and message id.
-
-**Syntax**
-```bash
-palomad q palomaconsensus message-by-id <queue-name> <message-id>
-```
-
-## `palomaconsensus messages-in-queue`          
-Queries all messages in a specific queue.
-
-**Syntax**
-```bash
-palomad q palomaconsensus messages-in-queue <queue-name>
-```
-
-## `palomaconsensus params`                      
-Prints the parameters of the module.
-
-**Syntax**
-```bash
-palomad q palomaconsensus params
-```
-
-
-## `palomaconsensus queued-messages-for-signing` 
-Queries all messages that need to be signed for a specific validator and queue.
-**Syntax**
-```bash
-palomad q palomaconsensus queued-messages-for-signing <validator address> <queue name>
-```
-
-## `scheduler job`         
-Finds a job by providing the job's ID. 
-
-**Syntax**
-```bash
-palomad q scheduler job <job-id>
-```
-
-## `scheduler params`      
-Prints the parameters of the module.
-
-**Syntax**
-```bash
-palomad q scheduler params
 ```
 
 ## `slashing signing-info`
@@ -842,6 +844,39 @@ To retrieve the information of a single validator, append the validator address 
 
 ```bash
 palomad query staking validator Palomavaloper15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc
+```
+
+
+## `treasury fees`
+Retrieves the current values for the community fee and the security fee.
+
+**Syntax**
+```bash
+palomad q treasury fees
+```
+
+## `treasury params`
+Shows the parameters of the module.
+
+**Syntax**
+```bash
+palomad q treasury params
+```
+
+## `treasury relayer-fee`
+Retrieve relayer fee values for all chains for a specific validator 
+
+**Syntax**
+```bash
+palomad q treasury relayer-fee <validator-address>
+```
+
+## `treasury relayer-fees`
+Retrieve all set relayer fees values for a given chain
+
+**Syntax**
+```bash
+palomad q treasury relayer-fees <chain-reference-id>
 ```
 
 ## `tx`

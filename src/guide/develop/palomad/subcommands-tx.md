@@ -289,6 +289,23 @@ palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance <chain-ref
 palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance eth-main 50000000
 ```
 
+### `gov submit-legacy-proposal paloma propose-light-node-client-feegranter` 
+Proposal to set new feegranter account for light node clients.
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal paloma propose-light-node-client-feegranter <account>
+```
+
+### `gov submit-legacy-proposal paloma propose-light-node-client-funders`
+Proposal to set new funder accounts for light node clients.
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal paloma propose-light-node-client-funders --funder-accounts <account>
+```
+
+
 ### `gov submit-legacy-proposal skyway set-bridge-transfer-limit`
 Proposal to set the skyway Brige transfer limit for the specified token denom.
 `limit-period` must be one of: NONE, DAILY, WEEKLY, MONTHLY, YEARLY. Setting it to NONE effectively disables the limit.    
