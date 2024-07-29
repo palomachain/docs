@@ -392,6 +392,38 @@ deposit_parmas:
   max_deposit_period: 48h0m0s
 ```
 
+## `paloma light-node-client-feegranter`
+Shows the current light node client fee granter settings, set by governance vote
+
+**Syntax**
+```bash
+palomad query paloma light-node-client-feegranter
+```
+
+## `paloma light-node-client-funders`
+Shows the current light node client funders settings, set by governance vote
+
+**Syntax**
+```bash
+palomad query paloma light-node-client-funders
+```
+
+## `paloma light-node-client-licenses`
+Shows the current light node client licenses waiting to be claimed
+
+**Syntax**
+```bash
+palomad query paloma light-node-client-licenses
+```
+
+## `paloma params`
+shows the parameters of the module
+
+**Syntax**
+```bash
+palomad paloma params
+```
+
 ## `skyway attestations`
 Queries current and historical skyway attestations (only the most recent 1000 are stored). Optionally provide a limit to reduce the number of attestations returned.
 
