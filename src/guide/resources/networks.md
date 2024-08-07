@@ -24,9 +24,9 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 | Ethereum Mainnet | eth-main | EVM | [0x2fE59ff4f13Ea42444B3BAB28Bdd69878d38010F](https://etherscan.io/address/0x2fE59ff4f13Ea42444B3BAB28Bdd69878d38010F) | Live |
 | Polygon Mainnet | matic-main| EVM | [0x9b9F6842Bc2814CBc63fdB0850D06F4161d9183C](https://polygonscan.com/address/0x9b9F6842Bc2814CBc63fdB0850D06F4161d9183C) | Live |
 | Optimism Mainnet | op-main  | EVM | [0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2](https://optimistic.etherscan.io/address/0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2) | Live |
-| Base Mainnet | base-main |    EVM | [0x717c63f090AEAd8CdE9eFB0D34b0bde83F6947Fe](https://basescan.org/address/0x717c63f090AEAd8CdE9eFB0D34b0bde83F6947Fe) | Live |
+| Base Mainnet | base-main |    EVM | [0x978A72B76ddDFD603b0261Adb4FB0D7Bb09f6AA6](https://basescan.org/address/0x978A72B76ddDFD603b0261Adb4FB0D7Bb09f6AA6) | Live |
 | Gnosis Mainnet | gnosis-main | EVM | [0xfd4602B8D4d629AAC57427E4Fd014E2f4f4C3FF5](https://gnosisscan.io/address/0xfd4602B8D4d629AAC57427E4Fd014E2f4f4C3FF5) | Live |
-| Arbitrum Mainnet | arbitrum-main | EVM | [0x2E68518cC9351843d11B3F41c08a63cd5B72Eb71](https://arbiscan.io/address/0x2E68518cC9351843d11B3F41c08a63cd5B72Eb71) | Live |
+| Arbitrum Mainnet | arbitrum-main | EVM | [0x0E7039B63C57cDF92A22F4B78B04CAf125522e56](https://arbiscan.io/address/0x0E7039B63C57cDF92A22F4B78B04CAf125522e56) | Live |
 | Blast Mainnet | blast-main | EVM | [0xe99716d73fcb603e10f23b1bBC1e32d29da92f65](https://blastscan.io/address/0xe99716d73fcb603e10f23b1bBC1e32d29da92f65) | Live |
 
 
