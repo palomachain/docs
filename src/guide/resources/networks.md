@@ -6,8 +6,8 @@
  - Live since: April 22nd, 2024
  - [Genesis file](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/genesis.json) 
  - [Address book](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/addrbook.json)
- - current tag for Paloma: [**v1.15.6**](https://github.com/palomachain/paloma/releases/tag/v1.15.6)
- - current tag for Pigeon: [**v1.12.3**](https://github.com/palomachain/pigeon/releases/tag/v1.12.3)
+ - current tag for Paloma: [**v1.15.7**](https://github.com/palomachain/paloma/releases/tag/v1.15.7)
+ - current tag for Pigeon: [**v1.12.4**](https://github.com/palomachain/pigeon/releases/tag/v1.12.4)
 
 
 ### Available endpoints
@@ -20,14 +20,14 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Target Chain|chain-ref-id|Chain Type|Compass Contract address|Status|
 |------------|------------|----------|------------------------|------|
-| BNB Chain mainnet| bnb-main | EVM | [0xb47247d125D87Cd15A69d041d009005AeC8bBf8b](https://bscscan.com/address/0xb47247d125D87Cd15A69d041d009005AeC8bBf8b) | Live |
-| Ethereum Mainnet | eth-main | EVM | [0x2fE59ff4f13Ea42444B3BAB28Bdd69878d38010F](https://etherscan.io/address/0x2fE59ff4f13Ea42444B3BAB28Bdd69878d38010F) | Live |
-| Polygon Mainnet | matic-main| EVM | [0x9b9F6842Bc2814CBc63fdB0850D06F4161d9183C](https://polygonscan.com/address/0x9b9F6842Bc2814CBc63fdB0850D06F4161d9183C) | Live |
-| Optimism Mainnet | op-main  | EVM | [0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2](https://optimistic.etherscan.io/address/0x950AA3028F1A3A09D4969C3504BEc30D7ac7d6b2) | Live |
+| BNB Chain mainnet| bnb-main | EVM | [0x9d703a2bE7ac576454fa310Aca1c667D1D5e8081](https://bscscan.com/address/0x9d703a2bE7ac576454fa310Aca1c667D1D5e8081) | Live |
+| Ethereum Mainnet | eth-main | EVM | [0x4E74982adB77496308f9c16e45966264D1A4e596](https://etherscan.io/address/0x4E74982adB77496308f9c16e45966264D1A4e596) | Live |
+| Polygon Mainnet | matic-main| EVM | [0xEf4E24B1a9aAb82e7a0a2e238E7815Cd9A566c48](https://polygonscan.com/address/0xEf4E24B1a9aAb82e7a0a2e238E7815Cd9A566c48) | Live |
+| Optimism Mainnet | op-main  | EVM | [0xa9Ff4c11B1B5c898E2037063C8641fe5A1EBEF26](https://optimistic.etherscan.io/address/0xa9Ff4c11B1B5c898E2037063C8641fe5A1EBEF26) | Live |
 | Base Mainnet | base-main |    EVM | [0x978A72B76ddDFD603b0261Adb4FB0D7Bb09f6AA6](https://basescan.org/address/0x978A72B76ddDFD603b0261Adb4FB0D7Bb09f6AA6) | Live |
-| Gnosis Mainnet | gnosis-main | EVM | [0xfd4602B8D4d629AAC57427E4Fd014E2f4f4C3FF5](https://gnosisscan.io/address/0xfd4602B8D4d629AAC57427E4Fd014E2f4f4C3FF5) | Live |
+| Gnosis Mainnet | gnosis-main | EVM | [0x75d8cC67A59d85Ea67A1E69d14De97Fe0173F4f1](https://gnosisscan.io/address/0x75d8cC67A59d85Ea67A1E69d14De97Fe0173F4f1) | Live |
 | Arbitrum Mainnet | arbitrum-main | EVM | [0x0E7039B63C57cDF92A22F4B78B04CAf125522e56](https://arbiscan.io/address/0x0E7039B63C57cDF92A22F4B78B04CAf125522e56) | Live |
-| Blast Mainnet | blast-main | EVM | [0xe99716d73fcb603e10f23b1bBC1e32d29da92f65](https://blastscan.io/address/0xe99716d73fcb603e10f23b1bBC1e32d29da92f65) | Live |
+| Blast Mainnet | blast-main | EVM | [0x1Ce0eEDb82788982448D4E4F052Cf04B60741c47](https://blastscan.io/address/0x1Ce0eEDb82788982448D4E4F052Cf04B60741c47) | Live |
 
 
 ::: tip 
@@ -41,8 +41,8 @@ Missing a chain? Anybody can submit a proposal to add an additional chain. Take 
  - Live since: May 9th, 2024
  - [Genesis file](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/genesis.json)
  - [Address book](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/addrbook.json)
- -  - current tag for Paloma: [**v1.15.6**](https://github.com/palomachain/paloma/releases/tag/v1.15.6)
- -   - current tag for Pigeon: [**v1.12.3**](https://github.com/palomachain/pigeon/releases/tag/v1.12.3)
+ -  - current tag for Paloma: [**v1.15.7**](https://github.com/palomachain/paloma/releases/tag/v1.15.7)
+ -   - current tag for Pigeon: [**v1.12.4**](https://github.com/palomachain/pigeon/releases/tag/v1.12.4)
 
 
 ### Available endpoints
