@@ -331,6 +331,20 @@ palomad tx gov submit-legacy-proposal evm propose-relay-weights <chain-reference
 palomad tx gov submit-legacy-proposal evm propose-relay-weights eth-main {"fee": "0.50", "uptime": "0.75", "successRate": "0.90", "executionTime": "0.20", "featureSet": "0.95"}
 ```
 
+### `gov submit-legacy-proposal evm set-fee-manager-address`
+Changes the fee manager contract address for a given EVM chain referenced by the chain-reference-id
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal evm set-fee-manager-address <chain-reference-id> <fee manager contract address>
+```
+
+**Example**
+```bash
+palomad tx gov submit-legacy-proposal evm set-fee-manager-address arbitrum-main \
+  0xd865124b3d9C67acDFB830bEa4f3070a4123Ed34
+```
+
 ### `gov submit-legacy-proposal paloma propose-light-node-client-feegranter` 
 Proposal to set new feegranter account for light node clients.
 
