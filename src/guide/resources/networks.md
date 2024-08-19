@@ -6,8 +6,8 @@
  - Live since: April 22nd, 2024
  - [Genesis file](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/genesis.json) 
  - [Address book](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/addrbook.json)
- - current tag for Paloma: [**v1.15.7**](https://github.com/palomachain/paloma/releases/tag/v1.15.7)
- - current tag for Pigeon: [**v1.12.4**](https://github.com/palomachain/pigeon/releases/tag/v1.12.4)
+ - current tag for Paloma: [**v2.0.0**](https://github.com/palomachain/paloma/releases/tag/v2.0.0)
+ - current tag for Pigeon: [**v2.0.0**](https://github.com/palomachain/pigeon/releases/tag/v2.0.0)
 
 
 ### Available endpoints
@@ -41,8 +41,8 @@ Missing a chain? Anybody can submit a proposal to add an additional chain. Take 
  - Live since: May 9th, 2024
  - [Genesis file](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/genesis.json)
  - [Address book](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/addrbook.json)
- -  - current tag for Paloma: [**v1.15.7**](https://github.com/palomachain/paloma/releases/tag/v1.15.7)
- -   - current tag for Pigeon: [**v1.12.4**](https://github.com/palomachain/pigeon/releases/tag/v1.12.4)
+ -  - current tag for Paloma: [**v2.0.0**](https://github.com/palomachain/paloma/releases/tag/v2.0.0)
+ -   - current tag for Pigeon: [**v2.0.0**](https://github.com/palomachain/pigeon/releases/tag/v2.0.0)
 
 
 ### Available endpoints
