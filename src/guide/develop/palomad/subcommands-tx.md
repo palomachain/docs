@@ -278,7 +278,7 @@ where `proposal.json` contains the following information:
 }
 ```
 
-### `gov evm change-min-on-chain-balance`
+### `gov submit-legacy-proposal evm change-min-on-chain-balance`
 **Syntax**
 ```bash
 palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance <chain-reference-id> <balance>
@@ -287,6 +287,48 @@ palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance <chain-ref
 **Example**
 ```bash
 palomad tx gov submit-legacy-proposal evm change-min-on-chain-balance eth-main 50000000
+```
+
+### `gov submit-legacy-proposal evm propose-chain-removal`
+Proposal to remove an existing EVM chain from Paloma. 
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal evm propose-chain-removal <chain-reference-id>
+```
+
+### `gov submit-legacy-proposal evm propose-new-chain`
+Proposal to add a new EVM chain. 
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal evm propose-new-chain <chain-reference-id> <chain-id> <min-on-chain-balance> <block-height> <block-hash-at-height>
+```
+
+**Example**
+```bash
+palomad tx gov submit-legacy-proposal evm propose-new-chain blast-main 81457 5000000 251462 0xf5ce8b11e5ff01cbb989748c77cbf71378ab23df5fa6e2fe7657b8f024de76f1
+```
+
+### `gov submit-legacy-proposal evm propose-new-smart-contract`
+Proposal to deploy a new compass contract to all deployed target chains. 
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal evm propose-new-smart-contract '[JSON ABI BLOB]' [HEX BLOB]
+```
+
+### `gov submit-legacy-proposal evm propose-relay-weights`
+Changes the relay weights for a given EVM chain referenced by the chain-reference-id.
+
+**Syntax**
+```bash
+palomad tx gov submit-legacy-proposal evm propose-relay-weights <chain-reference-id> <weights>
+```
+
+**Example**
+```bash
+palomad tx gov submit-legacy-proposal evm propose-relay-weights eth-main {"fee": "0.50", "uptime": "0.75", "successRate": "0.90", "executionTime": "0.20", "featureSet": "0.95"}
 ```
 
 ### `gov submit-legacy-proposal paloma propose-light-node-client-feegranter` 
@@ -370,48 +412,6 @@ Proposal to change the security fee. The fee is denoted as a fraction - e.g. 0.1
 palomad tx gov submit-legacy-proposal treasury propose-security-fee <fee>
 ```
 
-
-### `gov evm propose-chain-removal`
-Proposal to remove an existing EVM chain from Paloma. 
-
-**Syntax**
-```bash
-palomad tx gov submit-legacy-proposal evm propose-chain-removal <chain-reference-id>
-```
-
-### `gov evm propose-new-chain`
-Proposal to add a new EVM chain. 
-
-**Syntax**
-```bash
-palomad tx gov submit-legacy-proposal evm propose-new-chain <chain-reference-id> <chain-id> <min-on-chain-balance> <block-height> <block-hash-at-height>
-```
-
-**Example**
-```bash
-palomad tx gov submit-legacy-proposal evm propose-new-chain blast-main 81457 5000000 251462 0xf5ce8b11e5ff01cbb989748c77cbf71378ab23df5fa6e2fe7657b8f024de76f1
-```
-
-### `gov evm propose-new-smart-contract`
-Proposal to deploy a new compass contract to all deployed target chains. 
-
-**Syntax**
-```bash
-palomad tx gov submit-legacy-proposal evm propose-new-smart-contract '[JSON ABI BLOB]' [HEX BLOB]
-```
-
-### `gov evm propose-relay-weights`
-Changes the relay weights for a given EVM chain referenced by the chain-reference-id.
-
-**Syntax**
-```bash
-palomad tx gov submit-legacy-proposal evm propose-relay-weights <chain-reference-id> <weights>
-```
-
-**Example**
-```bash
-palomad tx gov submit-legacy-proposal evm propose-relay-weights eth-main {"fee": "0.50", "uptime": "0.75", "successRate": "0.90", "executionTime": "0.20", "featureSet": "0.95"}
-```
 
 ## `gov vote`
 
