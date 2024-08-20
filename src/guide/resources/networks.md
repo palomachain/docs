@@ -54,10 +54,10 @@ Missing a chain? Anybody can submit a proposal to add an additional chain. Take 
 
 All blockchains listed below are supported by Paloma's relay pigeons and allow for remote message execution.
 
-|Target Chain|chain-ref-id|Chain Type|Compass Contract address|Status|
+|Target Chain|chain-ref-id|Chain Type|Compass Contract|Fee Manager|
 |------------|------------|----------|------------------------|------|
-| Ethereum Mainnet | eth-main | EVM | [0x97cBf57a763e874DbE9433DD7C809E86f680a0Fc](https://etherscan.io/address/0x97cBf57a763e874DbE9433DD7C809E86f680a0Fc) | Live |
-| Arbitrum Mainnet | arbitrum-main | EVM | [0x375C07050a13d71110e5f058A4B3f9939a79E360](https://arbiscan.io/address/0x375C07050a13d71110e5f058A4B3f9939a79E360) | Live |
+| Ethereum Mainnet | eth-main | EVM | [0x97cBf...0a0Fc](https://etherscan.io/address/0x97cBf57a763e874DbE9433DD7C809E86f680a0Fc) | [0xf62d5...b77dd](https://etherscan.io/address/0xf62d5ab8bb6378238c3e67e468809081ad8b77dd) |
+| Arbitrum Mainnet | arbitrum-main | EVM | [0x375C0...9E360](https://arbiscan.io/address/0x375C07050a13d71110e5f058A4B3f9939a79E360) | [0xdc503...4d118](https://arbiscan.io/address/0xdc503ab31f8295cf87b09e151bf1f8fb6824d118) |
 
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
