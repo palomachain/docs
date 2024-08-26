@@ -7,7 +7,7 @@
  - [Genesis file](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/genesis.json) 
  - [Address book](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/addrbook.json)
  - current tag for Paloma: [**v2.0.1**](https://github.com/palomachain/paloma/releases/tag/v2.0.1)
- - current tag for Pigeon: [**v2.0.0**](https://github.com/palomachain/pigeon/releases/tag/v2.0.0)
+ - current tag for Pigeon: [**v2.1.0**](https://github.com/palomachain/pigeon/releases/tag/v2.1.0)
 
 
 ### Available endpoints
@@ -42,7 +42,7 @@ Missing a chain? Anybody can submit a proposal to add an additional chain. Take 
  - [Genesis file](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/genesis.json)
  - [Address book](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/addrbook.json)
  - current tag for Paloma: [**v2.0.1**](https://github.com/palomachain/paloma/releases/tag/v2.0.1)
- - current tag for Pigeon: [**v2.0.0**](https://github.com/palomachain/pigeon/releases/tag/v2.0.0)
+ - current tag for Pigeon: [**v2.1.0**](https://github.com/palomachain/pigeon/releases/tag/v2.1.0)
 
 
 ### Available endpoints
