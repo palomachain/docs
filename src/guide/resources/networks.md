@@ -24,7 +24,7 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 | Ethereum Mainnet | eth-main | EVM | [0xDcBd0...ed391d](https://etherscan.io/address/0xDcBd07EEC1D48aE0A14E61dD09BB5AA9c7ed391d) | [0x10670...1dcc9](https://etherscan.io/address/0x1067082fd0b74bfddfd5794e5ac0f24ed941dcc9) |
 | Polygon Mainnet | matic-main| EVM | [0x26f5D...590EAb](https://polygonscan.com/address/0x26f5Da70095d69103ba8b2Ee264A20cD4B590EAb) | [0x8a3b1...25eed](https://polygonscan.com/address/0x8a3b188e5b8f3ac0437cfb85db4ca1ee41225eed) |
 | Optimism Mainnet | op-main  | EVM | [0x5a7A8...F3bd52](https://optimistic.etherscan.io/address/0x5a7A8fAf7f73063b4F175E4eF354B6426aF3bd52) | [0x0b15c...d5fd9](https://optimistic.etherscan.io/address/0x0b15cd4f536c0c198bccfa69fd6eb5e8192d5fd9) |
-| Base Mainnet | base-main |    EVM | [0xD41Cc...16Dfb9](https://basescan.org/address/0xD41Cc53d6F483c8C77bb806A2d17c569B216Dfb9) | [0xde43b...377bb](https://basescan.org/address/0xde43bac3ddc0dfd71117ade93a92a2aa079377bb) |
+| Base Mainnet | base-main |    EVM | [0x7cd97...a64E19](https://basescan.org/address/0x7cd976c5029FDA0dF0124490d00D7fBa25a64E19) | [0xeE833...B78f9](https://basescan.org/address/0xeE8338Ee133B6705a7144a407eeB64Bf742B78f9) |
 | Gnosis Mainnet | gnosis-main | EVM | [0xEf2e3...9d16Ab](https://gnosisscan.io/address/0xEf2e3E09bCb5d1647D40E811D0396629549d16Ab) | [0xcb48c...b5581](https://gnosisscan.io/address/0xcb48c27e69acfc2466941f71ff9e8530d53b5581) |
 | Arbitrum Mainnet | arbitrum-main | EVM | [0x82Ed6...C89e73](https://arbiscan.io/address/0x82Ed642F4067D55cE884e2823951baDfEdC89e73) | [0xd8651...3ed34](https://arbiscan.io/address/0xd865124b3d9c67acdfb830bea4f3070a4123ed34) |
 | Blast Mainnet | blast-main | EVM | [0x99465...566686](https://blastscan.io/address/0x994653E3916c93008F25cA0eeec71252C7566686) | [0x621fa...86db8](https://blastscan.io/address/0x621fa57c7229d207d1d9b6deeb6c25b936d86db8) |
@@ -56,8 +56,8 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Target Chain|chain-ref-id|Chain Type|Compass Contract|Fee Manager|
 |------------|------------|----------|------------------------|------|
-| Ethereum Mainnet | eth-main | EVM | [0x97cBf...0a0Fc](https://etherscan.io/address/0x97cBf57a763e874DbE9433DD7C809E86f680a0Fc) | [0xf62d5...b77dd](https://etherscan.io/address/0xf62d5ab8bb6378238c3e67e468809081ad8b77dd) |
-| Arbitrum Mainnet | arbitrum-main | EVM | [0x375C0...9E360](https://arbiscan.io/address/0x375C07050a13d71110e5f058A4B3f9939a79E360) | [0xdc503...4d118](https://arbiscan.io/address/0xdc503ab31f8295cf87b09e151bf1f8fb6824d118) |
+| Ethereum Mainnet | eth-main | EVM | [0x061A4...Cd43F](https://etherscan.io/address/0x061A44249c2050adcdEB8Ab09213b3E6510Cd43F) | [0xf62d5...b77dd](https://etherscan.io/address/0xf62d5ab8bb6378238c3e67e468809081ad8b77dd) |
+| Arbitrum Mainnet | arbitrum-main | EVM | [0xC859B...c14bf](https://arbiscan.io/address/0xC859BCf62DC2571e693422277cdb3453f84c14bf) | [0xdc503...4d118](https://arbiscan.io/address/0xdc503ab31f8295cf87b09e151bf1f8fb6824d118) |
 
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
