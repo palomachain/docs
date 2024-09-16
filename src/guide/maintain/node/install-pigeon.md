@@ -22,7 +22,7 @@ balance will be jailed. However, Pigeons are reimbursed for their gas expenses.
 Start by installing the binary on your validator environment:
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v2.1.0
+On mainnet `tumbler` the latest tag is v2.2.1
 
 ```bash
 wget -O - https://github.com/palomachain/pigeon/releases/download/v2.1.0/pigeon_Linux_x86_64.tar.gz | \
