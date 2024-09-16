@@ -8,7 +8,7 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v2.1.0
+On mainnet `tumbler` the latest tag is v2.2.1
 
 
 ```sh
