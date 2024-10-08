@@ -7,7 +7,7 @@ This guide is for developers who want to install `palomad` and interact with Pal
 ## Prerequisites
 
 ### Install libwasm
-The current required version of libwasm is `1.5.2`. If you're upgrading from a prior version it is recommended to remove the cache to avoid errors. If you're already have palomad running, you will need to stop it before doing these steps.
+The current required version of libwasm is `2.1.3`. If you're upgrading from a prior version it is recommended to remove the cache to avoid errors. If you're already have palomad running, you will need to stop it before doing these steps.
 
 ```
 wget https://github.com/CosmWasm/wasmvm/releases/download/v1.5.2/libwasmvm.x86_64.so
@@ -22,14 +22,14 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v2.2.1
+On mainnet `tumbler` the latest tag is v2.3.1
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v2.2.1/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v2.3.1/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
-sudo wget -P /usr/lib https://github.com/CosmWasm/wasmvm/releases/download/v1.5.2/libwasmvm.x86_64.so
+wget https://github.com/CosmWasm/wasmvm/releases/download/v2.1.3/libwasmvm.x86_64.so/libwasmvm.x86_64.so
 ```
 
 ### Testnet
@@ -81,8 +81,8 @@ The following example shows version information when Paloma is installed correct
 ```bash
  name: paloma
  server_name: palomad
- version: v2.2.1
- commit: 0d41cdabf52696902e3360095bf5fbadf30305c6
+ version: v2.3.1
+ commit: 39ee1e5b7c02db907d6895fa18f1658c86dc3230
  build_tags: ""
  go: go version go1.23.3 linux/amd64
 ...
