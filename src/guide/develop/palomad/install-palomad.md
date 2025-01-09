@@ -22,10 +22,10 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v2.3.1
+On mainnet `tumbler` the latest tag is v2.4.1
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v2.3.1/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.1/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
@@ -33,10 +33,10 @@ wget https://github.com/CosmWasm/wasmvm/releases/download/v2.1.3/libwasmvm.x86_6
 ```
 
 ### Testnet
-On testnet `paloma-testnet-16` the latest tag is v2.1.0
+On testnet `paloma-testnet-16` the latest tag is v2.3.1
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v2.1.0/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v2.3.1/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
@@ -81,7 +81,7 @@ The following example shows version information when Paloma is installed correct
 ```bash
  name: paloma
  server_name: palomad
- version: v2.3.1
+ version: v2.4.1
  commit: 39ee1e5b7c02db907d6895fa18f1658c86dc3230
  build_tags: ""
  go: go version go1.23.3 linux/amd64
