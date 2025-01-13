@@ -110,10 +110,6 @@ if(!ignore) {
     logo: "/assets/Paloma_black.svg",
     nav: [
       {
-        text: 'Developer Assistance',
-        link: 'https://guaya23l1on.typeform.com/to/r0NYlO5S?typeform-source=www.palomachain.com ',
-      },
-      {
         text: 'Blog',
         link: 'https://www.palomachain.com/blog/'
       },
