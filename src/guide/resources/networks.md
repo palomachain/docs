@@ -41,8 +41,8 @@ Missing a chain? Anybody can submit a proposal to add an additional chain. Take 
  - Live since: May 9th, 2024
  - [Genesis file](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/genesis.json)
  - [Address book](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/addrbook.json)
- - current tag for Paloma: [**v2.3.1**](https://github.com/palomachain/paloma/releases/tag/v2.3.1)
- - current tag for Pigeon: [**v2.3.1**](https://github.com/palomachain/pigeon/releases/tag/v2.3.1)
+ - current tag for Paloma: [**v2.4.2**](https://github.com/palomachain/paloma/releases/tag/v2.4.2)
+ - current tag for Pigeon: [**v2.3.3**](https://github.com/palomachain/pigeon/releases/tag/v2.3.3)
 
 
 ### Available endpoints
@@ -56,8 +56,8 @@ All blockchains listed below are supported by Paloma's relay pigeons and allow f
 
 |Target Chain|chain-ref-id|Chain Type|Compass Contract|Fee Manager|
 |------------|------------|----------|------------------------|------|
-| Ethereum Mainnet | eth-main | EVM | [0x061A4...Cd43F](https://etherscan.io/address/0x061A44249c2050adcdEB8Ab09213b3E6510Cd43F) | [0xf62d5...b77dd](https://etherscan.io/address/0xf62d5ab8bb6378238c3e67e468809081ad8b77dd) |
-| Arbitrum Mainnet | arbitrum-main | EVM | [0xC859B...c14bf](https://arbiscan.io/address/0xC859BCf62DC2571e693422277cdb3453f84c14bf) | [0xdc503...4d118](https://arbiscan.io/address/0xdc503ab31f8295cf87b09e151bf1f8fb6824d118) |
+| Ethereum Mainnet | eth-main | EVM | currently not live| currently not live |
+| Arbitrum Mainnet | arbitrum-main | EVM | currently not live | currently not live |
 
 ::: tip 
 Missing a chain? Anybody can submit a proposal to add an additional chain. Take a look at the [guidelines](https://forum.palomachain.com/t/how-to-create-a-paloma-improvement-proposal-or-pip/64) for submitting a proposal and [previous proposals](https://forum.palomachain.com/c/governance/6) submitted.
