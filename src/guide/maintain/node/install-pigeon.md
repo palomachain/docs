@@ -33,7 +33,7 @@ mkdir ~/.pigeon
 
 ### Testnet
 
-On testnet `paloma-testnet-16` the latest tag is v2.3.3
+On testnet `paloma-testnet-17` the latest tag is v2.3.3
 
 ```bash
 wget -O - https://github.com/palomachain/pigeon/releases/download/v2.3.3/pigeon_Linux_x86_64.tar.gz | \

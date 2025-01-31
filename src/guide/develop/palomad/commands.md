@@ -181,7 +181,7 @@ palomad genesis migrate <path-to-genesis-file>
 
 **Example**
 ```bash
-palomad migrate /genesis.json --chain-id=paloma-testnet-16 --genesis-time=2024-06-26T17:00:00Z --initial-height=4000
+palomad migrate /genesis.json --chain-id=paloma-testnet-17 --genesis-time=2024-06-26T17:00:00Z --initial-height=4000
 ```
 
 ### `validate`
