@@ -27,7 +27,7 @@ palomad tx bank send \
     paloma15h6vd5f0wqps26zjlwrc6chah08ryu4hzzdwhc \
     paloma14h2od5f3vahd28uywwvt8sqbi52upnzagshtrm \
     8600000ugrain \
-    --paloma-testnet-16 \
+    --paloma-testnet-17 \
 ```
 
 ## `distribution fund-community-pool`
@@ -148,7 +148,7 @@ palomad tx gov deposit <proposal-id> "<deposit-amount>" \
 ```bash
 palomad tx gov deposit 15 "10000000ugrain" \
     --from=paloma13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
-    --chain-id=paloma-testnet-16
+    --chain-id=paloma-testnet-17
 ```
 
 ::: danger
@@ -183,7 +183,7 @@ palomad tx gov submit-legacy-proposal \
     --type="Text" \
     --deposit="100000ugrain" \
     --from=paloma13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
-    --chain-id=paloma-testnet-16
+    --chain-id=paloma-testnet-17
 ```
 
 ### Parameter-change proposals
@@ -205,7 +205,7 @@ palomad tx gov submit-legacy-proposal \
 palomad tx gov submit-legacy-proposal \
     param-change /proposals/proposal.json \
     --from=paloma13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
-    --chain-id=paloma-testnet-16
+    --chain-id=paloma-testnet-17
 ```
 
 where `proposal.json` contains the following information:
@@ -253,7 +253,7 @@ palomad tx gov submit-legacy-proposal \
 palomad tx gov submit-legacy-proposal \
     community-pool-spend /proposals/proposal.json \
     --from=paloma13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
-    --chain-id=paloma-testnet-16
+    --chain-id=paloma-testnet-17
 ```
 
 where `proposal.json` contains the following information:
@@ -446,7 +446,7 @@ palomad tx gov vote \
 palomad tx gov vote \
     7 yes \
     --from=paloma13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
-    --chain-id=paloma-testnet-16
+    --chain-id=paloma-testnet-17
 ```
 
 ## `skyway cancel-tx`
@@ -646,7 +646,7 @@ palomad tx upgrade software-upgrade v1.12.1 \
     --type="Text" \
     --deposit="10000000ugrain" \
     --from=paloma13a8ddv3h7kbcn73akcbpe7ueks22vaolewpaxmb \
-    --chain-id=paloma-testnet-16
+    --chain-id=paloma-testnet-17
 ```
 
 <!-- ## `upgrade cancel-software-upgrade`
@@ -723,7 +723,7 @@ palomad tx wasm migrate Paloma... 10 '{"verifier": "Paloma..."}'
 
 ## `wasm store`
 
-Uploads a new WASM binary or migrates to existing binary to the paloma-testnet-16 release.
+Uploads a new WASM binary or migrates to existing binary to the paloma-testnet-17 release.
 
 **Syntax for a new WASM binary**
 

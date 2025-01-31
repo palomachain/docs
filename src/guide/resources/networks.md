@@ -37,11 +37,11 @@ Missing a chain? Anybody can submit a proposal to add an additional chain. Take 
 
 
 ## Testnet
- - Chain ID: `paloma-testnet-16`
- - Live since: May 9th, 2024
- - [Genesis file](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/genesis.json)
- - [Address book](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-16/addrbook.json)
- - current tag for Paloma: [**v2.4.2**](https://github.com/palomachain/paloma/releases/tag/v2.4.2)
+ - Chain ID: `paloma-testnet-17`
+ - Live since: January 15th, 2025
+ - [Genesis file](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-17/genesis.json)
+ - [Address book](https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-17/addrbook.json)
+ - current tag for Paloma: [**v2.4.5**](https://github.com/palomachain/paloma/releases/tag/v2.4.5)
  - current tag for Pigeon: [**v2.3.3**](https://github.com/palomachain/pigeon/releases/tag/v2.3.3)
 
 
