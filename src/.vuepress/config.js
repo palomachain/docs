@@ -286,6 +286,7 @@ if(!ignore) {
             collapsable: true,
             children: [
               'resources/networks',
+              'resources/token-dex',
               'resources/governance',
               'resources/staking',
               'resources/paloma-ledger'
