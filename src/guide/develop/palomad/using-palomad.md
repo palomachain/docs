@@ -21,13 +21,14 @@ Volume operates a full node on the testnet that can be accessed at https://testn
 ## Configuring palomad
 
 ```
-palomad config <key> [value] [flags]
+palomad config set [config] [key] [value]
 ```
 This allows you to configure `palomad` directly. For example if you're connecting to a remote node, you'll want to set the node as well as the chain id: 
 
 ```
-palomad config chain-id <chain ID>
-palomad config node <remote node address>
+palomad config set client node <rpc endpoint>
+palomad config set client chain-id <Chain ID>
+
 ```
 
 ## Querying Blockchain State
