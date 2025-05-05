@@ -17,7 +17,7 @@
 
 |Target Chain|chain-ref-id|Chain Type|Token Address|
 |------------|------------|----------|------------------------|
-| Arbitrum Mainnet | arbitrum-main | EVM | [0x93c654dEE345fc27d34CeF2CB0366510278842E5](https://arbiscan.io/address/0x93c654dEE345fc27d34CeF2CB0366510278842E5) |
+| Arbitrum Mainnet | arbitrum-main | EVM | [0xfb0fC12E82d62f279Ba5b4cE60A8E7c278EC6477](https://arbiscan.io/address/0xfb0fC12E82d62f279Ba5b4cE60A8E7c278EC6477) |
 | Base Mainnet | base-main |    EVM | [0x81d8B2d6F2171203cC76655BAe213B28D6f6C9c4](https://basescan.org/address/0x81d8B2d6F2171203cC76655BAe213B28D6f6C9c4) |
 | BNB Chain mainnet| bnb-main | EVM | [0xf868c2b070320212bd135874d32c0da2cdcc335c](https://bscscan.com/address/0xf868c2b070320212bd135874d32c0da2cdcc335c) |
 | Ethereum Mainnet | eth-main | EVM | [0x2Ac2d7223C74e54dED9C7CF6Ee1FfDE9534f3F87](https://etherscan.io/address/0x2Ac2d7223C74e54dED9C7CF6Ee1FfDE9534f3F87) |
