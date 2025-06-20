@@ -8,11 +8,11 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v2.4.11
+On mainnet `tumbler` the latest tag is v2.4.12
 
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.11/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.12/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
@@ -68,7 +68,7 @@ The following example shows version information when Paloma is installed correct
  version: v.0.9.1
  commit: 0f7194bc7f75283630f5239976c6d7cf2b41a47c
  build_tags: ""
- go: go version go1.18.3 linux/amd64
+ go: go version go1.24.4 linux/amd64
 
  # followed by many build dependenecies (build_deps)
 ```

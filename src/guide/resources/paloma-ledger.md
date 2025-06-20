@@ -70,7 +70,7 @@ The end of the output should look like this and allows to confirm the Version.
 build_tags: netgo,ledger
 commit: 869235eb3e3ea2e4e97281b048f2263eb11081de
 cosmos_sdk_version: v0.47.4
-go: go version go1.19.4 darwin/amd64
+go: go version go1.24.4 darwin/amd64
 name: paloma
 server_name: palomad
 version: 1.0.0
