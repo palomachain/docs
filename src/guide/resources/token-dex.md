@@ -37,3 +37,16 @@
 | Gnosis Mainnet | gnosis-main | EVM | [0x2C555af8504D45384A25b1C82b99d39445462E29](https://gnosisscan.io/address/0x2C555af8504D45384A25b1C82b99d39445462E29) |
 | Polygon Mainnet | matic-main| EVM | [0x4cd4E9Da584D14150A31BFb8443D883C6a1CfdDb](https://polygonscan.com/address/0x4cd4E9Da584D14150A31BFb8443D883C6a1CfdDb) |
 | Optimism Mainnet | op-main  | EVM | [0x92246597800AE5bc4DF0d8ce0bd6126104Ec7a8a](https://optimistic.etherscan.io/address/0x92246597800AE5bc4DF0d8ce0bd6126104Ec7a8a) |
+
+
+## PUSD token connector addresses
+
+|Target Chain|chain-ref-id|Chain Type|Token Address|
+|------------|------------|----------|------------------------|
+| Arbitrum Mainnet | arbitrum-main | EVM | [0x2d4aEa7B731Ff9974670de2b86AF7BC26172810b](https://arbiscan.io/address/0x2d4aEa7B731Ff9974670de2b86AF7BC26172810b) |
+| Base Mainnet | base-main |    EVM | [0x5A827A278751900bb35511d3cD370c41DE1A1bf5](https://basescan.org/address/0x5A827A278751900bb35511d3cD370c41DE1A1bf5) |
+| BNB Chain mainnet| bnb-main | EVM | [0x7064eD97BF9DC38De9Cf6b416c47f1E711730cf5](https://bscscan.com/address/0x7064eD97BF9DC38De9Cf6b416c47f1E711730cf5) |
+| Ethereum Mainnet | eth-main | EVM | [0x4798b79a38Ce4829DC22F0B26742Cc939F7df5cf](https://etherscan.io/address/0x4798b79a38Ce4829DC22F0B26742Cc939F7df5cf) |
+| Gnosis Mainnet | gnosis-main | EVM | [0x6FC2c26FeCB215Aa3533Bc79965F37076e6c10d8](https://gnosisscan.io/address/0x6FC2c26FeCB215Aa3533Bc79965F37076e6c10d8) |
+| Polygon Mainnet | matic-main| EVM | [0x4594E59AcE780D137c23Da87cFFdaf8acb72020A](https://polygonscan.com/address/0x4594E59AcE780D137c23Da87cFFdaf8acb72020A) |
+| Optimism Mainnet | op-main  | EVM | [0x3BAb26c05a570146A5853F7C48a44B3268D6d0bd](https://optimistic.etherscan.io/address/0x3BAb26c05a570146A5853F7C48a44B3268D6d0bd) |
