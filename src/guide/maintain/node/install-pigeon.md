@@ -14,7 +14,7 @@ Validators running pigeon are expected to support all chains that
 Paloma is targeting. Target chains are added when they pass governance. 
 Pigeons must have a wallet for each supported chain and have a balance in 
 the native denomination for each chain high enough to pay gas for remote 
-message execution on the target chains. Validators who don’t have a sufficient 
+message execution on the target chains. Validators who don't have a sufficient 
 balance will be jailed. However, Pigeons are reimbursed for their gas expenses.
 
 ## Installation

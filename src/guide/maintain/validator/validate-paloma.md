@@ -31,7 +31,7 @@ On Paloma, a validator must:
 
 - **Relay and verify cross-chain messages**: Validators **must run** the Pigeon software,
   which is a relayer system for Paloma validators to deliver messages cross-chain. View 
-  the [Pigeon guide](../relayer/pigeon) for more details.
+  the [Pigeon guide](../node/install-pigeon) for more details.
 
 ::: danger System administration
 
