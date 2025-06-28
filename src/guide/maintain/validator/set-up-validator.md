@@ -205,4 +205,4 @@ To restore a validator:
 Validators **must run** the Pigeon software, which is a relayer system for 
 Paloma validators to deliver messages cross-chain. After you have succesfully 
 set up your validator and effectively configured your environment, navigate to the 
-[Pigeon guide](../relayer/pigeon) to set up the relay system.
+[Pigeon guide](../node/install-pigeon) to set up the relay system.
