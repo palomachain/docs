@@ -241,7 +241,7 @@ if(!ignore) {
           children: [
             ['develop/applications/overview', 'Extending Paloma'],
             ['develop/applications/compass-evm/overview','Compass EVM'],
-            'develop/applications/pyth/pyth-price-feeds',
+            'develop/applications/tokenization/cross-chain-tokenization',
               ]
              },
         {
