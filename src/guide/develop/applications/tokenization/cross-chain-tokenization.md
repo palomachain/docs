@@ -5,13 +5,13 @@ On all chains, Paloma Validators monitor an ERC-20 Factory contract called the *
 
 
 ## Create a Real World Asset Token
-* Write to the ETF Purchaser Contract using the `create_signle_etf` function. (the spelling in `single` is deliberate)
+* Write to the ETF Purchaser Contract using the `create_signle_etf` function. (the spelling in `signle` is deliberate)
 * Inputs to the function are:
   * `_token_name` 
   * `_token_symbol` 
   * `_token_description`
-  *  `_etf_ticker`
-  * `_expense_ratio` (the expense ratio is for ETFs only)
+  * `_etf_ticker`
+  * `_expense_ratio` (the expense ratio is for ETF tickers only)
 
 ## Buying a Real World Asset Token
 * Write to the ETF Purchaser Contract using the `buy` payable function. Inputs to the payable function are as such:
@@ -21,13 +21,14 @@ On all chains, Paloma Validators monitor an ERC-20 Factory contract called the *
   * `_recipient`  The recipient EVM address
   * `_path`  The path for swapping the input token into USDT. We use Uniswap v3 for all purchases on all.
   * `_min_amount` The default is 0 (it's for the min amount for swapping into USDT)
+**PURCHASE SETTLEMENT NOTE:** Real World Assets Purchased will be verified off-chain with Paloma's custodians that funds are received. Once funds are received on the target chain, the asset will mint.
 
 ## Selling a Real World Asset Token
 * Write to the ETF Purchaser Contract using the `sell` external function. Inputs to the external function are as such:
   * `_etf_token` This address is the token the seller wants to sell
   * `_etf_amount`The token amount
   * `_estimated_amount` The estimated PalomaUSD (PUSD) amount after sell. Developers can get estimated amount from the etfapi/v1/customindexprice api on PalomaDex.
-  * `_recipient`: The reciepient's EVM address
+  * `_recipient`: The recipient's EVM address
 
 ### Target chains Cross-Chain Real World Asset Tokenization 
 
