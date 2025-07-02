@@ -15,11 +15,11 @@ On all chains, Paloma Validators monitor an ERC-20 Factory contract called the *
 
 ## Buying a Real World Asset Token
 * Write to the ETF Purchaser Contract using the `buy` payable function. Inputs to the payable function are as such:
-  * A user can buy with ETH or any token which listed on uniswap v3
+  * A user can buy with ETH or any token which listed on Uniswap v3 and Curve
   * `_etf_token` The etf_token address is the token the user will purchase.
   * `_etf_amount` The token amount
   * `_recipient`  The recipient EVM address
-  * `_path`  The path for swapping the input token into USDT. We use Uniswap v3 for all purchases on all.
+  * `_path`  The path for swapping the input token into USDT. We use Uniswap v3 and Curve for all purchases on all.
   * `_min_amount` The default is 0 (it's for the min amount for swapping into USDT)
 **PURCHASE SETTLEMENT NOTE:** Real World Assets Purchased will be verified off-chain with Paloma's custodians that funds are received. Once funds are received on the target chain, the asset will mint.
 
@@ -29,6 +29,7 @@ On all chains, Paloma Validators monitor an ERC-20 Factory contract called the *
   * `_etf_amount`The token amount
   * `_estimated_amount` The estimated PalomaUSD (PUSD) amount after sell. Developers can get estimated amount from the etfapi/v1/customindexprice api on PalomaDex.
   * `_recipient`: The recipient's EVM address
+  **SELLERS SETTLEMENT NOTE:** Real World Assets sold are redeemed for PalomaUSD (PUSD) stablecoin on all target chains. Any user can withdraw PUSD for USDT on any target chain. Also, any user can redeem PUSD for USDT on https://www.palomadex.com/  using Buy/Sell to sell PUSD.
 
 ### Target chains Cross-Chain Real World Asset Tokenization 
 
