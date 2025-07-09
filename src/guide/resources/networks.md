@@ -6,7 +6,7 @@
  - Live since: April 22nd, 2024
  - [Genesis file](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/genesis.json) 
  - [Address book](https://raw.githubusercontent.com/palomachain/mainnet/master/tumbler/addrbook.json)
- - current tag for Paloma: [**v2.4.12**](https://github.com/palomachain/paloma/releases/tag/v2.4.12)
+ - current tag for Paloma: [**v2.4.13**](https://github.com/palomachain/paloma/releases/tag/v2.4.13)
  - current tag for Pigeon: [**v2.3.5**](https://github.com/palomachain/pigeon/releases/tag/v2.3.5)
 
 

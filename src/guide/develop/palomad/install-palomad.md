@@ -22,10 +22,10 @@ The easiest way to install `palomad` and Paloma is by downloading a pre-built bi
 
 
 ### Mainnet
-On mainnet `tumbler` the latest tag is v2.4.12
+On mainnet `tumbler` the latest tag is v2.4.13
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.12/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.13/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
@@ -36,7 +36,7 @@ wget https://github.com/CosmWasm/wasmvm/releases/download/v2.1.3/libwasmvm.x86_6
 On testnet `paloma-testnet-17` the latest tag is v2.4.11
 
 ```sh
-wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.2/paloma_Linux_x86_64.tar.gz  | \
+wget -O - https://github.com/palomachain/paloma/releases/download/v2.4.11/paloma_Linux_x86_64.tar.gz  | \
 sudo tar -C /usr/local/bin -xvzf - palomad
 sudo chmod +x /usr/local/bin/palomad
 
