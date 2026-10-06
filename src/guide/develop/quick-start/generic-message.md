@@ -32,7 +32,7 @@ Here is an example for creating a job called demo to be executed on Binance Main
 }
 ```
 ::: tip
-User `jq` or an [online tool](https://www.freeformatter.com/json-escape.html) to escape your contracts ABI
+Use `jq` or an [online JSON escape tool](https://jsonviewertool.com/json-escape) to escape your contract ABI. The linked tool returns escaped content without surrounding quotes.
 :::
 
 #### `payload` - payload.json
